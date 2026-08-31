@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import time
 import feedparser
 
 from datetime import datetime, timezone, timedelta
@@ -15,11 +16,14 @@ SOURCE_FILE = "sources.json"
 
 LOOKBACK_HOURS = 24
 MAX_CANDIDATES = 30
-FINAL_STORIES = 15
 
-GEMINI_MODEL = "gemini-3.7-flash"
+GEMINI_MODELS = [
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash"
+]
 
-IST = timezone(timedelta(hours=5, minutes=30))
+GEMINI_MAX_RETRIES = 3
 
 
 # ============================================================
@@ -162,7 +166,6 @@ def collect_news():
                         )
                     )
 
-
                     if not title or not link:
 
                         continue
@@ -172,13 +175,10 @@ def collect_news():
                         entry
                     )
 
-
                     if published_date is None:
 
                         continue
 
-
-                    # ONLY RECENT NEWS
 
                     if published_date < cutoff_time:
 
@@ -197,9 +197,8 @@ def collect_news():
 
                         "summary": summary,
 
-                        "published": (
+                        "published":
                             published_date.isoformat()
-                        )
 
                     })
 
@@ -243,11 +242,9 @@ def remove_duplicates(news):
             ""
         )
 
-
         if normalized in seen:
 
             continue
-
 
         seen.add(
             normalized
@@ -262,7 +259,7 @@ def remove_duplicates(news):
 
 
 # ============================================================
-# PRELIMINARY IMPORTANCE SCORE
+# IMPORTANCE KEYWORDS
 # ============================================================
 
 KEYWORDS = {
@@ -323,18 +320,54 @@ KEYWORDS = {
 }
 
 
+# ============================================================
+# SOURCE IMPORTANCE
+# ============================================================
+
 SOURCE_POINTS = {
 
     "OpenAI": 8,
     "Google AI": 7,
     "Google DeepMind": 8,
+    "Google Research": 6,
+
     "Microsoft AI": 7,
+    "Microsoft Research": 7,
+
     "NVIDIA": 8,
+    "NVIDIA Developer": 7,
+
+    "Anthropic": 8,
+
     "TechCrunch AI": 5,
+
     "MIT Technology Review AI": 6,
-    "Anthropic": 8
+
+    "VentureBeat": 5,
+
+    "The Decoder": 5,
+
+    "Ars Technica": 5,
+
+    "The Verge AI": 5,
+
+    "Hugging Face": 6,
+
+    "arXiv AI": 3,
+
+    "Apple Machine Learning": 6,
+
+    "AWS AI": 6,
+
+    "AMD": 6,
+
+    "Intel AI": 6
 }
 
+
+# ============================================================
+# CALCULATE SCORE
+# ============================================================
 
 def calculate_score(item):
 
@@ -345,7 +378,6 @@ def calculate_score(item):
     ).lower()
 
     score = 0
-
 
     for keyword, points in KEYWORDS.items():
 
@@ -364,7 +396,7 @@ def calculate_score(item):
 
 
 # ============================================================
-# RANK CANDIDATES
+# RANK NEWS
 # ============================================================
 
 def rank_news(news):
@@ -494,6 +526,17 @@ combine them into ONE story.
 
 Prioritize major developments over quantity.
 
+IMPORTANT ACCURACY RULES:
+
+- Do NOT invent facts.
+- Do NOT invent numbers.
+- Do NOT invent companies.
+- Do NOT invent events.
+- Only use information contained in the supplied stories.
+- Preserve the original source and source link.
+- If a story contains uncertain claims, describe them carefully.
+- Do not present speculation as confirmed fact.
+
 For every selected story provide:
 
 headline
@@ -504,7 +547,7 @@ category
 source
 source_link
 
-Categories should be one of:
+Categories must be one of:
 
 AI Models
 AI Agents
@@ -525,6 +568,8 @@ india_watch
 business_takeaway
 
 Return ONLY valid JSON.
+
+Do not use markdown.
 
 Use exactly this structure:
 
@@ -552,639 +597,286 @@ RECENT AI NEWS:
 """
 
 
-    response = client.models.generate_content(
+    # ========================================================
+    # TRY GEMINI MODELS
+    # ========================================================
 
-        model=GEMINI_MODEL,
-
-        contents=prompt
-    )
-
-
-    result_text = response.text.strip()
+    last_error = None
 
 
-    # Remove markdown fences if Gemini adds them
-
-    if result_text.startswith(
-        "```json"
-    ):
-
-        result_text = result_text[
-            7:
-        ]
-
-
-    if result_text.startswith(
-        "```"
-    ):
-
-        result_text = result_text[
-            3:
-        ]
-
-
-    if result_text.endswith(
-        "```"
-    ):
-
-        result_text = result_text[
-            :-3
-        ]
-
-
-    result_text = result_text.strip()
-
-
-    try:
-
-        result = json.loads(
-            result_text
-        )
-
-    except json.JSONDecodeError:
+    for model in GEMINI_MODELS:
 
         print()
-        print(
-            "❌ Gemini returned invalid JSON"
-        )
 
         print(
-            result_text
-        )
-
-        raise
-
-
-    return result
-
-
-# ============================================================
-# HTML HELPERS
-# ============================================================
-
-def html_escape(text):
-
-    if text is None:
-        return ""
-
-    text = str(text)
-
-    return (
-        text
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-        .replace("'", "&#39;")
-    )
-
-
-def get_edition():
-
-    hour = datetime.now(
-        IST
-    ).hour
-
-    if hour < 15:
-
-        return "MORNING EDITION"
-
-    return "EVENING EDITION"
-
-
-# ============================================================
-# GENERATE HTML EMAIL
-# ============================================================
-
-def generate_html_email(result):
-
-    now_ist = datetime.now(
-        IST
-    )
-
-    edition = get_edition()
-
-    stories = result.get(
-        "top_stories",
-        []
-    )
-
-
-    story_blocks = []
-
-
-    for number, story in enumerate(
-        stories,
-        start=1
-    ):
-
-        headline = html_escape(
-            story.get(
-                "headline",
-                ""
-            )
-        )
-
-        category = html_escape(
-            story.get(
-                "category",
-                "AI"
-            )
-        )
-
-        what_happened = html_escape(
-            story.get(
-                "what_happened",
-                ""
-            )
-        )
-
-        why_it_matters = html_escape(
-            story.get(
-                "why_it_matters",
-                ""
-            )
-        )
-
-        business_impact = html_escape(
-            story.get(
-                "business_impact",
-                ""
-            )
-        )
-
-        source = html_escape(
-            story.get(
-                "source",
-                ""
-            )
-        )
-
-        source_link = html_escape(
-            story.get(
-                "source_link",
-                "#"
-            )
+            f"Trying Gemini model: {model}"
         )
 
 
-        block = f"""
-        <div style="
-            background:#ffffff;
-            border:1px solid #e5e7eb;
-            border-radius:12px;
-            margin:0 0 18px 0;
-            padding:22px;
-        ">
+        for attempt in range(
+            1,
+            GEMINI_MAX_RETRIES + 1
+        ):
 
-            <div style="
-                font-size:13px;
-                font-weight:bold;
-                color:#2563eb;
-                margin-bottom:8px;
-            ">
-                #{number} &nbsp; | &nbsp; {category}
-            </div>
+            try:
 
-            <div style="
-                font-size:20px;
-                line-height:1.35;
-                font-weight:700;
-                color:#111827;
-                margin-bottom:12px;
-            ">
-                {headline}
-            </div>
+                print(
+                    f"Attempt {attempt}/"
+                    f"{GEMINI_MAX_RETRIES}"
+                )
 
-            <div style="
-                font-size:13px;
-                color:#6b7280;
-                margin-bottom:16px;
-            ">
-                Source: {source}
-            </div>
 
-            <div style="
-                font-size:14px;
-                line-height:1.65;
-                color:#374151;
-                margin-bottom:14px;
-            ">
-                <strong>What happened</strong><br>
-                {what_happened}
-            </div>
+                response = client.models.generate_content(
 
-            <div style="
-                font-size:14px;
-                line-height:1.65;
-                color:#374151;
-                margin-bottom:14px;
-            ">
-                <strong>Why it matters</strong><br>
-                {why_it_matters}
-            </div>
+                    model=model,
 
-            <div style="
-                background:#f3f4f6;
-                border-radius:8px;
-                padding:12px 14px;
-                font-size:14px;
-                line-height:1.6;
-                color:#374151;
-                margin-bottom:16px;
-            ">
-                <strong>💼 Business impact</strong><br>
-                {business_impact}
-            </div>
+                    contents=prompt
+                )
 
-            <a href="{source_link}"
-               style="
-                   display:inline-block;
-                   background:#2563eb;
-                   color:#ffffff;
-                   text-decoration:none;
-                   padding:10px 16px;
-                   border-radius:7px;
-                   font-size:13px;
-                   font-weight:bold;
-               ">
-                Read original source →
-            </a>
 
-        </div>
-        """
+                result_text = response.text.strip()
 
-        story_blocks.append(
-            block
+
+                # =================================================
+                # REMOVE MARKDOWN FENCES
+                # =================================================
+
+                if result_text.startswith(
+                    "```json"
+                ):
+
+                    result_text = result_text[7:]
+
+
+                elif result_text.startswith(
+                    "```"
+                ):
+
+                    result_text = result_text[3:]
+
+
+                if result_text.endswith(
+                    "```"
+                ):
+
+                    result_text = result_text[:-3]
+
+
+                result_text = result_text.strip()
+
+
+                # =================================================
+                # PARSE JSON
+                # =================================================
+
+                try:
+
+                    result = json.loads(
+                        result_text
+                    )
+
+
+                    if not isinstance(
+                        result,
+                        dict
+                    ):
+
+                        raise ValueError(
+                            "Gemini response "
+                            "was not a JSON object."
+                        )
+
+
+                    if "top_stories" not in result:
+
+                        raise ValueError(
+                            "Gemini response "
+                            "does not contain "
+                            "top_stories."
+                        )
+
+
+                    print()
+
+                    print(
+                        "✅ Gemini analysis "
+                        "successful using",
+                        model
+                    )
+
+                    return result
+
+
+                except (
+                    json.JSONDecodeError,
+                    ValueError
+                ) as json_error:
+
+                    print()
+
+                    print(
+                        "⚠️ Gemini returned "
+                        "invalid JSON."
+                    )
+
+                    print(
+                        "Trying again..."
+                    )
+
+                    last_error = json_error
+
+
+            except Exception as error:
+
+                error_text = str(error)
+
+                last_error = error
+
+
+                print()
+
+                print(
+                    "⚠️ Gemini error:",
+                    error_text
+                )
+
+
+                # =================================================
+                # TEMPORARY 503 ERROR
+                # =================================================
+
+                if (
+                    "503" in error_text
+                    or
+                    "UNAVAILABLE" in error_text
+                    or
+                    "high demand" in error_text
+                    or
+                    "temporarily unavailable"
+                    in error_text.lower()
+                ):
+
+                    print()
+
+                    print(
+                        "⚠️ Gemini is temporarily "
+                        "unavailable."
+                    )
+
+
+                    if attempt < GEMINI_MAX_RETRIES:
+
+                        wait_seconds = (
+                            attempt * 10
+                        )
+
+
+                        print(
+                            f"Waiting "
+                            f"{wait_seconds} seconds "
+                            f"before retry..."
+                        )
+
+
+                        time.sleep(
+                            wait_seconds
+                        )
+
+
+                    continue
+
+
+                # =================================================
+                # RATE LIMIT
+                # =================================================
+
+                if (
+                    "429" in error_text
+                    or
+                    "RESOURCE_EXHAUSTED"
+                    in error_text
+                ):
+
+                    print()
+
+                    print(
+                        "⚠️ Gemini rate limit "
+                        "reached."
+                    )
+
+
+                    if attempt < GEMINI_MAX_RETRIES:
+
+                        wait_seconds = (
+                            attempt * 15
+                        )
+
+
+                        print(
+                            f"Waiting "
+                            f"{wait_seconds} seconds..."
+                        )
+
+
+                        time.sleep(
+                            wait_seconds
+                        )
+
+
+                    continue
+
+
+                # =================================================
+                # OTHER ERROR
+                # =================================================
+
+                print()
+
+                print(
+                    "⚠️ Non-retryable "
+                    "Gemini error."
+                )
+
+                break
+
+
+        print()
+
+        print(
+            f"⚠️ Model {model} failed."
+        )
+
+        print(
+            "Trying next Gemini model..."
         )
 
 
-    stories_html = "\n".join(
-        story_blocks
-    )
-
-
-    overall_trend = html_escape(
-        result.get(
-            "overall_ai_trend",
-            ""
-        )
-    )
-
-    india_watch = html_escape(
-        result.get(
-            "india_watch",
-            ""
-        )
-    )
-
-    business_takeaway = html_escape(
-        result.get(
-            "business_takeaway",
-            ""
-        )
-    )
-
-
-    html = f"""<!DOCTYPE html>
-
-<html>
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width,
-               initial-scale=1.0">
-
-<title>
-Global AI Intelligence
-</title>
-
-</head>
-
-
-<body style="
-    margin:0;
-    padding:0;
-    background:#f3f4f6;
-    font-family:Arial,
-                 Helvetica,
-                 sans-serif;
-">
-
-
-<table width="100%"
-       cellpadding="0"
-       cellspacing="0"
-       style="
-           background:#f3f4f6;
-           padding:25px 10px;
-       ">
-
-<tr>
-
-<td align="center">
-
-
-<table width="700"
-       cellpadding="0"
-       cellspacing="0"
-       style="
-           max-width:700px;
-           width:100%;
-       ">
-
-
-<!-- HEADER -->
-
-<tr>
-
-<td style="
-    background:#111827;
-    color:#ffffff;
-    border-radius:14px 14px 0 0;
-    padding:30px 25px;
-">
-
-<div style="
-    font-size:12px;
-    font-weight:bold;
-    letter-spacing:1.5px;
-    color:#93c5fd;
-    margin-bottom:8px;
-">
-GLOBAL AI INTELLIGENCE
-</div>
-
-
-<div style="
-    font-size:28px;
-    font-weight:700;
-    line-height:1.25;
-">
-AI News Briefing
-</div>
-
-
-<div style="
-    font-size:14px;
-    color:#d1d5db;
-    margin-top:10px;
-">
-{edition}
-&nbsp; • &nbsp;
-{now_ist.strftime("%d %B %Y")}
-&nbsp; • &nbsp;
-{now_ist.strftime("%I:%M %p")} IST
-</div>
-
-</td>
-
-</tr>
-
-
-<!-- INTRO -->
-
-<tr>
-
-<td style="
-    background:#ffffff;
-    padding:25px;
-">
-
-<div style="
-    font-size:15px;
-    line-height:1.6;
-    color:#374151;
-">
-Here are the most important AI developments
-identified from global AI sources over the
-last 24 hours and analyzed by Gemini.
-</div>
-
-</td>
-
-</tr>
-
-
-<!-- STORIES -->
-
-<tr>
-
-<td style="
-    background:#f9fafb;
-    padding:10px 15px 5px 15px;
-">
-
-<div style="
-    font-size:18px;
-    font-weight:700;
-    color:#111827;
-    padding:10px;
-">
-🔥 Top AI Developments
-</div>
-
-</td>
-
-</tr>
-
-
-<tr>
-
-<td style="
-    background:#f9fafb;
-    padding:10px 15px 20px 15px;
-">
-
-{stories_html}
-
-</td>
-
-</tr>
-
-
-<!-- OVERALL TREND -->
-
-<tr>
-
-<td style="
-    background:#111827;
-    color:#ffffff;
-    padding:25px;
-">
-
-<div style="
-    font-size:17px;
-    font-weight:bold;
-    margin-bottom:10px;
-">
-📈 Overall AI Trend
-</div>
-
-<div style="
-    font-size:14px;
-    line-height:1.7;
-    color:#e5e7eb;
-">
-{overall_trend}
-</div>
-
-</td>
-
-</tr>
-
-
-<!-- INDIA WATCH -->
-
-<tr>
-
-<td style="
-    background:#ffffff;
-    padding:25px;
-">
-
-<div style="
-    font-size:17px;
-    font-weight:bold;
-    color:#111827;
-    margin-bottom:10px;
-">
-🇮🇳 India AI Watch
-</div>
-
-<div style="
-    font-size:14px;
-    line-height:1.7;
-    color:#374151;
-">
-{india_watch}
-</div>
-
-</td>
-
-</tr>
-
-
-<!-- BUSINESS TAKEAWAY -->
-
-<tr>
-
-<td style="
-    background:#eff6ff;
-    padding:25px;
-">
-
-<div style="
-    font-size:17px;
-    font-weight:bold;
-    color:#1e3a8a;
-    margin-bottom:10px;
-">
-💼 Business Takeaway
-</div>
-
-<div style="
-    font-size:14px;
-    line-height:1.7;
-    color:#374151;
-">
-{business_takeaway}
-</div>
-
-</td>
-
-</tr>
-
-
-<!-- FOOTER -->
-
-<tr>
-
-<td style="
-    background:#ffffff;
-    border-radius:0 0 14px 14px;
-    padding:22px;
-    text-align:center;
-">
-
-<div style="
-    font-size:12px;
-    color:#9ca3af;
-    line-height:1.6;
-">
-Generated automatically by
-<strong>Global AI Intelligence Engine</strong>
-<br>
-Sources: Global AI research, technology companies
-and leading AI news publications.
-</div>
-
-</td>
-
-</tr>
-
-
-</table>
-
-
-</td>
-
-</tr>
-
-</table>
-
-
-</body>
-
-</html>
-"""
-
-
-    return html
-
-
-# ============================================================
-# SAVE HTML EMAIL
-# ============================================================
-
-def save_html_email(result):
-
-    html = generate_html_email(
-        result
-    )
-
-
-    filename = "ai_briefing.html"
-
-
-    with open(
-        filename,
-        "w",
-        encoding="utf-8"
-    ) as file:
-
-        file.write(
-            html
-        )
-
+    # ========================================================
+    # ALL MODELS FAILED
+    # ========================================================
 
     print()
-    print(
-        "=" * 80
-    )
+
+    print("=" * 80)
 
     print(
-        f"HTML EMAIL CREATED: {filename}"
+        "❌ GEMINI ANALYSIS FAILED"
     )
 
+    print("=" * 80)
+
+    print()
+
     print(
-        "=" * 80
+        "All configured Gemini models "
+        "were unavailable."
     )
 
     print()
+
+    raise RuntimeError(
+        f"Gemini analysis failed: {last_error}"
+    )
 
 
 # ============================================================
@@ -1200,11 +892,15 @@ def print_gemini_results(result):
 
 
     print()
+
     print("=" * 80)
+
     print(
         f"TOP {len(stories)} AI STORIES"
     )
+
     print("=" * 80)
+
     print()
 
 
@@ -1296,6 +992,7 @@ def print_gemini_results(result):
 
 
     print()
+
     print(
         "OVERALL AI TREND:"
     )
@@ -1309,6 +1006,7 @@ def print_gemini_results(result):
 
 
     print()
+
     print(
         "INDIA WATCH:"
     )
@@ -1322,6 +1020,7 @@ def print_gemini_results(result):
 
 
     print()
+
     print(
         "BUSINESS TAKEAWAY:"
     )
@@ -1350,6 +1049,7 @@ def main():
 
     print()
 
+
     print(
         "Current time:",
         datetime.now(
@@ -1360,9 +1060,9 @@ def main():
     print()
 
 
-    # --------------------------------------------------------
-    # STEP 1: COLLECT
-    # --------------------------------------------------------
+    # ========================================================
+    # STEP 1 - COLLECT NEWS
+    # ========================================================
 
     news = collect_news()
 
@@ -1375,9 +1075,9 @@ def main():
     )
 
 
-    # --------------------------------------------------------
-    # STEP 2: DUPLICATES
-    # --------------------------------------------------------
+    # ========================================================
+    # STEP 2 - REMOVE DUPLICATES
+    # ========================================================
 
     news = remove_duplicates(
         news
@@ -1390,9 +1090,9 @@ def main():
     )
 
 
-    # --------------------------------------------------------
-    # STEP 3: RANK
-    # --------------------------------------------------------
+    # ========================================================
+    # STEP 3 - RANK
+    # ========================================================
 
     news = rank_news(
         news
@@ -1410,13 +1110,14 @@ def main():
     )
 
 
-    # --------------------------------------------------------
-    # STEP 4: GEMINI
-    # --------------------------------------------------------
+    # ========================================================
+    # STEP 4 - GEMINI
+    # ========================================================
 
     if not candidates:
 
         print()
+
         print(
             "⚠️ No recent AI stories found."
         )
@@ -1429,29 +1130,23 @@ def main():
     )
 
 
-    # --------------------------------------------------------
-    # STEP 5: DISPLAY
-    # --------------------------------------------------------
+    # ========================================================
+    # STEP 5 - DISPLAY
+    # ========================================================
 
     print_gemini_results(
         result
     )
 
 
-    # --------------------------------------------------------
-    # STEP 6: CREATE HTML EMAIL
-    # --------------------------------------------------------
-
-    save_html_email(
-        result
-    )
-
-
     print()
+
     print("=" * 80)
+
     print(
         "GEMINI ANALYSIS COMPLETE"
     )
+
     print("=" * 80)
 
 
