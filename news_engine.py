@@ -288,6 +288,7 @@ def select_top_news(news):
 # ---------------------------------------------------------
 
 def main():
+    print("### NEW VERSION OF NEWS ENGINE ###")
 
     print("=" * 80)
 
