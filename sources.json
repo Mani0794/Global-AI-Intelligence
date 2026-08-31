@@ -1,0 +1,38 @@
+{
+  "frontier_ai": {
+    "OpenAI": "https://openai.com/news/rss.xml",
+    "Google AI": "https://blog.google/technology/ai/rss/",
+    "Google DeepMind": "https://deepmind.google/blog/rss.xml",
+    "Google Research": "https://research.google/blog/rss/",
+    "Microsoft AI": "https://blogs.microsoft.com/ai/feed/",
+    "Microsoft Research": "https://www.microsoft.com/en-us/research/feed/",
+    "Meta Engineering": "https://engineering.fb.com/feed/",
+    "Hugging Face": "https://huggingface.co/blog/feed.xml",
+    "Mistral": "https://mistral.ai/news/rss.xml",
+    "Cohere": "https://cohere.com/blog/rss.xml"
+  },
+
+  "chips_and_infrastructure": {
+    "NVIDIA": "https://blogs.nvidia.com/feed/",
+    "NVIDIA Developer": "https://developer.nvidia.com/blog/feed/",
+    "AWS AI": "https://aws.amazon.com/blogs/machine-learning/feed/",
+    "AMD": "https://community.amd.com/s/feed/0D54v00006i6oK9CAI",
+    "Intel AI": "https://community.intel.com/t5/Blogs/ct-p/Blogs"
+  },
+
+  "technology_media": {
+    "TechCrunch AI": "https://techcrunch.com/category/artificial-intelligence/feed/",
+    "The Verge AI": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+    "MIT Technology Review AI": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+    "VentureBeat": "https://venturebeat.com/feed/",
+    "Ars Technica": "https://feeds.arstechnica.com/arstechnica/index",
+    "IEEE Spectrum": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence",
+    "The Decoder": "https://the-decoder.com/feed/"
+  },
+
+  "research": {
+    "arXiv AI": "https://rss.arxiv.org/rss/cs.AI",
+    "Apple Machine Learning": "https://machinelearning.apple.com/rss.xml",
+    "Hugging Face Papers": "https://huggingface.co/api/daily_papers"
+  }
+}
