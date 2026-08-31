@@ -21,5 +21,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Collect AI news
-        run: |
-          python news_engine.py
+  env:
+    GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  run: |
+    python news_engine.py
