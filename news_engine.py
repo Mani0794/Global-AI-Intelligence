@@ -1,183 +1,72 @@
+import os
+import re
 import json
 import feedparser
-import re
-from datetime import datetime, timezone, timedelta
 
+from datetime import datetime, timezone, timedelta
+from google import genai
+
+
+# ============================================================
+# GLOBAL AI INTELLIGENCE ENGINE
+# ============================================================
 
 SOURCE_FILE = "sources.json"
 
 LOOKBACK_HOURS = 24
-MAX_AI_ARTICLES = 30
+MAX_CANDIDATES = 30
+FINAL_STORIES = 15
+
+GEMINI_MODEL = "gemini-3.7-flash"
 
 
-# ---------------------------------------------------------
+# ============================================================
 # LOAD SOURCES
-# ---------------------------------------------------------
+# ============================================================
 
 def load_sources():
 
-    with open(SOURCE_FILE, "r", encoding="utf-8") as file:
+    with open(
+        SOURCE_FILE,
+        "r",
+        encoding="utf-8"
+    ) as file:
+
         return json.load(file)
 
 
-# ---------------------------------------------------------
-# PARSE PUBLICATION DATE
-# ---------------------------------------------------------
+# ============================================================
+# PARSE DATE
+# ============================================================
 
 def parse_date(entry):
 
-    # RSS feeds normally provide published_parsed
-    # or updated_parsed.
+    for field in [
+        "published_parsed",
+        "updated_parsed"
+    ]:
 
-    if entry.get("published_parsed"):
+        parsed = entry.get(field)
 
-        try:
+        if parsed:
 
-            return datetime(
-                *entry.published_parsed[:6],
-                tzinfo=timezone.utc
-            )
+            try:
 
-        except Exception:
-            pass
+                return datetime(
+                    *parsed[:6],
+                    tzinfo=timezone.utc
+                )
 
+            except Exception:
 
-    if entry.get("updated_parsed"):
-
-        try:
-
-            return datetime(
-                *entry.updated_parsed[:6],
-                tzinfo=timezone.utc
-            )
-
-        except Exception:
-            pass
-
+                pass
 
     return None
 
 
-# ---------------------------------------------------------
-# COLLECT NEWS
-# ---------------------------------------------------------
-
-def collect_news():
-
-    sources = load_sources()
-
-    all_news = []
-
-    current_time = datetime.now(timezone.utc)
-
-    cutoff_time = (
-        current_time
-        - timedelta(hours=LOOKBACK_HOURS)
-    )
-
-    print()
-    print(
-        f"Looking for articles since: "
-        f"{cutoff_time}"
-    )
-
-    print()
-
-    for category, category_sources in sources.items():
-
-        for source_name, url in category_sources.items():
-
-            print(f"Reading: {source_name}")
-
-            try:
-
-                feed = feedparser.parse(url)
-
-                if feed.bozo and not feed.entries:
-
-                    print(
-                        "  ⚠️ Feed unavailable"
-                    )
-
-                    continue
-
-
-                for entry in feed.entries[:15]:
-
-                    title = entry.get(
-                        "title",
-                        ""
-                    ).strip()
-
-                    link = entry.get(
-                        "link",
-                        ""
-                    ).strip()
-
-                    summary = entry.get(
-                        "summary",
-                        ""
-                    ).strip()
-
-
-                    if not title or not link:
-
-                        continue
-
-
-                    published_date = parse_date(
-                        entry
-                    )
-
-
-                    # Ignore articles where
-                    # publication date cannot
-                    # be determined.
-
-                    if published_date is None:
-
-                        continue
-
-
-                    # IMPORTANT:
-                    # Ignore old articles.
-
-                    if published_date < cutoff_time:
-
-                        continue
-
-
-                    all_news.append({
-
-                        "category": category,
-
-                        "source": source_name,
-
-                        "title": title,
-
-                        "link": link,
-
-                        "summary": summary,
-
-                        "published": published_date.isoformat()
-
-                    })
-
-
-            except Exception as error:
-
-                print(
-                    f"  ❌ Error reading "
-                    f"{source_name}: {error}"
-                )
-
-
-    return all_news
-
-
-# ---------------------------------------------------------
+# ============================================================
 # CLEAN TEXT
-# ---------------------------------------------------------
+# ============================================================
 
 def clean_text(text):
 
@@ -196,9 +85,137 @@ def clean_text(text):
     return text.strip()
 
 
-# ---------------------------------------------------------
+# ============================================================
+# COLLECT NEWS
+# ============================================================
+
+def collect_news():
+
+    sources = load_sources()
+
+    all_news = []
+
+    current_time = datetime.now(
+        timezone.utc
+    )
+
+    cutoff_time = (
+        current_time
+        - timedelta(
+            hours=LOOKBACK_HOURS
+        )
+    )
+
+    print()
+
+    print(
+        "Looking for articles since:",
+        cutoff_time
+    )
+
+    print()
+
+    for category, category_sources in sources.items():
+
+        for source_name, url in category_sources.items():
+
+            print(
+                f"Reading: {source_name}"
+            )
+
+            try:
+
+                feed = feedparser.parse(
+                    url
+                )
+
+                if (
+                    feed.bozo
+                    and not feed.entries
+                ):
+
+                    print(
+                        "  ⚠️ Feed unavailable"
+                    )
+
+                    continue
+
+
+                for entry in feed.entries[:20]:
+
+                    title = entry.get(
+                        "title",
+                        ""
+                    ).strip()
+
+                    link = entry.get(
+                        "link",
+                        ""
+                    ).strip()
+
+                    summary = clean_text(
+                        entry.get(
+                            "summary",
+                            ""
+                        )
+                    )
+
+
+                    if not title or not link:
+
+                        continue
+
+
+                    published_date = parse_date(
+                        entry
+                    )
+
+
+                    if published_date is None:
+
+                        continue
+
+
+                    # ONLY RECENT NEWS
+
+                    if published_date < cutoff_time:
+
+                        continue
+
+
+                    all_news.append({
+
+                        "category": category,
+
+                        "source": source_name,
+
+                        "title": title,
+
+                        "link": link,
+
+                        "summary": summary,
+
+                        "published": (
+                            published_date.isoformat()
+                        )
+
+                    })
+
+
+            except Exception as error:
+
+                print(
+                    f"  ❌ Error reading "
+                    f"{source_name}: {error}"
+                )
+
+
+    return all_news
+
+
+# ============================================================
 # REMOVE DUPLICATES
-# ---------------------------------------------------------
+# ============================================================
 
 def remove_duplicates(news):
 
@@ -208,38 +225,45 @@ def remove_duplicates(news):
 
     for item in news:
 
-        title = item["title"].lower()
-
-        title = re.sub(
-            r"[^a-z0-9 ]",
-            "",
-            title
+        normalized = (
+            item["title"]
+            .lower()
         )
 
-        title = title.replace(
+        normalized = re.sub(
+            r"[^a-z0-9 ]",
+            "",
+            normalized
+        )
+
+        normalized = normalized.replace(
             " ",
             ""
         )
 
 
-        if title in seen:
+        if normalized in seen:
 
             continue
 
 
-        seen.add(title)
+        seen.add(
+            normalized
+        )
 
-        unique_news.append(item)
+        unique_news.append(
+            item
+        )
 
 
     return unique_news
 
 
-# ---------------------------------------------------------
-# IMPORTANCE KEYWORDS
-# ---------------------------------------------------------
+# ============================================================
+# PRELIMINARY IMPORTANCE SCORE
+# ============================================================
 
-IMPORTANT_KEYWORDS = {
+KEYWORDS = {
 
     "launch": 5,
     "launched": 5,
@@ -271,6 +295,7 @@ IMPORTANT_KEYWORDS = {
     "anthropic": 6,
     "google": 5,
     "gemini": 6,
+
     "microsoft": 5,
     "meta": 5,
     "deepmind": 6,
@@ -282,134 +307,465 @@ IMPORTANT_KEYWORDS = {
     "robotics": 4,
 
     "regulation": 6,
-    "law": 5,
-    "government": 4,
+    "regulatory": 6,
 
     "security": 5,
     "cybersecurity": 5,
 
     "breakthrough": 6,
 
-    "research": 3
+    "research": 3,
+
+    "india": 5,
+    "indian": 5
 }
 
 
-# ---------------------------------------------------------
-# IMPORTANT SOURCES
-# ---------------------------------------------------------
-
-IMPORTANT_SOURCES = {
+SOURCE_POINTS = {
 
     "OpenAI": 8,
     "Google AI": 7,
     "Google DeepMind": 8,
-
     "Microsoft AI": 7,
-
     "NVIDIA": 8,
-
     "TechCrunch AI": 5,
-
     "MIT Technology Review AI": 6,
-
-    "Reuters": 9,
-
-    "Financial Times AI": 9,
-
     "Anthropic": 8
 }
 
 
-# ---------------------------------------------------------
-# CALCULATE SCORE
-# ---------------------------------------------------------
-
 def calculate_score(item):
+
+    text = (
+        item["title"]
+        + " "
+        + item["summary"]
+    ).lower()
 
     score = 0
 
-    title = item["title"].lower()
 
-    summary = clean_text(
-        item["summary"]
-    ).lower()
+    for keyword, points in KEYWORDS.items():
 
-    combined_text = (
-        title
-        + " "
-        + summary
-    )
-
-
-    # Keyword score
-
-    for keyword, points in IMPORTANT_KEYWORDS.items():
-
-        if keyword in combined_text:
+        if keyword in text:
 
             score += points
 
 
-    # Source score
-
-    source = item["source"]
-
-    score += IMPORTANT_SOURCES.get(
-        source,
+    score += SOURCE_POINTS.get(
+        item["source"],
         0
     )
-
-
-    # Small title quality bonus
-
-    if len(item["title"]) < 120:
-
-        score += 1
 
 
     return score
 
 
-# ---------------------------------------------------------
-# RANK
-# ---------------------------------------------------------
+# ============================================================
+# RANK CANDIDATES
+# ============================================================
 
 def rank_news(news):
 
     for item in news:
 
-        item["importance_score"] = (
-            calculate_score(item)
+        item["score"] = calculate_score(
+            item
         )
 
 
     news.sort(
-
-        key=lambda x:
-        x["importance_score"],
-
+        key=lambda x: x["score"],
         reverse=True
-
     )
 
 
     return news
 
 
-# ---------------------------------------------------------
-# SELECT TOP NEWS
-# ---------------------------------------------------------
+# ============================================================
+# GEMINI ANALYSIS
+# ============================================================
 
-def select_top_news(news):
+def analyze_with_gemini(news):
 
-    return news[
-        :MAX_AI_ARTICLES
-    ]
+    api_key = os.environ.get(
+        "GEMINI_API_KEY"
+    )
+
+    if not api_key:
+
+        raise RuntimeError(
+            "GEMINI_API_KEY was not found."
+        )
 
 
-# ---------------------------------------------------------
+    print()
+    print("=" * 80)
+    print("CONNECTING TO GEMINI")
+    print("=" * 80)
+    print()
+
+
+    client = genai.Client(
+        api_key=api_key
+    )
+
+
+    stories = []
+
+
+    for number, item in enumerate(
+        news,
+        start=1
+    ):
+
+        stories.append(
+
+            f"""
+STORY {number}
+
+Title:
+{item['title']}
+
+Source:
+{item['source']}
+
+Published:
+{item['published']}
+
+Summary:
+{item['summary']}
+
+Link:
+{item['link']}
+"""
+        )
+
+
+    news_text = "\n".join(
+        stories
+    )
+
+
+    prompt = f"""
+
+You are a senior GLOBAL AI INTELLIGENCE analyst.
+
+Analyze the following recent AI news.
+
+Select the 10 to 15 MOST IMPORTANT stories.
+
+Do NOT simply follow the preliminary score.
+
+Evaluate:
+
+1. Global AI significance
+2. Business impact
+3. Technology impact
+4. AI industry impact
+5. Potential disruption
+6. New AI model launches
+7. AI agents
+8. AI infrastructure
+9. AI chips
+10. Robotics
+11. AI research
+12. AI regulation
+13. AI safety/security
+14. Funding/acquisitions
+15. India relevance
+
+IMPORTANT:
+
+Remove stories that are:
+
+- General technology news
+- Gaming news unrelated to AI
+- Politics unrelated to AI
+- Minor product updates
+- Promotional announcements with little significance
+- Low-impact research papers
+
+If multiple articles discuss the SAME event,
+combine them into ONE story.
+
+Prioritize major developments over quantity.
+
+For every selected story provide:
+
+headline
+what_happened
+why_it_matters
+business_impact
+category
+source
+source_link
+
+Categories should be one of:
+
+AI Models
+AI Agents
+AI Infrastructure
+AI Chips
+AI Research
+Robotics
+AI Business
+AI Regulation
+AI Safety
+India AI
+Enterprise AI
+
+Also provide:
+
+overall_ai_trend
+india_watch
+business_takeaway
+
+Return ONLY valid JSON.
+
+Use exactly this structure:
+
+{{
+    "top_stories": [
+        {{
+            "headline": "",
+            "what_happened": "",
+            "why_it_matters": "",
+            "business_impact": "",
+            "category": "",
+            "source": "",
+            "source_link": ""
+        }}
+    ],
+    "overall_ai_trend": "",
+    "india_watch": "",
+    "business_takeaway": ""
+}}
+
+RECENT AI NEWS:
+
+{news_text}
+
+"""
+
+
+    response = client.models.generate_content(
+
+        model=GEMINI_MODEL,
+
+        contents=prompt
+    )
+
+
+    result_text = response.text.strip()
+
+
+    # Remove markdown fences if Gemini adds them
+
+    if result_text.startswith(
+        "```json"
+    ):
+
+        result_text = result_text[
+            7:
+        ]
+
+
+    if result_text.startswith(
+        "```"
+    ):
+
+        result_text = result_text[
+            3:
+        ]
+
+
+    if result_text.endswith(
+        "```"
+    ):
+
+        result_text = result_text[
+            :-3
+        ]
+
+
+    result_text = result_text.strip()
+
+
+    try:
+
+        result = json.loads(
+            result_text
+        )
+
+    except json.JSONDecodeError:
+
+        print()
+        print(
+            "❌ Gemini returned invalid JSON"
+        )
+
+        print(
+            result_text
+        )
+
+        raise
+
+
+    return result
+
+
+# ============================================================
+# PRINT GEMINI RESULTS
+# ============================================================
+
+def print_gemini_results(result):
+
+    stories = result.get(
+        "top_stories",
+        []
+    )
+
+
+    print()
+    print("=" * 80)
+    print(
+        f"TOP {len(stories)} AI STORIES"
+    )
+    print("=" * 80)
+    print()
+
+
+    for number, story in enumerate(
+        stories,
+        start=1
+    ):
+
+        print(
+            f"{number}. "
+            f"{story.get('headline', '')}"
+        )
+
+        print()
+
+        print(
+            "   Category:",
+            story.get(
+                "category",
+                ""
+            )
+        )
+
+        print()
+
+        print(
+            "   What happened:"
+        )
+
+        print(
+            "   ",
+            story.get(
+                "what_happened",
+                ""
+            )
+        )
+
+        print()
+
+        print(
+            "   Why it matters:"
+        )
+
+        print(
+            "   ",
+            story.get(
+                "why_it_matters",
+                ""
+            )
+        )
+
+        print()
+
+        print(
+            "   Business impact:"
+        )
+
+        print(
+            "   ",
+            story.get(
+                "business_impact",
+                ""
+            )
+        )
+
+        print()
+
+        print(
+            "   Source:",
+            story.get(
+                "source",
+                ""
+            )
+        )
+
+        print()
+
+        print(
+            "   Link:",
+            story.get(
+                "source_link",
+                ""
+            )
+        )
+
+        print()
+
+        print("-" * 80)
+
+
+    print()
+    print(
+        "OVERALL AI TREND:"
+    )
+
+    print(
+        result.get(
+            "overall_ai_trend",
+            ""
+        )
+    )
+
+
+    print()
+    print(
+        "INDIA WATCH:"
+    )
+
+    print(
+        result.get(
+            "india_watch",
+            ""
+        )
+    )
+
+
+    print()
+    print(
+        "BUSINESS TAKEAWAY:"
+    )
+
+    print(
+        result.get(
+            "business_takeaway",
+            ""
+        )
+    )
+
+
+# ============================================================
 # MAIN
-# ---------------------------------------------------------
+# ============================================================
 
 def main():
 
@@ -425,13 +781,17 @@ def main():
 
     print(
         "Current time:",
-        datetime.now(timezone.utc)
+        datetime.now(
+            timezone.utc
+        )
     )
 
     print()
 
 
-    # 1. Collect recent news
+    # --------------------------------------------------------
+    # STEP 1: COLLECT
+    # --------------------------------------------------------
 
     news = collect_news()
 
@@ -439,21 +799,14 @@ def main():
     print()
 
     print(
-        f"Recent stories collected: "
-        f"{len(news)}"
+        "Recent stories collected:",
+        len(news)
     )
 
 
-    # 2. Clean summaries
-
-    for item in news:
-
-        item["summary"] = clean_text(
-            item["summary"]
-        )
-
-
-    # 3. Remove duplicates
+    # --------------------------------------------------------
+    # STEP 2: DUPLICATES
+    # --------------------------------------------------------
 
     news = remove_duplicates(
         news
@@ -461,79 +814,70 @@ def main():
 
 
     print(
-        f"After duplicate removal: "
-        f"{len(news)}"
+        "After duplicate removal:",
+        len(news)
     )
 
 
-    # 4. Rank
+    # --------------------------------------------------------
+    # STEP 3: RANK
+    # --------------------------------------------------------
 
     news = rank_news(
         news
     )
 
 
-    # 5. Select top 30
+    candidates = news[
+        :MAX_CANDIDATES
+    ]
 
-    top_news = select_top_news(
-        news
-    )
-
-
-    print()
-
-    print("=" * 80)
 
     print(
-        f"TOP {len(top_news)} RECENT AI STORIES"
+        f"Candidates sent to Gemini: "
+        f"{len(candidates)}"
     )
 
-    print("=" * 80)
 
-    print()
+    # --------------------------------------------------------
+    # STEP 4: GEMINI
+    # --------------------------------------------------------
 
-
-    for number, item in enumerate(
-        top_news,
-        start=1
-    ):
-
-        print(
-            f"{number}. "
-            f"{item['title']}"
-        )
-
-        print(
-            f"   Source: "
-            f"{item['source']}"
-        )
-
-        print(
-            f"   Published: "
-            f"{item['published']}"
-        )
-
-        print(
-            f"   Score: "
-            f"{item['importance_score']}"
-        )
-
-        print(
-            f"   Link: "
-            f"{item['link']}"
-        )
+    if not candidates:
 
         print()
+        print(
+            "⚠️ No recent AI stories found."
+        )
+
+        return
 
 
-    print("=" * 80)
-
-    print(
-        "Ready for Gemini AI analysis."
+    result = analyze_with_gemini(
+        candidates
     )
 
+
+    # --------------------------------------------------------
+    # STEP 5: DISPLAY
+    # --------------------------------------------------------
+
+    print_gemini_results(
+        result
+    )
+
+
+    print()
+    print("=" * 80)
+    print(
+        "GEMINI ANALYSIS COMPLETE"
+    )
     print("=" * 80)
 
+
+# ============================================================
+# RUN
+# ============================================================
 
 if __name__ == "__main__":
 
