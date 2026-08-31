@@ -6,10 +6,7 @@ from datetime import datetime, timezone, timedelta
 
 SOURCE_FILE = "sources.json"
 
-# How many hours of news we want to consider
 LOOKBACK_HOURS = 24
-
-# Maximum articles passed to the AI stage
 MAX_AI_ARTICLES = 30
 
 
@@ -24,6 +21,44 @@ def load_sources():
 
 
 # ---------------------------------------------------------
+# PARSE PUBLICATION DATE
+# ---------------------------------------------------------
+
+def parse_date(entry):
+
+    # RSS feeds normally provide published_parsed
+    # or updated_parsed.
+
+    if entry.get("published_parsed"):
+
+        try:
+
+            return datetime(
+                *entry.published_parsed[:6],
+                tzinfo=timezone.utc
+            )
+
+        except Exception:
+            pass
+
+
+    if entry.get("updated_parsed"):
+
+        try:
+
+            return datetime(
+                *entry.updated_parsed[:6],
+                tzinfo=timezone.utc
+            )
+
+        except Exception:
+            pass
+
+
+    return None
+
+
+# ---------------------------------------------------------
 # COLLECT NEWS
 # ---------------------------------------------------------
 
@@ -32,6 +67,21 @@ def collect_news():
     sources = load_sources()
 
     all_news = []
+
+    current_time = datetime.now(timezone.utc)
+
+    cutoff_time = (
+        current_time
+        - timedelta(hours=LOOKBACK_HOURS)
+    )
+
+    print()
+    print(
+        f"Looking for articles since: "
+        f"{cutoff_time}"
+    )
+
+    print()
 
     for category, category_sources in sources.items():
 
@@ -44,31 +94,58 @@ def collect_news():
                 feed = feedparser.parse(url)
 
                 if feed.bozo and not feed.entries:
-                    print("  ⚠️ Feed unavailable")
+
+                    print(
+                        "  ⚠️ Feed unavailable"
+                    )
+
                     continue
+
 
                 for entry in feed.entries[:15]:
 
                     title = entry.get(
-                        "title", ""
+                        "title",
+                        ""
                     ).strip()
 
                     link = entry.get(
-                        "link", ""
+                        "link",
+                        ""
                     ).strip()
 
                     summary = entry.get(
-                        "summary", ""
+                        "summary",
+                        ""
                     ).strip()
 
-                    published = (
-                        entry.get("published")
-                        or entry.get("updated")
-                        or ""
-                    )
 
                     if not title or not link:
+
                         continue
+
+
+                    published_date = parse_date(
+                        entry
+                    )
+
+
+                    # Ignore articles where
+                    # publication date cannot
+                    # be determined.
+
+                    if published_date is None:
+
+                        continue
+
+
+                    # IMPORTANT:
+                    # Ignore old articles.
+
+                    if published_date < cutoff_time:
+
+                        continue
+
 
                     all_news.append({
 
@@ -82,9 +159,10 @@ def collect_news():
 
                         "summary": summary,
 
-                        "published": published
+                        "published": published_date.isoformat()
 
                     })
+
 
             except Exception as error:
 
@@ -93,11 +171,12 @@ def collect_news():
                     f"{source_name}: {error}"
                 )
 
+
     return all_news
 
 
 # ---------------------------------------------------------
-# CLEAN HTML
+# CLEAN TEXT
 # ---------------------------------------------------------
 
 def clean_text(text):
@@ -131,49 +210,63 @@ def remove_duplicates(news):
 
         title = item["title"].lower()
 
-        # Remove punctuation
         title = re.sub(
             r"[^a-z0-9 ]",
             "",
             title
         )
 
-        # Remove spaces
         title = title.replace(
             " ",
             ""
         )
 
+
         if title in seen:
+
             continue
+
 
         seen.add(title)
 
         unique_news.append(item)
 
+
     return unique_news
 
 
 # ---------------------------------------------------------
-# IMPORTANCE SCORING
+# IMPORTANCE KEYWORDS
 # ---------------------------------------------------------
 
 IMPORTANT_KEYWORDS = {
 
     "launch": 5,
+    "launched": 5,
     "released": 5,
     "release": 5,
+
     "model": 4,
+    "models": 4,
+
     "acquisition": 7,
     "acquires": 7,
+    "acquired": 7,
+
     "funding": 6,
     "investment": 6,
+
     "billion": 6,
     "million": 3,
+
     "partnership": 4,
+
     "chip": 5,
+    "chips": 5,
     "gpu": 5,
+
     "nvidia": 6,
+
     "openai": 6,
     "anthropic": 6,
     "google": 5,
@@ -181,35 +274,55 @@ IMPORTANT_KEYWORDS = {
     "microsoft": 5,
     "meta": 5,
     "deepmind": 6,
+
     "agent": 5,
     "agents": 5,
+
     "robot": 4,
     "robotics": 4,
+
     "regulation": 6,
     "law": 5,
     "government": 4,
+
     "security": 5,
     "cybersecurity": 5,
+
     "breakthrough": 6,
+
     "research": 3
 }
 
+
+# ---------------------------------------------------------
+# IMPORTANT SOURCES
+# ---------------------------------------------------------
 
 IMPORTANT_SOURCES = {
 
     "OpenAI": 8,
     "Google AI": 7,
     "Google DeepMind": 8,
-    "Microsoft AI": 7,
-    "NVIDIA": 8,
-    "TechCrunch AI": 5,
-    "MIT Technology Review AI": 6,
-    "Reuters": 9,
-    "Financial Times AI": 9,
-    "Anthropic": 8
 
+    "Microsoft AI": 7,
+
+    "NVIDIA": 8,
+
+    "TechCrunch AI": 5,
+
+    "MIT Technology Review AI": 6,
+
+    "Reuters": 9,
+
+    "Financial Times AI": 9,
+
+    "Anthropic": 8
 }
 
+
+# ---------------------------------------------------------
+# CALCULATE SCORE
+# ---------------------------------------------------------
 
 def calculate_score(item):
 
@@ -222,10 +335,13 @@ def calculate_score(item):
     ).lower()
 
     combined_text = (
-        title + " " + summary
+        title
+        + " "
+        + summary
     )
 
-    # Keyword scoring
+
+    # Keyword score
 
     for keyword, points in IMPORTANT_KEYWORDS.items():
 
@@ -233,7 +349,8 @@ def calculate_score(item):
 
             score += points
 
-    # Source scoring
+
+    # Source score
 
     source = item["source"]
 
@@ -242,17 +359,19 @@ def calculate_score(item):
         0
     )
 
-    # Title bonus
+
+    # Small title quality bonus
 
     if len(item["title"]) < 120:
 
         score += 1
 
+
     return score
 
 
 # ---------------------------------------------------------
-# RANK NEWS
+# RANK
 # ---------------------------------------------------------
 
 def rank_news(news):
@@ -263,17 +382,22 @@ def rank_news(news):
             calculate_score(item)
         )
 
+
     news.sort(
+
         key=lambda x:
         x["importance_score"],
+
         reverse=True
+
     )
+
 
     return news
 
 
 # ---------------------------------------------------------
-# SELECT TOP STORIES
+# SELECT TOP NEWS
 # ---------------------------------------------------------
 
 def select_top_news(news):
@@ -288,7 +412,6 @@ def select_top_news(news):
 # ---------------------------------------------------------
 
 def main():
-    print("### NEW VERSION OF NEWS ENGINE ###")
 
     print("=" * 80)
 
@@ -307,18 +430,21 @@ def main():
 
     print()
 
-    # Collect
+
+    # 1. Collect recent news
 
     news = collect_news()
+
 
     print()
 
     print(
-        f"Stories collected: "
+        f"Recent stories collected: "
         f"{len(news)}"
     )
 
-    # Clean
+
+    # 2. Clean summaries
 
     for item in news:
 
@@ -326,40 +452,46 @@ def main():
             item["summary"]
         )
 
-    # Deduplicate
+
+    # 3. Remove duplicates
 
     news = remove_duplicates(
         news
     )
+
 
     print(
         f"After duplicate removal: "
         f"{len(news)}"
     )
 
-    # Rank
+
+    # 4. Rank
 
     news = rank_news(
         news
     )
 
-    # Select
+
+    # 5. Select top 30
 
     top_news = select_top_news(
         news
     )
+
 
     print()
 
     print("=" * 80)
 
     print(
-        f"TOP {len(top_news)} AI STORIES"
+        f"TOP {len(top_news)} RECENT AI STORIES"
     )
 
     print("=" * 80)
 
     print()
+
 
     for number, item in enumerate(
         top_news,
@@ -377,6 +509,11 @@ def main():
         )
 
         print(
+            f"   Published: "
+            f"{item['published']}"
+        )
+
+        print(
             f"   Score: "
             f"{item['importance_score']}"
         )
@@ -387,6 +524,7 @@ def main():
         )
 
         print()
+
 
     print("=" * 80)
 
