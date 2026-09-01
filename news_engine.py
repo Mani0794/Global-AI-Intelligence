@@ -20,9 +20,7 @@ from google import genai
 
 SOURCE_FILE = "sources.json"
 
-# 9 AM and 9 PM editions = 12-hour news window
 LOOKBACK_HOURS = 12
-
 MAX_CANDIDATES = 30
 FINAL_STORIES = 15
 TOP_STORIES = 5
@@ -339,7 +337,6 @@ def collect_news(sources):
 def remove_duplicates(stories):
 
     unique = []
-
     seen_titles = set()
 
     for story in stories:
@@ -811,7 +808,7 @@ AI NEWS CANDIDATES:
 
 
 # ============================================================
-# ESCAPE HTML
+# SAFE HTML
 # ============================================================
 
 def safe_text(value):
@@ -868,9 +865,7 @@ def category_icon(category):
     ):
         return "🔬"
 
-    if (
-        "robot" in category
-    ):
+    if "robot" in category:
         return "🦾"
 
     if (
@@ -942,10 +937,6 @@ def create_html_email(result):
             "%d %b %Y • %I:%M %p IST"
         )
     )
-
-    # ========================================================
-    # TOP 5 STORY CARDS
-    # ========================================================
 
     top_story_html = ""
 
@@ -1034,44 +1025,21 @@ def create_html_email(result):
             index - 1
         ]
 
-        if index == 1:
-
-            border_style = (
-                "border:2px solid #7c3aed;"
-            )
-
-            top_bar = """
-            <div style="
-                height:5px;
-                background:linear-gradient(
-                    90deg,
-                    #7c3aed,
-                    #2563eb,
-                    #06b6d4
-                );
-            "></div>
-            """
-
-        else:
-
-            border_style = (
-                "border:1px solid #e2e8f0;"
-            )
-
-            top_bar = ""
-
         top_story_html += f"""
         <div style="
             background:#ffffff;
-            {border_style}
+            border:1px solid #dce3ee;
             border-radius:16px;
             overflow:hidden;
             margin-bottom:22px;
-            box-shadow:
-                0 4px 18px rgba(15,23,42,0.06);
+            box-shadow:0 5px 18px rgba(15,23,42,0.07);
         ">
 
-            {top_bar}
+            <div style="
+                height:5px;
+                background:#6366f1;
+            ">
+            </div>
 
             <div style="
                 padding:25px;
@@ -1084,11 +1052,7 @@ def create_html_email(result):
                 >
                     <tr>
 
-                        <td
-                            style="
-                                vertical-align:middle;
-                            "
-                        >
+                        <td>
 
                             <span style="
                                 font-size:22px;
@@ -1099,7 +1063,7 @@ def create_html_email(result):
                             <span style="
                                 font-size:12px;
                                 font-weight:700;
-                                color:#7c3aed;
+                                color:#6d28d9;
                                 letter-spacing:0.8px;
                                 margin-left:5px;
                             ">
@@ -1110,15 +1074,12 @@ def create_html_email(result):
 
                         <td
                             align="right"
-                            style="
-                                vertical-align:middle;
-                            "
                         >
 
                             <span style="
                                 display:inline-block;
                                 background:#f1f5f9;
-                                color:#475569;
+                                color:#334155;
                                 padding:6px 11px;
                                 border-radius:20px;
                                 font-size:11px;
@@ -1133,8 +1094,7 @@ def create_html_email(result):
                 </table>
 
                 <h2 style="
-                    margin:
-                        17px 0 20px 0;
+                    margin:17px 0 20px 0;
                     color:#0f172a;
                     font-size:22px;
                     line-height:1.38;
@@ -1142,9 +1102,8 @@ def create_html_email(result):
                     {headline}
                 </h2>
 
-
                 <div style="
-                    background:#f8fafc;
+                    background:#eff6ff;
                     border-left:4px solid #2563eb;
                     border-radius:8px;
                     padding:15px 17px;
@@ -1152,7 +1111,7 @@ def create_html_email(result):
                 ">
 
                     <div style="
-                        color:#2563eb;
+                        color:#1d4ed8;
                         font-weight:700;
                         font-size:13px;
                         margin-bottom:6px;
@@ -1161,7 +1120,7 @@ def create_html_email(result):
                     </div>
 
                     <div style="
-                        color:#334155;
+                        color:#1e293b;
                         font-size:15px;
                         line-height:1.65;
                     ">
@@ -1170,17 +1129,16 @@ def create_html_email(result):
 
                 </div>
 
-
                 <div style="
-                    background:#fffbeb;
-                    border-left:4px solid #f59e0b;
+                    background:#fff7ed;
+                    border-left:4px solid #f97316;
                     border-radius:8px;
                     padding:15px 17px;
                     margin-bottom:14px;
                 ">
 
                     <div style="
-                        color:#b45309;
+                        color:#c2410c;
                         font-weight:700;
                         font-size:13px;
                         margin-bottom:6px;
@@ -1189,7 +1147,7 @@ def create_html_email(result):
                     </div>
 
                     <div style="
-                        color:#334155;
+                        color:#1e293b;
                         font-size:15px;
                         line-height:1.65;
                     ">
@@ -1197,7 +1155,6 @@ def create_html_email(result):
                     </div>
 
                 </div>
-
 
                 <div style="
                     background:#f0fdf4;
@@ -1216,7 +1173,7 @@ def create_html_email(result):
                     </div>
 
                     <div style="
-                        color:#334155;
+                        color:#1e293b;
                         font-size:15px;
                         line-height:1.65;
                     ">
@@ -1224,7 +1181,6 @@ def create_html_email(result):
                     </div>
 
                 </div>
-
 
                 <table
                     width="100%"
@@ -1274,11 +1230,6 @@ def create_html_email(result):
 
         </div>
         """
-
-
-    # ========================================================
-    # MORE SIGNALS
-    # ========================================================
 
     signals_html = ""
 
@@ -1367,7 +1318,6 @@ def create_html_email(result):
 
                     </td>
 
-
                     <td valign="top">
 
                         <div style="
@@ -1434,11 +1384,6 @@ def create_html_email(result):
         </div>
         """
 
-
-    # ========================================================
-    # EXECUTIVE SUMMARY
-    # ========================================================
-
     overall_trend = safe_text(
         result.get(
             "overall_ai_trend",
@@ -1459,11 +1404,6 @@ def create_html_email(result):
             ""
         )
     )
-
-
-    # ========================================================
-    # FINAL EMAIL
-    # ========================================================
 
     return f"""
 <!DOCTYPE html>
@@ -1490,10 +1430,7 @@ Global AI Intelligence
     margin:0;
     padding:0;
     background:#eef2f7;
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 ">
 
 
@@ -1517,22 +1454,16 @@ Global AI Intelligence
     <!-- HEADER -->
 
     <div style="
-        background:
-            linear-gradient(
-                135deg,
-                #0f172a 0%,
-                #312e81 55%,
-                #2563eb 100%
-            );
+        background:#eef4ff;
+        border:1px solid #c7d7fe;
         border-radius:18px;
         padding:34px 30px;
         margin-bottom:22px;
-        box-shadow:
-            0 8px 25px rgba(15,23,42,0.18);
+        box-shadow:0 8px 22px rgba(15,23,42,0.08);
     ">
 
         <div style="
-            color:#bfdbfe;
+            color:#2563eb;
             font-size:12px;
             font-weight:700;
             letter-spacing:1.6px;
@@ -1540,20 +1471,17 @@ Global AI Intelligence
             🌍 GLOBAL AI INTELLIGENCE
         </div>
 
-
         <h1 style="
-            color:#ffffff;
-            margin:
-                10px 0 8px 0;
+            color:#0f172a;
+            margin:10px 0 8px 0;
             font-size:31px;
             line-height:1.2;
         ">
             Executive AI Brief
         </h1>
 
-
         <div style="
-            color:#dbeafe;
+            color:#334155;
             font-size:15px;
             line-height:1.6;
         ">
@@ -1565,19 +1493,18 @@ Global AI Intelligence
             {generated_time}
         </div>
 
-
         <div style="
             margin-top:20px;
         ">
 
             <span style="
                 display:inline-block;
-                background:
-                    rgba(255,255,255,0.13);
-                color:#ffffff;
+                background:#dbeafe;
+                color:#1d4ed8;
                 padding:7px 12px;
                 border-radius:20px;
                 font-size:12px;
+                font-weight:700;
                 margin-right:6px;
             ">
                 🔥 Top 5 Must-Know
@@ -1585,12 +1512,12 @@ Global AI Intelligence
 
             <span style="
                 display:inline-block;
-                background:
-                    rgba(255,255,255,0.13);
-                color:#ffffff;
+                background:#ede9fe;
+                color:#6d28d9;
                 padding:7px 12px;
                 border-radius:20px;
                 font-size:12px;
+                font-weight:700;
             ">
                 📡 Global AI Signals
             </span>
@@ -1627,52 +1554,38 @@ Global AI Intelligence
 
     <!-- TOP 5 TITLE -->
 
-    <table
-        width="100%"
-        cellspacing="0"
-        cellpadding="0"
-        style="
-            margin-bottom:14px;
-        "
-    >
+    <div style="
+        margin-bottom:14px;
+    ">
 
-        <tr>
+        <div style="
+            color:#7c3aed;
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:1.1px;
+        ">
+            PRIORITY INTELLIGENCE
+        </div>
 
-            <td>
+        <div style="
+            color:#0f172a;
+            font-size:24px;
+            font-weight:700;
+            margin-top:4px;
+        ">
+            🔥 Top 5 — Must Know
+        </div>
 
-                <div style="
-                    color:#7c3aed;
-                    font-size:12px;
-                    font-weight:700;
-                    letter-spacing:1.1px;
-                ">
-                    PRIORITY INTELLIGENCE
-                </div>
-
-                <div style="
-                    color:#0f172a;
-                    font-size:24px;
-                    font-weight:700;
-                    margin-top:4px;
-                ">
-                    🔥 Top 5 — Must Know
-                </div>
-
-            </td>
-
-        </tr>
-
-    </table>
+    </div>
 
 
     {top_story_html}
 
 
-    <!-- MORE SIGNALS TITLE -->
+    <!-- MORE SIGNALS -->
 
     <div style="
-        margin:
-            34px 0 16px 0;
+        margin:34px 0 16px 0;
         padding-top:6px;
     ">
 
@@ -1713,20 +1626,15 @@ Global AI Intelligence
 
     <div style="
         margin-top:35px;
-        background:
-            linear-gradient(
-                145deg,
-                #0f172a,
-                #1e293b
-            );
+        background:#ffffff;
+        border:1px solid #dbe3ef;
         border-radius:18px;
         padding:30px 26px;
-        box-shadow:
-            0 8px 24px rgba(15,23,42,0.16);
+        box-shadow:0 8px 24px rgba(15,23,42,0.08);
     ">
 
         <div style="
-            color:#93c5fd;
+            color:#2563eb;
             font-size:12px;
             font-weight:700;
             letter-spacing:1.2px;
@@ -1735,9 +1643,8 @@ Global AI Intelligence
         </div>
 
         <h2 style="
-            color:#ffffff;
-            margin:
-                7px 0 22px 0;
+            color:#0f172a;
+            margin:7px 0 22px 0;
             font-size:24px;
         ">
             🧭 What It All Means
@@ -1745,17 +1652,15 @@ Global AI Intelligence
 
 
         <div style="
-            background:
-                rgba(59,130,246,0.13);
-            border:
-                1px solid rgba(147,197,253,0.25);
+            background:#eff6ff;
+            border:1px solid #bfdbfe;
             border-radius:12px;
             padding:18px;
             margin-bottom:14px;
         ">
 
             <div style="
-                color:#93c5fd;
+                color:#1d4ed8;
                 font-size:13px;
                 font-weight:700;
                 margin-bottom:7px;
@@ -1764,7 +1669,7 @@ Global AI Intelligence
             </div>
 
             <div style="
-                color:#e2e8f0;
+                color:#1e293b;
                 font-size:15px;
                 line-height:1.65;
             ">
@@ -1775,17 +1680,15 @@ Global AI Intelligence
 
 
         <div style="
-            background:
-                rgba(249,115,22,0.12);
-            border:
-                1px solid rgba(251,146,60,0.25);
+            background:#fff7ed;
+            border:1px solid #fed7aa;
             border-radius:12px;
             padding:18px;
             margin-bottom:14px;
         ">
 
             <div style="
-                color:#fdba74;
+                color:#c2410c;
                 font-size:13px;
                 font-weight:700;
                 margin-bottom:7px;
@@ -1794,7 +1697,7 @@ Global AI Intelligence
             </div>
 
             <div style="
-                color:#e2e8f0;
+                color:#1e293b;
                 font-size:15px;
                 line-height:1.65;
             ">
@@ -1805,16 +1708,14 @@ Global AI Intelligence
 
 
         <div style="
-            background:
-                rgba(34,197,94,0.11);
-            border:
-                1px solid rgba(74,222,128,0.25);
+            background:#f0fdf4;
+            border:1px solid #bbf7d0;
             border-radius:12px;
             padding:18px;
         ">
 
             <div style="
-                color:#86efac;
+                color:#15803d;
                 font-size:13px;
                 font-weight:700;
                 margin-bottom:7px;
@@ -1823,7 +1724,7 @@ Global AI Intelligence
             </div>
 
             <div style="
-                color:#e2e8f0;
+                color:#1e293b;
                 font-size:15px;
                 line-height:1.65;
             ">
@@ -1839,15 +1740,16 @@ Global AI Intelligence
 
     <div style="
         text-align:center;
-        padding:
-            28px 15px 10px 15px;
-        color:#94a3b8;
+        padding:28px 15px 10px 15px;
+        color:#64748b;
         font-size:11px;
         line-height:1.7;
     ">
 
         🤖 Generated automatically by
-        <strong>
+        <strong style="
+            color:#334155;
+        ">
             Global AI Intelligence Engine
         </strong>
 
@@ -1973,10 +1875,7 @@ def send_gmail(
     )
 
     message["Subject"] = subject
-
-    message["From"] = (
-        gmail_username
-    )
+    message["From"] = gmail_username
 
     message["To"] = ", ".join(
         recipients
@@ -1990,14 +1889,13 @@ Your latest executive AI briefing is ready.
 This edition contains:
 
 - Top 5 must-know AI developments
+- What happened
 - Why they matter
 - Business impact
 - Additional AI signals
 - Global AI trend
 - India watch
 - Business takeaway
-
-Please view this email in an HTML-compatible email client.
 """
 
     message.attach(
