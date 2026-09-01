@@ -23,19 +23,14 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Generate AI Intelligence
+      - name: Generate and Send AI Intelligence
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          python news_engine.py
-
-      - name: Send Gmail
-        env:
           GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           GMAIL_TO: ${{ secrets.GMAIL_TO }}
         run: |
-          python send_email.py
+          python news_engine.py
 
       - name: Save HTML Email
         uses: actions/upload-artifact@v4
