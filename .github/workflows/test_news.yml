@@ -1,12 +1,14 @@
-name: Test AI News Collection
+name: Global AI Intelligence
 
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: "30 3 * * *"
+    - cron: "30 15 * * *"
+
 jobs:
-
-  test-news:
-
+  run-ai-intelligence:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,5 +37,5 @@ jobs:
       - name: Save HTML Email
         uses: actions/upload-artifact@v4
         with:
-          name: ai-news-email
+          name: ai-news-email-${{ github.run_number }}
           path: ai_news_email.html
