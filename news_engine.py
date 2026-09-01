@@ -20,7 +20,7 @@ from google import genai
 
 SOURCE_FILE = "sources.json"
 
-LOOKBACK_HOURS = 24
+LOOKBACK_HOURS = 12
 MAX_CANDIDATES = 30
 FINAL_STORIES = 15
 
