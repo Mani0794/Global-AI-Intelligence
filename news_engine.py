@@ -31,8 +31,6 @@ GEMINI_MODELS = [
     "gemini-3.5-flash",
     "gemini-3.5-flash-lite",
 ]
-
-
 # ============================================================
 # LOAD SOURCES
 # ============================================================
@@ -45,7 +43,73 @@ def load_sources():
         encoding="utf-8"
     ) as file:
 
-        return json.load(file)
+        data = json.load(file)
+
+    # -----------------------------------------
+    # FORMAT 1:
+    # [
+    #   {"name": "...", "url": "..."}
+    # ]
+    # -----------------------------------------
+
+    if isinstance(data, list):
+
+        return data
+
+    # -----------------------------------------
+    # FORMAT 2:
+    # {
+    #   "sources": [
+    #       {"name": "...", "url": "..."}
+    #   ]
+    # }
+    # -----------------------------------------
+
+    if isinstance(data, dict):
+
+        if (
+            "sources" in data
+            and isinstance(
+                data["sources"],
+                list
+            )
+        ):
+
+            return data["sources"]
+
+        # -------------------------------------
+        # FORMAT 3:
+        # {
+        #   "official": [...],
+        #   "research": [...],
+        #   "media": [...]
+        # }
+        # -------------------------------------
+
+        all_sources = []
+
+        for key, value in data.items():
+
+            if isinstance(value, list):
+
+                for source in value:
+
+                    if isinstance(
+                        source,
+                        dict
+                    ):
+
+                        all_sources.append(
+                            source
+                        )
+
+        if all_sources:
+
+            return all_sources
+
+    raise RuntimeError(
+        "Unable to understand sources.json structure."
+    )
 
 
 # ============================================================
