@@ -45,72 +45,35 @@ def load_sources():
 
         data = json.load(file)
 
-    # -----------------------------------------
-    # FORMAT 1:
-    # [
-    #   {"name": "...", "url": "..."}
-    # ]
-    # -----------------------------------------
+    all_sources = []
 
-    if isinstance(data, list):
+    for category, sources in data.items():
 
-        return data
+        if not isinstance(sources, dict):
+            continue
 
-    # -----------------------------------------
-    # FORMAT 2:
-    # {
-    #   "sources": [
-    #       {"name": "...", "url": "..."}
-    #   ]
-    # }
-    # -----------------------------------------
+        for source_name, source_url in sources.items():
 
-    if isinstance(data, dict):
-
-        if (
-            "sources" in data
-            and isinstance(
-                data["sources"],
-                list
+            all_sources.append(
+                {
+                    "name": source_name,
+                    "url": source_url,
+                    "priority": 1,
+                    "category": category,
+                }
             )
-        ):
 
-            return data["sources"]
+    if not all_sources:
 
-        # -------------------------------------
-        # FORMAT 3:
-        # {
-        #   "official": [...],
-        #   "research": [...],
-        #   "media": [...]
-        # }
-        # -------------------------------------
+        raise RuntimeError(
+            "No valid sources found in sources.json."
+        )
 
-        all_sources = []
-
-        for key, value in data.items():
-
-            if isinstance(value, list):
-
-                for source in value:
-
-                    if isinstance(
-                        source,
-                        dict
-                    ):
-
-                        all_sources.append(
-                            source
-                        )
-
-        if all_sources:
-
-            return all_sources
-
-    raise RuntimeError(
-        "Unable to understand sources.json structure."
+    print(
+        f"Loaded {len(all_sources)} sources."
     )
 
+    return all_sources
 
 # ============================================================
 # DATE HANDLING
