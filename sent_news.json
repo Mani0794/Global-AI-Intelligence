@@ -88,5 +88,83 @@
     "headline": "FedEHR-Agents Enables Federated Experience Sharing for Healthcare AI",
     "source": "arXiv AI",
     "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
+    "headline": "AIR Raises $50M to Secure Autonomous Enterprise AI Agents",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/tech/987423/google-pics-ai-image-editor-generator",
+    "headline": "Google Workspace Launches Gemini-Powered 'Google Pics' Creative Suite",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://venturebeat.com/orchestration/ai-is-redefining-the-workforce-and-most-planning-models-arent-ready",
+    "headline": "Enterprise Planning Models Fail to Keep Pace with AI Workforce Shifts",
+    "source": "VentureBeat",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/runways-solaris-is-an-ai-system-that-generates-software-interfaces-in-real-time/",
+    "headline": "Runway Unveils 'Solaris' Real-Time Dynamic Interface Model",
+    "source": "The Decoder",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/tokenomics-at-scale-how-jamf-built-real-time-spend-enforcement-for-amazon-bedrock/",
+    "headline": "Jamf Deploys Real-Time Token Spend Governance for Amazon Bedrock",
+    "source": "AWS AI",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/how-t54-built-a-trust-layer-with-amazon-bedrock-agentcore-payments/",
+    "headline": "t54 Implements Autonomous Payment Trust Layer for AI Agents",
+    "source": "AWS AI",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://developer.nvidia.com/blog/how-to-size-gpus-for-ai-inference-and-tco-without-overspending/",
+    "headline": "Nvidia Publishes Architectural Framework for Sizing GPU Inference",
+    "source": "NVIDIA Developer",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/securing-amazon-quick-from-poc-to-production-agents-flows-and-spaces/",
+    "headline": "AWS Outlines Enterprise Security Architecture for Production AI Agents",
+    "source": "AWS AI",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/how-boomi-scribe-streamlines-documentation-using-aws/",
+    "headline": "Boomi Uses AWS Agents to Automate Enterprise Workflow Documentation",
+    "source": "AWS AI",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/987486/john-deere-jd-ai-chatbot",
+    "headline": "John Deere Launches AI Assistant to Optimize Agricultural Field Data",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/how-zs-democratized-secure-ad-hoc-analytics-with-amazon-sagemaker/",
+    "headline": "ZS Scales Healthcare-Grade Analytics Platform across 200+ SageMaker Domains",
+    "source": "AWS AI",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/googles-election-ai-overviews-are-opaque-rely-on-few-sources-and-sometimes-take-sides/",
+    "headline": "Study Highlights Source Bias and Opacity in Google Election AI Overviews",
+    "source": "The Decoder",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/tech/986378/nvidia-dlss-5-launch-nba-2k27",
+    "headline": "Nvidia Launches DLSS 5 Real-Time Upscaling for High-End GPUs",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-01T16:14:50.363955+00:00"
   }
 ]
