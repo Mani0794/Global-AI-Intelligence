@@ -30,7 +30,7 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           GMAIL_TO: ${{ secrets.GMAIL_TO }}
         run: |
-          python news_engine.py
+          python -u news_engine.py
 
       - name: Save HTML Email
         uses: actions/upload-artifact@v4
