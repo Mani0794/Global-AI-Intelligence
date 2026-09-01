@@ -1875,7 +1875,7 @@ def send_gmail(
     )
 
     message["Subject"] = subject
-    message["From"] = gmail_username
+    message["From"] = f"Global AI Intelligence <{gmail_username}>"
 
     message["To"] = ", ".join(
         recipients
