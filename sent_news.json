@@ -1,0 +1,92 @@
+[
+  {
+    "key": "https://venturebeat.com/orchestration/your-files-stay-put-perplexitys-hybrid-ai-keeps-confidential-data-off-the-cloud",
+    "headline": "Perplexity Launches Hybrid AI Architecture to Keep Enterprise Data On-Device",
+    "source": "VentureBeat",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2603.19423",
+    "headline": "Defense Safety Training Degrades AI Agent Execution Competence",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2605.30434",
+    "headline": "Benchmark Reveals 47% Accuracy Drop in Long-Horizon Agent Data Analysis",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.27646",
+    "headline": "Out-of-Band Boundary Framework Prevents Enterprise Agent Data Leakage",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.27465",
+    "headline": "Emotional Prompt Context Increases Sycophancy Across Flagship Commercial LLMs",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.22538",
+    "headline": "STAGE Framework Integrates Deterministic Control to Boost Agent Policy Success",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.27796",
+    "headline": "ReToolSQL Achieves Top Text-to-SQL Performance via Agentic RL Training",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.18682",
+    "headline": "Reverse-Turn Policy Optimization Stabilizes Multi-Turn Agentic RL Training",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.28021",
+    "headline": "GenIaC-SecBench Shows AI Infrastructure Code Contains Up to 3.8x Human Vulnerability Density",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.28027",
+    "headline": "String Runtime Re-architects Agent Tool Context Using Markdown Interfaces",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.28062",
+    "headline": "WeAgent-MMSearch Integrates Native Visual Trajectory Tracking for Search Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.26747",
+    "headline": "AgentFold Automates Architectural Search for Scientific Protein Folding Models",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.27869",
+    "headline": "MAGE Framework Leverages Multimodal Agents to Discover Scientific Governing Equations",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.27790",
+    "headline": "Credo Introduces Declarative Primitives for Reusable Agent Harnesses",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.27856",
+    "headline": "FedEHR-Agents Enables Federated Experience Sharing for Healthcare AI",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-01T15:53:33.881666+00:00"
+  }
+]
