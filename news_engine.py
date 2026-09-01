@@ -19,13 +19,17 @@ from google import genai
 # ============================================================
 
 SOURCE_FILE = "sources.json"
+SENT_NEWS_FILE = "sent_news.json"
 
 LOOKBACK_HOURS = 12
+
 MAX_CANDIDATES = 30
 FINAL_STORIES = 15
 TOP_STORIES = 5
 
 SOURCE_TIMEOUT_SECONDS = 10
+
+SENT_HISTORY_DAYS = 7
 
 HTML_OUTPUT_FILE = "ai_news_email.html"
 
@@ -48,7 +52,6 @@ def load_sources():
         "r",
         encoding="utf-8"
     ) as file:
-
         data = json.load(file)
 
     all_sources = []
@@ -70,13 +73,13 @@ def load_sources():
             )
 
     if not all_sources:
-
         raise RuntimeError(
             "No valid sources found in sources.json."
         )
 
     print(
-        f"Loaded {len(all_sources)} sources."
+        f"Loaded {len(all_sources)} sources.",
+        flush=True
     )
 
     return all_sources
@@ -94,14 +97,12 @@ def parse_date(entry):
         hasattr(entry, "published_parsed")
         and entry.published_parsed
     ):
-
         date_struct = entry.published_parsed
 
     elif (
         hasattr(entry, "updated_parsed")
         and entry.updated_parsed
     ):
-
         date_struct = entry.updated_parsed
 
     if not date_struct:
@@ -140,7 +141,310 @@ def clean_text(text):
 
 
 # ============================================================
-# DOWNLOAD RSS WITH TIMEOUT
+# NORMALIZE STORY
+# ============================================================
+
+def normalize_story_key(story):
+
+    link = (
+        story.get("link")
+        or story.get("source_link")
+        or ""
+    ).strip().lower()
+
+    if link and link != "#":
+        return link
+
+    title = (
+        story.get("title")
+        or story.get("headline")
+        or ""
+    )
+
+    normalized_title = re.sub(
+        r"[^a-z0-9]",
+        "",
+        title.lower()
+    )
+
+    return normalized_title
+
+
+# ============================================================
+# SENT NEWS HISTORY
+# ============================================================
+
+def load_sent_news():
+
+    if not os.path.exists(
+        SENT_NEWS_FILE
+    ):
+
+        print(
+            "No sent_news.json found. "
+            "Starting fresh.",
+            flush=True
+        )
+
+        return []
+
+    try:
+
+        with open(
+            SENT_NEWS_FILE,
+            "r",
+            encoding="utf-8"
+        ) as file:
+
+            data = json.load(file)
+
+        if not isinstance(data, list):
+            return []
+
+        cutoff = (
+            datetime.now(timezone.utc)
+            - timedelta(
+                days=SENT_HISTORY_DAYS
+            )
+        )
+
+        valid_history = []
+
+        for item in data:
+
+            try:
+
+                sent_at = datetime.fromisoformat(
+                    item.get(
+                        "sent_at",
+                        ""
+                    )
+                )
+
+                if (
+                    sent_at.tzinfo
+                    is None
+                ):
+                    sent_at = sent_at.replace(
+                        tzinfo=timezone.utc
+                    )
+
+                if sent_at >= cutoff:
+                    valid_history.append(
+                        item
+                    )
+
+            except Exception:
+                continue
+
+        print(
+            f"Loaded {len(valid_history)} "
+            f"recent sent-story records.",
+            flush=True
+        )
+
+        return valid_history
+
+    except Exception as error:
+
+        print(
+            f"⚠️ Could not load sent history: "
+            f"{error}",
+            flush=True
+        )
+
+        return []
+
+
+# ============================================================
+# FILTER PREVIOUSLY SENT
+# ============================================================
+
+def filter_previously_sent(
+    stories,
+    sent_history
+):
+
+    sent_keys = {
+        item.get("key", "")
+        for item in sent_history
+        if item.get("key")
+    }
+
+    fresh_stories = []
+
+    removed = 0
+
+    for story in stories:
+
+        story_key = normalize_story_key(
+            story
+        )
+
+        if (
+            story_key
+            and story_key in sent_keys
+        ):
+
+            removed += 1
+            continue
+
+        fresh_stories.append(
+            story
+        )
+
+    print(
+        f"Previously sent stories removed: "
+        f"{removed}",
+        flush=True
+    )
+
+    print(
+        f"Fresh stories remaining: "
+        f"{len(fresh_stories)}",
+        flush=True
+    )
+
+    return fresh_stories
+
+
+# ============================================================
+# SAVE SENT HISTORY
+# ============================================================
+
+def save_sent_history(
+    result,
+    existing_history
+):
+
+    now = datetime.now(
+        timezone.utc
+    )
+
+    new_records = []
+
+    all_sent_stories = (
+        result.get(
+            "top_stories",
+            []
+        )
+        +
+        result.get(
+            "more_signals",
+            []
+        )
+    )
+
+    for story in all_sent_stories:
+
+        key = normalize_story_key(
+            story
+        )
+
+        if not key:
+            continue
+
+        new_records.append(
+            {
+                "key": key,
+                "headline": (
+                    story.get(
+                        "headline",
+                        ""
+                    )
+                ),
+                "source": (
+                    story.get(
+                        "source",
+                        ""
+                    )
+                ),
+                "sent_at": (
+                    now.isoformat()
+                ),
+            }
+        )
+
+    combined = (
+        existing_history
+        + new_records
+    )
+
+    cutoff = (
+        now
+        - timedelta(
+            days=SENT_HISTORY_DAYS
+        )
+    )
+
+    cleaned = []
+    seen = set()
+
+    for item in reversed(
+        combined
+    ):
+
+        try:
+
+            sent_at = datetime.fromisoformat(
+                item.get(
+                    "sent_at",
+                    ""
+                )
+            )
+
+            if sent_at.tzinfo is None:
+                sent_at = sent_at.replace(
+                    tzinfo=timezone.utc
+                )
+
+            if sent_at < cutoff:
+                continue
+
+            key = item.get(
+                "key",
+                ""
+            )
+
+            if not key:
+                continue
+
+            if key in seen:
+                continue
+
+            seen.add(key)
+
+            cleaned.append(
+                item
+            )
+
+        except Exception:
+            continue
+
+    cleaned.reverse()
+
+    with open(
+        SENT_NEWS_FILE,
+        "w",
+        encoding="utf-8"
+    ) as file:
+
+        json.dump(
+            cleaned,
+            file,
+            ensure_ascii=False,
+            indent=2
+        )
+
+    print(
+        f"✅ Sent history updated: "
+        f"{len(cleaned)} records",
+        flush=True
+    )
+
+
+# ============================================================
+# DOWNLOAD FEED
 # ============================================================
 
 def download_feed(
@@ -154,7 +458,9 @@ def download_feed(
             source_url,
             headers={
                 "User-Agent":
-                    "Mozilla/5.0 Global-AI-Intelligence/1.0",
+                    "Mozilla/5.0 "
+                    "Global-AI-Intelligence/1.0",
+
                 "Accept":
                     "application/rss+xml,"
                     "application/atom+xml,"
@@ -177,7 +483,8 @@ def download_feed(
     except Exception as error:
 
         print(
-            f"⚠️ Skipping {source_name}: {error}",
+            f"⚠️ Skipping {source_name}: "
+            f"{error}",
             flush=True
         )
 
@@ -196,12 +503,19 @@ def collect_news(sources):
         timezone.utc
     )
 
-    cutoff = now - timedelta(
-        hours=LOOKBACK_HOURS
+    cutoff = (
+        now
+        - timedelta(
+            hours=LOOKBACK_HOURS
+        )
     )
 
     print("\n" + "=" * 80)
-    print("COLLECTING GLOBAL AI NEWS")
+
+    print(
+        "COLLECTING GLOBAL AI NEWS"
+    )
+
     print("=" * 80)
 
     for source in sources:
@@ -300,7 +614,8 @@ def collect_news(sources):
                         "published":
                             published_date.isoformat(),
                         "priority": priority,
-                        "source_category": category,
+                        "source_category":
+                            category,
                     }
                 )
 
@@ -309,12 +624,14 @@ def collect_news(sources):
             except Exception as error:
 
                 print(
-                    f"  Entry skipped: {error}",
+                    f"  Entry skipped: "
+                    f"{error}",
                     flush=True
                 )
 
         print(
-            f"  Recent stories: {source_count}",
+            f"  Recent stories: "
+            f"{source_count}",
             flush=True
         )
 
@@ -337,32 +654,59 @@ def collect_news(sources):
 def remove_duplicates(stories):
 
     unique = []
+
     seen_titles = set()
+    seen_links = set()
 
     for story in stories:
 
-        normalized = re.sub(
+        normalized_title = re.sub(
             r"[^a-z0-9]",
             "",
             story["title"].lower()
         )
 
-        if not normalized:
+        link = (
+            story.get(
+                "link",
+                ""
+            )
+            .strip()
+            .lower()
+        )
+
+        if not normalized_title:
             continue
 
-        if normalized in seen_titles:
+        if (
+            normalized_title
+            in seen_titles
+        ):
+            continue
+
+        if (
+            link
+            and link in seen_links
+        ):
             continue
 
         seen_titles.add(
-            normalized
+            normalized_title
         )
+
+        if link:
+            seen_links.add(
+                link
+            )
 
         unique.append(
             story
         )
 
     print(
-        f"UNIQUE STORIES: {len(unique)}"
+        f"UNIQUE STORIES: "
+        f"{len(unique)}",
+        flush=True
     )
 
     return unique
@@ -449,7 +793,9 @@ def calculate_score(story):
         "release": 4,
     }
 
-    for keyword, points in keywords.items():
+    for keyword, points in (
+        keywords.items()
+    ):
 
         if keyword in text:
             score += points
@@ -480,7 +826,8 @@ def rank_news(stories):
         )
 
     ranked.sort(
-        key=lambda item: item["score"],
+        key=lambda item:
+            item["score"],
         reverse=True
     )
 
@@ -491,7 +838,8 @@ def rank_news(stories):
     print("\n" + "=" * 80)
 
     print(
-        f"TOP {len(candidates)} CANDIDATES"
+        f"TOP {len(candidates)} "
+        f"CANDIDATES"
     )
 
     print("=" * 80)
@@ -533,11 +881,11 @@ strategy teams, technology leaders and AI professionals.
 Analyze the AI news candidates below and select up to
 {FINAL_STORIES} of the most important stories.
 
-Rank the stories by real-world importance.
+Rank them by real-world importance.
 
-The FIRST {TOP_STORIES} stories are the MUST-KNOW executive stories.
+The FIRST {TOP_STORIES} stories are MUST-KNOW stories.
 
-For these TOP {TOP_STORIES}, provide:
+For TOP {TOP_STORIES}, provide:
 
 headline
 what_happened
@@ -547,17 +895,25 @@ category
 source
 source_link
 
-Writing rules for TOP {TOP_STORIES}:
+Rules:
 
-- headline should be short and compelling
-- what_happened should be maximum 2 short sentences
-- why_it_matters should be maximum 1 to 2 short sentences
-- business_impact should be maximum 1 to 2 short sentences
-- be factual
-- avoid hype
-- avoid marketing language
-- explain significance clearly
-- make it easy for an executive to scan
+headline:
+Short, clear and compelling.
+
+what_happened:
+Maximum 2 short sentences.
+
+why_it_matters:
+Maximum 1 to 2 short sentences.
+
+business_impact:
+Maximum 1 to 2 short sentences.
+
+Be factual.
+Be concise.
+Avoid hype.
+Avoid marketing language.
+Make it easy for executives to scan.
 
 For stories ranked 6 to {FINAL_STORIES},
 provide ONLY:
@@ -568,8 +924,7 @@ category
 source
 source_link
 
-key_insight must be ONE concise sentence explaining
-the most important thing the reader should know.
+key_insight must be ONE concise sentence.
 
 Prioritize:
 
@@ -580,13 +935,13 @@ Enterprise AI
 AI infrastructure
 GPUs
 AI chips
-NVIDIA
 OpenAI
 Anthropic
 Google
 Google DeepMind
 Microsoft
 Meta
+NVIDIA
 Apple
 Amazon
 Mistral
@@ -603,27 +958,30 @@ Business implications
 
 Avoid:
 
-Duplicate stories
+Duplicates
 Minor updates
 Promotional content
 Low-impact stories
 Repeated announcements
-Stories without meaningful implications
+Stories with little real-world significance
 
-Also provide three concise executive insights:
+Also provide:
 
 overall_ai_trend
 india_watch
 business_takeaway
 
-Each executive insight should ideally be
-1 to 3 concise sentences.
+Each should be maximum 1 to 3 concise sentences.
+
+IMPORTANT:
+
+Use the exact source and source_link from the candidate story.
+Do not invent URLs.
 
 Return ONLY valid JSON.
-
 Do not use markdown.
 
-Required JSON format:
+Required format:
 
 {{
   "top_stories": [
@@ -653,11 +1011,6 @@ Required JSON format:
   "business_takeaway": ""
 }}
 
-TOP_STORIES must contain a maximum of {TOP_STORIES} stories.
-
-more_signals can contain the remaining selected stories,
-up to a total of {FINAL_STORIES} stories.
-
 AI NEWS CANDIDATES:
 
 {json.dumps(candidates, ensure_ascii=False, indent=2)}
@@ -666,13 +1019,18 @@ AI NEWS CANDIDATES:
     last_error = None
 
     print("\n" + "=" * 80)
-    print("CONNECTING TO GEMINI")
+
+    print(
+        "CONNECTING TO GEMINI"
+    )
+
     print("=" * 80)
 
     for model in GEMINI_MODELS:
 
         print(
-            f"\nTrying Gemini model: {model}",
+            f"\nTrying Gemini model: "
+            f"{model}",
             flush=True
         )
 
@@ -684,7 +1042,8 @@ AI NEWS CANDIDATES:
             try:
 
                 print(
-                    f"Attempt {attempt}/3",
+                    f"Attempt "
+                    f"{attempt}/3",
                     flush=True
                 )
 
@@ -709,19 +1068,16 @@ AI NEWS CANDIDATES:
                 if text.startswith(
                     "```json"
                 ):
-
                     text = text[7:]
 
                 elif text.startswith(
                     "```"
                 ):
-
                     text = text[3:]
 
                 if text.endswith(
                     "```"
                 ):
-
                     text = text[:-3]
 
                 text = text.strip()
@@ -736,32 +1092,44 @@ AI NEWS CANDIDATES:
                 ):
 
                     raise RuntimeError(
-                        "Gemini response is not a JSON object."
+                        "Gemini response "
+                        "is not JSON."
                     )
 
-                if "top_stories" not in result:
+                if (
+                    "top_stories"
+                    not in result
+                ):
 
                     raise RuntimeError(
-                        "top_stories missing from Gemini result."
+                        "top_stories missing."
                     )
 
-                if "more_signals" not in result:
+                if (
+                    "more_signals"
+                    not in result
+                ):
 
-                    result["more_signals"] = []
+                    result[
+                        "more_signals"
+                    ] = []
 
                 print(
-                    f"✅ Gemini succeeded using {model}",
+                    f"✅ Gemini succeeded "
+                    f"using {model}",
                     flush=True
                 )
 
                 print(
                     f"🔥 Top stories: "
-                    f"{len(result.get('top_stories', []))}"
+                    f"{len(result.get('top_stories', []))}",
+                    flush=True
                 )
 
                 print(
                     f"📡 More signals: "
-                    f"{len(result.get('more_signals', []))}"
+                    f"{len(result.get('more_signals', []))}",
+                    flush=True
                 )
 
                 return result
@@ -771,7 +1139,8 @@ AI NEWS CANDIDATES:
                 last_error = error
 
                 print(
-                    f"⚠️ Gemini error: {error}",
+                    f"⚠️ Gemini error: "
+                    f"{error}",
                     flush=True
                 )
 
@@ -793,11 +1162,6 @@ AI NEWS CANDIDATES:
 
         print(
             f"❌ {model} failed.",
-            flush=True
-        )
-
-        print(
-            "Trying next model...",
             flush=True
         )
 
@@ -849,7 +1213,8 @@ def category_icon(category):
     if (
         "chip" in category
         or "gpu" in category
-        or "infrastructure" in category
+        or "infrastructure"
+        in category
     ):
         return "⚡"
 
@@ -900,14 +1265,18 @@ def category_icon(category):
 
 def create_html_email(result):
 
-    top_stories = result.get(
-        "top_stories",
-        []
-    )[:TOP_STORIES]
+    top_stories = (
+        result.get(
+            "top_stories",
+            []
+        )[:TOP_STORIES]
+    )
 
-    more_signals = result.get(
-        "more_signals",
-        []
+    more_signals = (
+        result.get(
+            "more_signals",
+            []
+        )
     )
 
     india_time = (
@@ -920,21 +1289,26 @@ def create_html_email(result):
         )
     )
 
-    hour = india_time.hour
+    if india_time.hour < 15:
 
-    if hour < 15:
+        edition = (
+            "Morning Edition"
+        )
 
-        edition = "Morning Edition"
         edition_icon = "☀️"
 
     else:
 
-        edition = "Evening Edition"
+        edition = (
+            "Evening Edition"
+        )
+
         edition_icon = "🌙"
 
     generated_time = (
         india_time.strftime(
-            "%d %b %Y • %I:%M %p IST"
+            "%d %b %Y • "
+            "%I:%M %p IST"
         )
     )
 
@@ -1017,63 +1391,87 @@ def create_html_email(result):
             )
         )
 
-        rank_icon = rank_icons[
-            index - 1
-        ]
+        rank_icon = (
+            rank_icons[
+                index - 1
+            ]
+        )
 
-        rank_label = rank_labels[
-            index - 1
-        ]
+        rank_label = (
+            rank_labels[
+                index - 1
+            ]
+        )
 
         top_story_html += f"""
-        <div style="
-            background:#ffffff;
-            border:1px solid #dce3ee;
-            border-radius:16px;
-            overflow:hidden;
-            margin-bottom:22px;
-            box-shadow:0 5px 18px rgba(15,23,42,0.07);
-        ">
+        <table
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            style="
+                background:#ffffff;
+                border:1px solid #dce3ee;
+                border-radius:16px;
+                margin-bottom:22px;
+                overflow:hidden;
+            "
+        >
+
+        <tr>
+
+        <td>
 
             <div style="
                 height:5px;
                 background:#6366f1;
+                font-size:1px;
+                line-height:1px;
             ">
+                &nbsp;
             </div>
 
-            <div style="
-                padding:25px;
-            ">
+            <div
+                class="card-padding"
+                style="
+                    padding:26px;
+                "
+            >
 
                 <table
                     width="100%"
-                    cellspacing="0"
                     cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
                 >
+
                     <tr>
 
-                        <td>
-
-                            <span style="
-                                font-size:22px;
-                            ">
+                        <td
+                            valign="middle"
+                            style="
+                                color:#6d28d9;
+                                font-size:12px;
+                                font-weight:bold;
+                            "
+                        >
+                            <span
+                                style="
+                                    font-size:21px;
+                                "
+                            >
                                 {rank_icon}
                             </span>
 
-                            <span style="
-                                font-size:12px;
-                                font-weight:700;
-                                color:#6d28d9;
-                                letter-spacing:0.8px;
-                                margin-left:5px;
-                            ">
-                                #{index} {rank_label}
-                            </span>
+                            &nbsp;
 
+                            #{index}
+                            {rank_label}
                         </td>
 
                         <td
                             align="right"
+                            valign="middle"
                         >
 
                             <span style="
@@ -1083,38 +1481,49 @@ def create_html_email(result):
                                 padding:6px 11px;
                                 border-radius:20px;
                                 font-size:11px;
-                                font-weight:700;
+                                font-weight:bold;
                             ">
-                                {cat_icon} {category}
+                                {cat_icon}
+                                {category}
                             </span>
 
                         </td>
 
                     </tr>
+
                 </table>
 
-                <h2 style="
-                    margin:17px 0 20px 0;
-                    color:#0f172a;
-                    font-size:22px;
-                    line-height:1.38;
-                ">
+
+                <div
+                    class="story-title"
+                    style="
+                        margin:
+                            18px 0
+                            20px 0;
+                        color:#0f172a;
+                        font-size:22px;
+                        font-weight:bold;
+                        line-height:1.4;
+                    "
+                >
                     {headline}
-                </h2>
+                </div>
+
 
                 <div style="
                     background:#eff6ff;
-                    border-left:4px solid #2563eb;
+                    border-left:
+                        4px solid #2563eb;
                     border-radius:8px;
-                    padding:15px 17px;
+                    padding:16px 18px;
                     margin-bottom:14px;
                 ">
 
                     <div style="
                         color:#1d4ed8;
-                        font-weight:700;
+                        font-weight:bold;
                         font-size:13px;
-                        margin-bottom:6px;
+                        margin-bottom:7px;
                     ">
                         📰 WHAT HAPPENED
                     </div>
@@ -1129,19 +1538,21 @@ def create_html_email(result):
 
                 </div>
 
+
                 <div style="
                     background:#fff7ed;
-                    border-left:4px solid #f97316;
+                    border-left:
+                        4px solid #f97316;
                     border-radius:8px;
-                    padding:15px 17px;
+                    padding:16px 18px;
                     margin-bottom:14px;
                 ">
 
                     <div style="
                         color:#c2410c;
-                        font-weight:700;
+                        font-weight:bold;
                         font-size:13px;
-                        margin-bottom:6px;
+                        margin-bottom:7px;
                     ">
                         🎯 WHY IT MATTERS
                     </div>
@@ -1156,18 +1567,20 @@ def create_html_email(result):
 
                 </div>
 
+
                 <div style="
                     background:#f0fdf4;
-                    border-left:4px solid #22c55e;
+                    border-left:
+                        4px solid #22c55e;
                     border-radius:8px;
-                    padding:15px 17px;
+                    padding:16px 18px;
                 ">
 
                     <div style="
                         color:#15803d;
-                        font-weight:700;
+                        font-weight:bold;
                         font-size:13px;
-                        margin-bottom:6px;
+                        margin-bottom:7px;
                     ">
                         💼 BUSINESS IMPACT
                     </div>
@@ -1182,10 +1595,12 @@ def create_html_email(result):
 
                 </div>
 
+
                 <table
                     width="100%"
-                    cellspacing="0"
                     cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
                     style="
                         margin-top:20px;
                     "
@@ -1193,14 +1608,18 @@ def create_html_email(result):
 
                     <tr>
 
-                        <td style="
-                            color:#64748b;
-                            font-size:12px;
-                        ">
+                        <td
+                            class="source-cell"
+                            style="
+                                color:#64748b;
+                                font-size:12px;
+                            "
+                        >
                             🗞️ {source}
                         </td>
 
                         <td
+                            class="button-cell"
                             align="right"
                         >
 
@@ -1212,8 +1631,9 @@ def create_html_email(result):
                                     color:#ffffff;
                                     text-decoration:none;
                                     font-size:13px;
-                                    font-weight:700;
-                                    padding:10px 16px;
+                                    font-weight:bold;
+                                    padding:
+                                        11px 17px;
                                     border-radius:8px;
                                 "
                             >
@@ -1228,7 +1648,11 @@ def create_html_email(result):
 
             </div>
 
-        </div>
+        </td>
+
+        </tr>
+
+        </table>
         """
 
     signals_html = ""
@@ -1281,18 +1705,33 @@ def create_html_email(result):
         )
 
         signals_html += f"""
-        <div style="
-            background:#ffffff;
-            border:1px solid #e2e8f0;
-            border-radius:12px;
-            padding:18px 20px;
-            margin-bottom:12px;
-        ">
+        <table
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            style="
+                background:#ffffff;
+                border:1px solid #e2e8f0;
+                border-radius:12px;
+                margin-bottom:12px;
+            "
+        >
+
+        <tr>
+
+        <td
+            class="signal-padding"
+            style="
+                padding:18px 20px;
+            "
+        >
 
             <table
                 width="100%"
-                cellspacing="0"
                 cellpadding="0"
+                cellspacing="0"
+                role="presentation"
             >
 
                 <tr>
@@ -1311,7 +1750,7 @@ def create_html_email(result):
                             background:#eef2ff;
                             color:#4338ca;
                             font-size:12px;
-                            font-weight:700;
+                            font-weight:bold;
                         ">
                             {index}
                         </div>
@@ -1321,23 +1760,19 @@ def create_html_email(result):
                     <td valign="top">
 
                         <div style="
+                            color:#7c3aed;
+                            font-size:11px;
+                            font-weight:bold;
                             margin-bottom:5px;
                         ">
-
-                            <span style="
-                                font-size:11px;
-                                font-weight:700;
-                                color:#7c3aed;
-                            ">
-                                {cat_icon} {category}
-                            </span>
-
+                            {cat_icon}
+                            {category}
                         </div>
 
                         <div style="
                             color:#0f172a;
                             font-size:16px;
-                            font-weight:700;
+                            font-weight:bold;
                             line-height:1.45;
                         ">
                             {headline}
@@ -1347,26 +1782,26 @@ def create_html_email(result):
                             color:#475569;
                             font-size:14px;
                             line-height:1.6;
-                            margin-top:6px;
+                            margin-top:7px;
                         ">
                             💡 {key_insight}
                         </div>
 
                         <div style="
-                            margin-top:10px;
+                            color:#64748b;
                             font-size:12px;
-                            color:#94a3b8;
+                            margin-top:11px;
                         ">
 
                             {source}
 
-                            &nbsp;•&nbsp;
+                            &nbsp; • &nbsp;
 
                             <a
                                 href="{source_link}"
                                 style="
                                     color:#2563eb;
-                                    font-weight:700;
+                                    font-weight:bold;
                                     text-decoration:none;
                                 "
                             >
@@ -1381,7 +1816,11 @@ def create_html_email(result):
 
             </table>
 
-        </div>
+        </td>
+
+        </tr>
+
+        </table>
         """
 
     overall_trend = safe_text(
@@ -1419,9 +1858,69 @@ def create_html_email(result):
     content="width=device-width, initial-scale=1.0"
 >
 
-<title>
-Global AI Intelligence
-</title>
+<style>
+
+body {{
+    margin:0 !important;
+    padding:0 !important;
+}}
+
+table {{
+    border-spacing:0;
+}}
+
+@media only screen and (max-width: 640px) {{
+
+    .email-container {{
+        width:100% !important;
+        max-width:100% !important;
+    }}
+
+    .outer-padding {{
+        padding:
+            10px !important;
+    }}
+
+    .header-padding {{
+        padding:
+            26px 20px !important;
+    }}
+
+    .header-title {{
+        font-size:
+            27px !important;
+    }}
+
+    .card-padding {{
+        padding:
+            19px !important;
+    }}
+
+    .story-title {{
+        font-size:
+            19px !important;
+    }}
+
+    .signal-padding {{
+        padding:
+            15px !important;
+    }}
+
+    .source-cell,
+    .button-cell {{
+        display:block !important;
+        width:100% !important;
+        text-align:left !important;
+    }}
+
+    .button-cell {{
+        padding-top:
+            14px !important;
+    }}
+
+}}
+
+</style>
 
 </head>
 
@@ -1430,7 +1929,10 @@ Global AI Intelligence
     margin:0;
     padding:0;
     background:#eef2f7;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 ">
 
 
@@ -1439,59 +1941,121 @@ Global AI Intelligence
     max-height:0;
     overflow:hidden;
 ">
-    Your executive AI intelligence briefing —
-    Top 5 must-know stories plus key signals.
+    Global AI Intelligence —
+    today's must-know AI developments.
 </div>
 
 
-<div style="
-    max-width:780px;
-    margin:auto;
-    padding:22px 12px 35px 12px;
-">
+<table
+    width="100%"
+    cellpadding="0"
+    cellspacing="0"
+    role="presentation"
+    style="
+        background:#eef2f7;
+    "
+>
+
+<tr>
+
+<td
+    align="center"
+    class="outer-padding"
+    style="
+        padding:
+            22px 12px
+            36px 12px;
+    "
+>
+
+
+<table
+    width="820"
+    cellpadding="0"
+    cellspacing="0"
+    role="presentation"
+    class="email-container"
+    style="
+        width:100%;
+        max-width:820px;
+    "
+>
+
+
+<tr>
+
+<td>
 
 
     <!-- HEADER -->
 
-    <div style="
-        background:#eef4ff;
-        border:1px solid #c7d7fe;
-        border-radius:18px;
-        padding:34px 30px;
-        margin-bottom:22px;
-        box-shadow:0 8px 22px rgba(15,23,42,0.08);
-    ">
+    <table
+        width="100%"
+        cellpadding="0"
+        cellspacing="0"
+        role="presentation"
+        style="
+            background:#eef4ff;
+            border:1px solid #c7d7fe;
+            border-radius:18px;
+            margin-bottom:22px;
+        "
+    >
+
+    <tr>
+
+    <td
+        class="header-padding"
+        style="
+            padding:
+                36px 32px;
+        "
+    >
 
         <div style="
             color:#2563eb;
             font-size:12px;
-            font-weight:700;
+            font-weight:bold;
             letter-spacing:1.6px;
         ">
             🌍 GLOBAL AI INTELLIGENCE
         </div>
 
-        <h1 style="
-            color:#0f172a;
-            margin:10px 0 8px 0;
-            font-size:31px;
-            line-height:1.2;
-        ">
+
+        <div
+            class="header-title"
+            style="
+                color:#0f172a;
+                font-size:32px;
+                font-weight:bold;
+                line-height:1.2;
+                margin:
+                    11px 0
+                    9px 0;
+            "
+        >
             Executive AI Brief
-        </h1>
+        </div>
+
 
         <div style="
             color:#334155;
             font-size:15px;
             line-height:1.6;
         ">
+
             {edition_icon}
+
             <strong>
                 {edition}
             </strong>
+
             &nbsp; • &nbsp;
+
             {generated_time}
+
         </div>
+
 
         <div style="
             margin-top:20px;
@@ -1504,8 +2068,9 @@ Global AI Intelligence
                 padding:7px 12px;
                 border-radius:20px;
                 font-size:12px;
-                font-weight:700;
-                margin-right:6px;
+                font-weight:bold;
+                margin:
+                    0 6px 6px 0;
             ">
                 🔥 Top 5 Must-Know
             </span>
@@ -1517,24 +2082,41 @@ Global AI Intelligence
                 padding:7px 12px;
                 border-radius:20px;
                 font-size:12px;
-                font-weight:700;
+                font-weight:bold;
+                margin-bottom:6px;
             ">
                 📡 Global AI Signals
             </span>
 
         </div>
 
-    </div>
+    </td>
+
+    </tr>
+
+    </table>
 
 
     <!-- INTRO -->
 
-    <div style="
-        background:#ffffff;
-        border-radius:12px;
-        padding:18px 22px;
-        margin-bottom:25px;
-        border:1px solid #e2e8f0;
+    <table
+        width="100%"
+        cellpadding="0"
+        cellspacing="0"
+        role="presentation"
+        style="
+            background:#ffffff;
+            border:1px solid #e2e8f0;
+            border-radius:12px;
+            margin-bottom:25px;
+        "
+    >
+
+    <tr>
+
+    <td style="
+        padding:
+            18px 22px;
         color:#475569;
         font-size:14px;
         line-height:1.65;
@@ -1547,75 +2129,71 @@ Global AI Intelligence
         </strong>
 
         The five AI developments that matter most,
-        followed by additional signals worth watching.
+        followed by additional global signals
+        worth watching.
 
-    </div>
+    </td>
+
+    </tr>
+
+    </table>
 
 
-    <!-- TOP 5 TITLE -->
+    <!-- TOP STORIES -->
 
     <div style="
-        margin-bottom:14px;
+        color:#7c3aed;
+        font-size:12px;
+        font-weight:bold;
+        letter-spacing:1.1px;
     ">
+        PRIORITY INTELLIGENCE
+    </div>
 
-        <div style="
-            color:#7c3aed;
-            font-size:12px;
-            font-weight:700;
-            letter-spacing:1.1px;
-        ">
-            PRIORITY INTELLIGENCE
-        </div>
-
-        <div style="
-            color:#0f172a;
-            font-size:24px;
-            font-weight:700;
-            margin-top:4px;
-        ">
-            🔥 Top 5 — Must Know
-        </div>
-
+    <div style="
+        color:#0f172a;
+        font-size:25px;
+        font-weight:bold;
+        margin:
+            5px 0 16px 0;
+    ">
+        🔥 Top 5 — Must Know
     </div>
 
 
     {top_story_html}
 
 
-    <!-- MORE SIGNALS -->
+    <!-- SIGNALS -->
 
     <div style="
-        margin:34px 0 16px 0;
-        padding-top:6px;
+        margin-top:35px;
+        color:#2563eb;
+        font-size:12px;
+        font-weight:bold;
+        letter-spacing:1.1px;
     ">
+        SIGNAL SCAN
+    </div>
 
-        <div style="
-            color:#2563eb;
-            font-size:12px;
-            font-weight:700;
-            letter-spacing:1.1px;
-        ">
-            SIGNAL SCAN
-        </div>
+    <div style="
+        color:#0f172a;
+        font-size:25px;
+        font-weight:bold;
+        margin-top:5px;
+    ">
+        📡 More Signals Worth Watching
+    </div>
 
-        <div style="
-            color:#0f172a;
-            font-size:24px;
-            font-weight:700;
-            margin-top:4px;
-        ">
-            📡 More Signals Worth Watching
-        </div>
-
-        <div style="
-            color:#64748b;
-            font-size:13px;
-            margin-top:6px;
-        ">
-            The rest of the developments —
-            condensed to the insight that matters.
-        </div>
-
+    <div style="
+        color:#64748b;
+        font-size:13px;
+        line-height:1.6;
+        margin:
+            7px 0 16px 0;
+    ">
+        Important developments condensed
+        to the one insight that matters.
     </div>
 
 
@@ -1624,31 +2202,46 @@ Global AI Intelligence
 
     <!-- EXECUTIVE RADAR -->
 
-    <div style="
-        margin-top:35px;
-        background:#ffffff;
-        border:1px solid #dbe3ef;
-        border-radius:18px;
-        padding:30px 26px;
-        box-shadow:0 8px 24px rgba(15,23,42,0.08);
-    ">
+    <table
+        width="100%"
+        cellpadding="0"
+        cellspacing="0"
+        role="presentation"
+        style="
+            background:#ffffff;
+            border:1px solid #dbe3ef;
+            border-radius:18px;
+            margin-top:36px;
+        "
+    >
+
+    <tr>
+
+    <td
+        class="card-padding"
+        style="
+            padding:30px 27px;
+        "
+    >
 
         <div style="
             color:#2563eb;
             font-size:12px;
-            font-weight:700;
+            font-weight:bold;
             letter-spacing:1.2px;
         ">
             EXECUTIVE RADAR
         </div>
 
-        <h2 style="
+        <div style="
             color:#0f172a;
-            margin:7px 0 22px 0;
-            font-size:24px;
+            font-size:25px;
+            font-weight:bold;
+            margin:
+                7px 0 22px 0;
         ">
             🧭 What It All Means
-        </h2>
+        </div>
 
 
         <div style="
@@ -1662,7 +2255,7 @@ Global AI Intelligence
             <div style="
                 color:#1d4ed8;
                 font-size:13px;
-                font-weight:700;
+                font-weight:bold;
                 margin-bottom:7px;
             ">
                 🌍 GLOBAL AI TREND
@@ -1690,7 +2283,7 @@ Global AI Intelligence
             <div style="
                 color:#c2410c;
                 font-size:13px;
-                font-weight:700;
+                font-weight:bold;
                 margin-bottom:7px;
             ">
                 🇮🇳 INDIA WATCH
@@ -1717,7 +2310,7 @@ Global AI Intelligence
             <div style="
                 color:#15803d;
                 font-size:13px;
-                font-weight:700;
+                font-weight:bold;
                 margin-bottom:7px;
             ">
                 💼 BUSINESS TAKEAWAY
@@ -1733,34 +2326,55 @@ Global AI Intelligence
 
         </div>
 
-    </div>
+    </td>
+
+    </tr>
+
+    </table>
 
 
     <!-- FOOTER -->
 
     <div style="
         text-align:center;
-        padding:28px 15px 10px 15px;
+        padding:
+            28px 15px
+            10px 15px;
         color:#64748b;
         font-size:11px;
         line-height:1.7;
     ">
 
         🤖 Generated automatically by
+
         <strong style="
             color:#334155;
         ">
-            Global AI Intelligence Engine
+            Global AI Intelligence
         </strong>
 
         <br>
 
-        AI signals • Executive relevance • Business impact
+        AI signals
+        • Executive relevance
+        • Business impact
 
     </div>
 
 
-</div>
+</td>
+
+</tr>
+
+</table>
+
+
+</td>
+
+</tr>
+
+</table>
+
 
 </body>
 
@@ -1787,60 +2401,63 @@ def save_html_email(
         )
 
     print(
-        f"\n✅ HTML email saved as: "
+        f"✅ HTML email saved: "
         f"{HTML_OUTPUT_FILE}",
         flush=True
     )
 
 
 # ============================================================
-# SEND GMAIL
+# SEND EMAIL
 # ============================================================
 
 def send_gmail(
     email_html
 ):
 
-    gmail_username = os.environ.get(
-        "GMAIL_USERNAME"
+    gmail_username = (
+        os.environ.get(
+            "GMAIL_USERNAME"
+        )
     )
 
-    gmail_app_password = os.environ.get(
-        "GMAIL_APP_PASSWORD"
+    gmail_app_password = (
+        os.environ.get(
+            "GMAIL_APP_PASSWORD"
+        )
     )
 
-    gmail_to = os.environ.get(
-        "GMAIL_TO"
+    gmail_to = (
+        os.environ.get(
+            "GMAIL_TO"
+        )
     )
 
     if not gmail_username:
-
         raise RuntimeError(
-            "GMAIL_USERNAME is missing."
+            "GMAIL_USERNAME missing."
         )
 
     if not gmail_app_password:
-
         raise RuntimeError(
-            "GMAIL_APP_PASSWORD is missing."
+            "GMAIL_APP_PASSWORD missing."
         )
 
     if not gmail_to:
-
         raise RuntimeError(
-            "GMAIL_TO is missing."
+            "GMAIL_TO missing."
         )
 
     recipients = [
         address.strip()
-        for address in gmail_to.split(",")
+        for address
+        in gmail_to.split(",")
         if address.strip()
     ]
 
     if not recipients:
-
         raise RuntimeError(
-            "No valid recipient found in GMAIL_TO."
+            "No valid recipients."
         )
 
     india_time = (
@@ -1855,11 +2472,15 @@ def send_gmail(
 
     if india_time.hour < 15:
 
-        edition = "☀️ Morning"
+        edition = (
+            "☀️ Morning"
+        )
 
     else:
 
-        edition = "🌙 Evening"
+        edition = (
+            "🌙 Evening"
+        )
 
     subject = (
         "⚡ AI Intelligence | "
@@ -1874,10 +2495,20 @@ def send_gmail(
         "alternative"
     )
 
-    message["Subject"] = subject
-    message["From"] = f"Global AI Intelligence <{gmail_username}>"
+    message[
+        "Subject"
+    ] = subject
 
-    message["To"] = ", ".join(
+    message[
+        "From"
+    ] = (
+        f"Global AI Intelligence "
+        f"<{gmail_username}>"
+    )
+
+    message[
+        "To"
+    ] = ", ".join(
         recipients
     )
 
@@ -1886,16 +2517,16 @@ GLOBAL AI INTELLIGENCE
 
 Your latest executive AI briefing is ready.
 
-This edition contains:
+This edition includes:
 
-- Top 5 must-know AI developments
-- What happened
-- Why they matter
-- Business impact
-- Additional AI signals
-- Global AI trend
-- India watch
-- Business takeaway
+Top 5 must-know AI developments
+What happened
+Why it matters
+Business impact
+Additional global AI signals
+Global AI trend
+India watch
+Business takeaway
 """
 
     message.attach(
@@ -1915,7 +2546,11 @@ This edition contains:
     )
 
     print("\n" + "=" * 80)
-    print("CONNECTING TO GMAIL")
+
+    print(
+        "CONNECTING TO GMAIL"
+    )
+
     print("=" * 80)
 
     try:
@@ -1937,7 +2572,9 @@ This edition contains:
             )
 
             print(
-                "Sending AI Intelligence email...",
+                f"Sending to "
+                f"{len(recipients)} "
+                f"recipient(s)...",
                 flush=True
             )
 
@@ -1948,14 +2585,16 @@ This edition contains:
             )
 
         print(
-            "✅ AI Intelligence email sent successfully.",
+            "✅ AI Intelligence "
+            "email sent successfully.",
             flush=True
         )
 
     except Exception as error:
 
         raise RuntimeError(
-            f"Gmail sending failed: {error}"
+            f"Gmail sending failed: "
+            f"{error}"
         )
 
 
@@ -1973,27 +2612,48 @@ def main():
 
     print("=" * 80)
 
-    gemini_api_key = os.environ.get(
-        "GEMINI_API_KEY"
+    gemini_api_key = (
+        os.environ.get(
+            "GEMINI_API_KEY"
+        )
     )
 
     if not gemini_api_key:
 
         raise RuntimeError(
-            "GEMINI_API_KEY is missing."
+            "GEMINI_API_KEY missing."
         )
 
-    sources = load_sources()
+    # Load previously sent news
 
-    stories = collect_news(
-        sources
+    sent_history = (
+        load_sent_news()
+    )
+
+    # Load sources
+
+    sources = (
+        load_sources()
+    )
+
+    # Collect recent news
+
+    stories = (
+        collect_news(
+            sources
+        )
     )
 
     if not stories:
 
-        raise RuntimeError(
-            "No recent AI stories found."
+        print(
+            "No recent AI stories found.",
+            flush=True
         )
+
+        return
+
+    # Remove duplicates in current feed
 
     unique_stories = (
         remove_duplicates(
@@ -2001,15 +2661,43 @@ def main():
         )
     )
 
-    candidates = rank_news(
-        unique_stories
+    # Remove previously emailed stories
+
+    fresh_stories = (
+        filter_previously_sent(
+            unique_stories,
+            sent_history
+        )
+    )
+
+    if not fresh_stories:
+
+        print(
+            "No new AI stories "
+            "after sent-news filtering.",
+            flush=True
+        )
+
+        return
+
+    # Rank
+
+    candidates = (
+        rank_news(
+            fresh_stories
+        )
     )
 
     if not candidates:
 
-        raise RuntimeError(
-            "No candidate stories found."
+        print(
+            "No candidate stories.",
+            flush=True
         )
+
+        return
+
+    # Gemini intelligence
 
     result = (
         analyze_with_gemini(
@@ -2017,6 +2705,8 @@ def main():
             gemini_api_key
         )
     )
+
+    # HTML
 
     email_html = (
         create_html_email(
@@ -2028,8 +2718,18 @@ def main():
         email_html
     )
 
+    # Send email FIRST
+
     send_gmail(
         email_html
+    )
+
+    # Only mark stories as sent
+    # after successful email delivery
+
+    save_sent_history(
+        result,
+        sent_history
     )
 
     print("\n" + "=" * 80)
