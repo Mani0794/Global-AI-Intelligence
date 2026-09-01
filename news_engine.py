@@ -4,9 +4,9 @@ import json
 import html
 import time
 import smtplib
-import feedparser
-import httpx
 import urllib.request
+
+import feedparser
 
 from datetime import datetime, timezone, timedelta
 from email.mime.text import MIMEText
@@ -24,6 +24,8 @@ LOOKBACK_HOURS = 24
 MAX_CANDIDATES = 30
 FINAL_STORIES = 15
 
+SOURCE_TIMEOUT_SECONDS = 10
+
 HTML_OUTPUT_FILE = "ai_news_email.html"
 
 GEMINI_MODELS = [
@@ -32,6 +34,8 @@ GEMINI_MODELS = [
     "gemini-3.5-flash",
     "gemini-3.5-flash-lite",
 ]
+
+
 # ============================================================
 # LOAD SOURCES
 # ============================================================
@@ -75,6 +79,7 @@ def load_sources():
     )
 
     return all_sources
+
 
 # ============================================================
 # DATE HANDLING
@@ -134,6 +139,50 @@ def clean_text(text):
 
 
 # ============================================================
+# DOWNLOAD RSS WITH TIMEOUT
+# ============================================================
+
+def download_feed(
+    source_name,
+    source_url
+):
+
+    try:
+
+        request = urllib.request.Request(
+            source_url,
+            headers={
+                "User-Agent":
+                    "Mozilla/5.0 Global-AI-Intelligence/1.0",
+                "Accept":
+                    "application/rss+xml,"
+                    "application/atom+xml,"
+                    "application/xml,"
+                    "text/xml,*/*",
+            }
+        )
+
+        with urllib.request.urlopen(
+            request,
+            timeout=SOURCE_TIMEOUT_SECONDS
+        ) as response:
+
+            feed_data = response.read()
+
+        return feedparser.parse(
+            feed_data
+        )
+
+    except Exception as error:
+
+        print(
+            f"  ⚠️ Skipping {source_name}: {error}"
+        )
+
+        return None
+
+
+# ============================================================
 # COLLECT NEWS
 # ============================================================
 
@@ -173,49 +222,32 @@ def collect_news(sources):
             continue
 
         print(
-            f"\nReading: {source_name}"
+            f"\nReading: {source_name}",
+            flush=True
         )
 
-        try:
+        feed = download_feed(
+            source_name,
+            source_url
+        )
+
+        if feed is None:
+            continue
+
+        if not feed.entries:
+
+            print(
+                "  No feed entries found.",
+                flush=True
+            )
+
+            continue
+
+        source_count = 0
+
+        for entry in feed.entries:
 
             try:
-    request = urllib.request.Request(
-        source_url,
-        headers={
-            "User-Agent": "Mozilla/5.0"
-        }
-    )
-
-    with urllib.request.urlopen(
-        request,
-        timeout=10
-    ) as response:
-
-        feed_data = response.read()
-
-    feed = feedparser.parse(
-        feed_data
-    )
-
-except Exception as error:
-
-    print(
-        f"  ⚠️ Skipping {source_name}: {error}"
-    )
-
-    continue
-
-            if not feed.entries:
-
-                print(
-                    "  No feed entries found."
-                )
-
-                continue
-
-            source_count = 0
-
-            for entry in feed.entries:
 
                 published_date = parse_date(
                     entry
@@ -258,22 +290,25 @@ except Exception as error:
                         "summary": summary,
                         "link": link,
                         "source": source_name,
-                        "published": published_date.isoformat(),
+                        "published":
+                            published_date.isoformat(),
                         "priority": priority,
                     }
                 )
 
                 source_count += 1
 
-            print(
-                f"  Recent stories: {source_count}"
-            )
+            except Exception as error:
 
-        except Exception as error:
+                print(
+                    f"  Entry skipped: {error}",
+                    flush=True
+                )
 
-            print(
-                f"  Feed error: {error}"
-            )
+        print(
+            f"  Recent stories: {source_count}",
+            flush=True
+        )
 
     print("\n" + "=" * 80)
 
@@ -294,7 +329,6 @@ except Exception as error:
 def remove_duplicates(stories):
 
     unique = []
-
     seen_titles = set()
 
     for story in stories:
@@ -491,39 +525,37 @@ Select the 10 to {FINAL_STORIES} MOST IMPORTANT stories.
 
 Prioritize:
 
-Major AI model releases
-AI agents
-Agentic AI
-Enterprise AI
-AI infrastructure
-GPUs and AI chips
-NVIDIA
-OpenAI
-Google
-Google DeepMind
-Microsoft
-Meta
-Anthropic
-Mistral
-Hugging Face
-Robotics
-AI safety
-AI security
-Government regulation
-Major AI investments
-Acquisitions
-Important AI research
-India AI developments
-Business implications
+- Major AI model releases
+- AI agents and agentic AI
+- Enterprise AI
+- AI infrastructure
+- GPUs and AI chips
+- NVIDIA
+- OpenAI
+- Google and Google DeepMind
+- Microsoft
+- Meta
+- Anthropic
+- Mistral
+- Hugging Face
+- Robotics
+- AI safety
+- AI security
+- Government regulation
+- Major AI investments
+- Acquisitions
+- Important AI research
+- India AI developments
+- Business implications
 
 Avoid:
 
-Duplicate stories
-Minor product updates
-Promotional content
-Low-impact stories
+- Duplicate stories
+- Minor product updates
+- Promotional content
+- Low-impact stories
 
-For every story provide:
+For every selected story provide:
 
 headline
 what_happened
@@ -540,6 +572,7 @@ india_watch
 business_takeaway
 
 Return ONLY valid JSON.
+Do not use markdown.
 
 Required format:
 
@@ -568,17 +601,14 @@ AI NEWS CANDIDATES:
     last_error = None
 
     print("\n" + "=" * 80)
-
-    print(
-        "CONNECTING TO GEMINI"
-    )
-
+    print("CONNECTING TO GEMINI")
     print("=" * 80)
 
     for model in GEMINI_MODELS:
 
         print(
-            f"\nTrying Gemini model: {model}"
+            f"\nTrying Gemini model: {model}",
+            flush=True
         )
 
         for attempt in range(
@@ -589,7 +619,8 @@ AI NEWS CANDIDATES:
             try:
 
                 print(
-                    f"Attempt {attempt}/3"
+                    f"Attempt {attempt}/3",
+                    flush=True
                 )
 
                 response = (
@@ -602,7 +633,7 @@ AI NEWS CANDIDATES:
                 if not response.text:
 
                     raise RuntimeError(
-                        "Empty Gemini response"
+                        "Empty Gemini response."
                     )
 
                 text = (
@@ -634,14 +665,24 @@ AI NEWS CANDIDATES:
                     text
                 )
 
+                if not isinstance(
+                    result,
+                    dict
+                ):
+
+                    raise RuntimeError(
+                        "Gemini response is not a JSON object."
+                    )
+
                 if "stories" not in result:
 
                     raise RuntimeError(
-                        "Stories missing from Gemini result"
+                        "Stories missing from Gemini result."
                     )
 
                 print(
-                    f"✅ Gemini succeeded using {model}"
+                    f"✅ Gemini succeeded using {model}",
+                    flush=True
                 )
 
                 return result
@@ -651,7 +692,8 @@ AI NEWS CANDIDATES:
                 last_error = error
 
                 print(
-                    f"⚠️ Gemini error: {error}"
+                    f"⚠️ Gemini error: {error}",
+                    flush=True
                 )
 
                 if attempt < 3:
@@ -662,7 +704,8 @@ AI NEWS CANDIDATES:
 
                     print(
                         f"Retrying in "
-                        f"{wait_seconds} seconds..."
+                        f"{wait_seconds} seconds...",
+                        flush=True
                     )
 
                     time.sleep(
@@ -670,11 +713,13 @@ AI NEWS CANDIDATES:
                     )
 
         print(
-            f"❌ {model} failed."
+            f"❌ {model} failed.",
+            flush=True
         )
 
         print(
-            "Trying next model..."
+            "Trying next model...",
+            flush=True
         )
 
     raise RuntimeError(
@@ -911,6 +956,21 @@ def create_html_email(result):
 
 <html>
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+Global AI Intelligence Brief
+</title>
+
+</head>
+
 <body style="
     margin:0;
     background:#f4f6f8;
@@ -1042,7 +1102,8 @@ def save_html_email(
 
     print(
         f"\n✅ HTML email saved as: "
-        f"{HTML_OUTPUT_FILE}"
+        f"{HTML_OUTPUT_FILE}",
+        flush=True
     )
 
 
@@ -1090,6 +1151,12 @@ def send_gmail(
         if address.strip()
     ]
 
+    if not recipients:
+
+        raise RuntimeError(
+            "No valid recipient found in GMAIL_TO."
+        )
+
     india_time = (
         datetime.now(
             timezone.utc
@@ -1112,13 +1179,25 @@ def send_gmail(
     )
 
     message["Subject"] = subject
-
-    message["From"] = (
-        gmail_username
-    )
+    message["From"] = gmail_username
 
     message["To"] = ", ".join(
         recipients
+    )
+
+    plain_text = """
+Global AI Intelligence Brief
+
+This email contains your latest Global AI Intelligence briefing.
+Please open this message in an HTML-compatible email client.
+"""
+
+    message.attach(
+        MIMEText(
+            plain_text,
+            "plain",
+            "utf-8"
+        )
     )
 
     message.attach(
@@ -1130,11 +1209,7 @@ def send_gmail(
     )
 
     print("\n" + "=" * 80)
-
-    print(
-        "CONNECTING TO GMAIL"
-    )
-
+    print("CONNECTING TO GMAIL")
     print("=" * 80)
 
     try:
@@ -1146,7 +1221,8 @@ def send_gmail(
         ) as server:
 
             print(
-                "Logging into Gmail..."
+                "Logging into Gmail...",
+                flush=True
             )
 
             server.login(
@@ -1155,7 +1231,8 @@ def send_gmail(
             )
 
             print(
-                "Sending AI Intelligence email..."
+                "Sending AI Intelligence email...",
+                flush=True
             )
 
             server.sendmail(
@@ -1165,7 +1242,8 @@ def send_gmail(
             )
 
         print(
-            "✅ AI Intelligence email sent successfully."
+            "✅ AI Intelligence email sent successfully.",
+            flush=True
         )
 
     except Exception as error:
@@ -1220,6 +1298,12 @@ def main():
     candidates = rank_news(
         unique_stories
     )
+
+    if not candidates:
+
+        raise RuntimeError(
+            "No candidate stories found."
+        )
 
     result = (
         analyze_with_gemini(
