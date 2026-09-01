@@ -6,6 +6,7 @@ import time
 import smtplib
 import feedparser
 import httpx
+import urllib.request
 
 from datetime import datetime, timezone, timedelta
 from email.mime.text import MIMEText
@@ -177,9 +178,32 @@ def collect_news(sources):
 
         try:
 
-            feed = feedparser.parse(
-                source_url
-            )
+            try:
+    request = urllib.request.Request(
+        source_url,
+        headers={
+            "User-Agent": "Mozilla/5.0"
+        }
+    )
+
+    with urllib.request.urlopen(
+        request,
+        timeout=10
+    ) as response:
+
+        feed_data = response.read()
+
+    feed = feedparser.parse(
+        feed_data
+    )
+
+except Exception as error:
+
+    print(
+        f"  ⚠️ Skipping {source_name}: {error}"
+    )
+
+    continue
 
             if not feed.entries:
 
