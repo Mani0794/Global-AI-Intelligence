@@ -166,5 +166,95 @@
     "headline": "Nvidia Launches DLSS 5 Real-Time Upscaling for High-End GPUs",
     "source": "The Verge AI",
     "sent_at": "2026-09-01T16:14:50.363955+00:00"
+  },
+  {
+    "key": "https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads",
+    "headline": "Anthropic Releases Claude Fable 5.1 and Cuts Cached Token Costs by 75%",
+    "source": "VentureBeat",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://venturebeat.com/orchestration/frontier-models-can-recover-up-to-65-of-facts-they-cant-directly-recall-just-by-thinking-longer",
+    "headline": "Google Study Finds Frontier Models Store 98% of Facts but Need Compute to Recall",
+    "source": "VentureBeat",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://venturebeat.com/security/azure-openai-agent-passed-every-evaluation-served-files-user-couldnt-open",
+    "headline": "Enterprise RAG Vulnerability Exposes Document Authorization Gaps",
+    "source": "VentureBeat",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://blogs.nvidia.com/blog/nvidia-crowdstrike-fal-con-2026/",
+    "headline": "NVIDIA and CrowdStrike Partner to Launch Agentic Cybersecurity System",
+    "source": "NVIDIA",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/987695/openai-astra-unreleased-model-cybersecurity-delay",
+    "headline": "OpenAI Delays Astra Suite to Reinforce Model Containment and Safety",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/",
+    "headline": "OpenAI Previews Security Protocols for Cyber-Critical Astra Model",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+    "headline": "ChatGPT Health Adds Read-Only Epic Integration for Clinicians",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/tech/987575/apple-openai-destroying-evidence-trade-secrets-lawsuit",
+    "headline": "Apple Alleges Evidence Spoliation in OpenAI Trade Secrets Dispute",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/01/afterquery-reportedly-becomes-y-combinators-fastest-ever-unicorn-now-valued-at-3-2b/",
+    "headline": "Model Training Startup AfterQuery Reaches $3.2B Valuation",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+    "headline": "Google DeepMind Unveils Agentic Video Understanding in Gemini",
+    "source": "Google DeepMind",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/anthropic-opens-claude-ai-text-detection-to-regulators-media-fact-checkers-and-others/",
+    "headline": "Anthropic Launches Watermark Detection API for Regulatory Compliance",
+    "source": "The Decoder",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/google-deepminds-new-chief-says-frontier-ai-leadership-is-the-only-thing-that-matters/",
+    "headline": "Google DeepMind Leadership Reaffirms Frontier Model Ambitions",
+    "source": "The Decoder",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
+    "headline": "Empirik Raises $21M to Build Predictive AI for IT Infrastructure Outages",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://openai.com/index/ai-native-company-workflows",
+    "headline": "OpenAI Highlights Shift from Point Tools to Agentic Operating Capabilities",
+    "source": "OpenAI",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/from-theory-to-delivery-how-atos-upskilled-400-engineers-in-agentic-ai/",
+    "headline": "Atos Upskills 400 Enterprise Engineers on AWS Agentic Stacks",
+    "source": "AWS AI",
+    "sent_at": "2026-09-02T03:40:05.502881+00:00"
   }
 ]
