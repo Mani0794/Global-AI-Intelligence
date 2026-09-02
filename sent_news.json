@@ -256,5 +256,95 @@
     "headline": "Atos Upskills 400 Enterprise Engineers on AWS Agentic Stacks",
     "source": "AWS AI",
     "sent_at": "2026-09-02T03:40:05.502881+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2604.16729",
+    "headline": "Agentic AI Solves Complex Multi-Step Neuro-Radiological Analysis Without Training",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.00791",
+    "headline": "Instella-MoE: Open 16B Mixture-of-Experts Model Trained Entirely on AMD GPUs",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.00015",
+    "headline": "OpenAgentFlow Establishes Action-Commit Governance for Enterprise Agent Fleets",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2607.21461",
+    "headline": "AREX Framework Advances Recursively Self-Improving Deep Research Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.00196",
+    "headline": "WHALE Protocol Optimizes Joint Model Weights and Execution Harnesses",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01245",
+    "headline": "CANOPY Protocol Proves Outcome-Only RL Suffices for Long-Horizon Interactive Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.00028",
+    "headline": "UI-Venus-2 Unifies Mobile, Web, and Desktop Task Automation",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2605.05726",
+    "headline": "SkillRet Benchmark Exposes Major Gaps in Enterprise Skill Retrieval",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.00206",
+    "headline": "Distributed Implicit Harm Uncovers Critical Blind Spots in Video Moderation",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01045",
+    "headline": "AgentFactory Automates Multi-Objective Design of Agentic Systems",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01272",
+    "headline": "Prospective Intention Store Enables Small Models to Execute Deferred Intentions",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2604.27977",
+    "headline": "D3-Gym Launches Verifiable Environments for Scientific Data Discovery",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.00474",
+    "headline": "LLAMIA Architecture Overcomes Verbalization Bottleneck in Non-Language Agent Collaboration",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01056",
+    "headline": "WorldBench Highlights Fragility of Multilingual Agents in Persona-Grounded Workflows",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2601.04243",
+    "headline": "Hybrid Insider Threat Framework Combines Multi-Agent Simulation and SIEM Correlation",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-02T15:56:14.694025+00:00"
   }
 ]
