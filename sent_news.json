@@ -436,5 +436,95 @@
     "headline": "RecEvolve Demonstrates Autonomous Model Optimization in Live Production Environments",
     "source": "arXiv AI",
     "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://venturebeat.com/infrastructure/microsoft-ais-mai-transcribe-2-undercuts-openai-google-and-elevenlabs-on-price-and-speed",
+    "headline": "Microsoft Launches MAI-Transcribe-2, Slashing Speech AI Costs by 72%",
+    "source": "VentureBeat",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/meta-closes-in-on-the-top-with-muse-spark-1-3-and-undercuts-rivals-on-price/",
+    "headline": "Meta Releases Muse Spark 1.3 with Aggressive Task Pricing",
+    "source": "The Decoder",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/",
+    "headline": "Google DeepMind Advances Atmospheric AI with WeatherNext 3",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01736",
+    "headline": "HEART Framework Beats Commercial Frontier Models in AI Tool Use",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.21377",
+    "headline": "Study Reveals Agentic Workflows Systematically Amplify Model Sycophancy",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.02253",
+    "headline": "APEx Framework Boosts Deep Research Agent Performance via Experience Distillation",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.02106",
+    "headline": "Git4Data Introduces Database-Native Version Control for AI Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2607.04562",
+    "headline": "HCRC Execution Control Eliminates Epistemic Errors in Production AI Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.02149",
+    "headline": "OmegaUse-SOP Enables GUI Agents to Execute Complex Enterprise Workflows",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01617",
+    "headline": "DocuSearch Deploys Multi-Agent Hybrid RAG in Production Telecom Networks",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.02217",
+    "headline": "SkillGLoW Consolidation Boosts Self-Improving Agent Performance on Long Horizons",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01818",
+    "headline": "Zeta-Lite Brings Concurrent SQL Branching to In-Browser Agentic Memory",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2607.24814",
+    "headline": "Aletheia Delivers Offline AI Clinical Decision Support for Rural Healthcare",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01608",
+    "headline": "WMLLM Leverages World Modeling for Sample-Efficient Black-Box Optimization",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.02459",
+    "headline": "CivBench Uncovers State-Monitoring and Execution Failures in Long-Horizon Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T15:43:09.873250+00:00"
   }
 ]
