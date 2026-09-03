@@ -346,5 +346,95 @@
     "headline": "Hybrid Insider Threat Framework Combines Multi-Agent Simulation and SIEM Correlation",
     "source": "arXiv AI",
     "sent_at": "2026-09-02T15:56:14.694025+00:00"
+  },
+  {
+    "key": "https://venturebeat.com/data/enterprises-put-non-nvidia-chips-14-points-ahead-of-nvidias-next-gen-gpus-on-their-evaluation-lists",
+    "headline": "Enterprises Prioritize Non-Nvidia Accelerators Over Blackwell in Evaluation Pipelines",
+    "source": "VentureBeat",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://venturebeat.com/security/googles-gemini-3-8-flash-is-built-for-agents-while-its-cyber-twin-hunts-vulnerabilities",
+    "headline": "Google Debuts Gemini 3.8 Flash and Specialized Cyber Defense Variant",
+    "source": "VentureBeat",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://venturebeat.com/technology/meta-prices-muse-voice-transcribe-at-0-18-an-hour-with-real-time-diarization-for-20-speakers-a-steal-for-enterprises",
+    "headline": "Meta Launches Real-Time Voice Model with 20+ Speaker Diarization at $0.18/Hour",
+    "source": "VentureBeat",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://venturebeat.com/security/stolen-claude-session-cookies-can-reach-corporate-gmail-through-grants-no-it-admin-can-revoke",
+    "headline": "Infostealer Attacks Expose Enterprise Data via Personal AI Session Tokens",
+    "source": "VentureBeat",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01660",
+    "headline": "Empirical Study Reveals Compounding Reliability Collapse in Multi-Step AI Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.02095",
+    "headline": "READY Framework Introduces Statistical Qualification for Enterprise Agent Oversight",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.02786",
+    "headline": "SafeEvolve Introduces Harness-Policy Co-Evolution for Autonomous Agent Safety",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2604.11557",
+    "headline": "UniToolCall Standardizes Function-Calling Datasets and Evaluation Protocols",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.02074",
+    "headline": "CHIME Framework Resolves Credit Assignment Failures in Agentic Memory",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01852",
+    "headline": "Research Identifies 'Memory Trust Gap' Where Capable Models Over-Rely on Stale Data",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01861",
+    "headline": "Belief-Calibrated Optimization Creates Explicit World Models for Coding Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2607.12406",
+    "headline": "Survey Establishes Isolation Architecture as Essential for Agent System Security",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01657",
+    "headline": "NeoMME Delivers Single-Tower Multilingual Multimodal Embeddings with 255x Compression",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.29460",
+    "headline": "Escalation Channels Reduce Autonomous Agent Reward Hacking to Near Zero",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.01622",
+    "headline": "RecEvolve Demonstrates Autonomous Model Optimization in Live Production Environments",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-03T05:31:11.654087+00:00"
   }
 ]
