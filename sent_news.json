@@ -526,5 +526,95 @@
     "headline": "CivBench Uncovers State-Monitoring and Execution Failures in Long-Horizon Agents",
     "source": "arXiv AI",
     "sent_at": "2026-09-03T15:43:09.873250+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/gpt-6-astra-is-the-first-model-making-openai-willing-to-declare-the-agi-era/",
+    "headline": "OpenAI Launches GPT-6 Astra, Declaring the Start of the AGI Era",
+    "source": "The Decoder",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/",
+    "headline": "Crusoe Raises $3B at $30B Valuation to Expand AI Infrastructure",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
+    "headline": "Meta Offers 95% Model Discount in Exchange for User Data Telemetry",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
+    "headline": "NVIDIA and Partners Accelerate Local Multi-Agent Workloads at Edge",
+    "source": "NVIDIA",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/migrate-agentic-workloads-to-amazon-bedrock-agentcore/",
+    "headline": "AWS Introduces Frameworks to Standardize Enterprise Agent Workloads",
+    "source": "AWS AI",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/03/accel-reportedly-in-talks-to-lead-1b-round-for-thinking-machines-at-40b-valuation/",
+    "headline": "Thinking Machines Pursues $1B Round at $40B Valuation",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://arstechnica.com/ai/2026/09/four-major-ai-models-suffer-rare-overlapping-downtime/",
+    "headline": "Simultaneous Downtime Hits ChatGPT, Claude, Grok, and Gemini",
+    "source": "Ars Technica",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini",
+    "headline": "Google Expands Real-Time Voice Assistant Capabilities Across Workspace",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
+    "headline": "Abliteration.ai Commercializes Guardrail Removal for Security Research",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/best-practices-for-building-agentic-automations-with-amazon-quick-automate/",
+    "headline": "AWS Details Design Patterns for Agentic Business Automations",
+    "source": "AWS AI",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/set-up-openai-chatgpt-codex-with-litellm-on-amazon-ecs-and-amazon-bedrock/",
+    "headline": "Enterprise Governance Blueprint Released for ChatGPT Codex on AWS",
+    "source": "AWS AI",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/",
+    "headline": "Meta Open-Sources ZGateway Infrastructure Proxy for Key-Value Stores",
+    "source": "Meta Engineering",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/03/ollie-is-betting-privacy-can-win-the-ai-assistant-race/",
+    "headline": "Ollie Launches Privacy-Centric Personal Assistant Strategy",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://research.google/blog/transfer-learning-for-genomic-prediction-in-underrepresented-populations/",
+    "headline": "Google Research Advances Transfer Learning in Genomic Predictions",
+    "source": "Google Research",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/",
+    "headline": "Connectomics Breakthrough Maps Complete Fruit Fly Brain",
+    "source": "Google Research",
+    "sent_at": "2026-09-04T03:42:23.818560+00:00"
   }
 ]
