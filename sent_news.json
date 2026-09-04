@@ -616,5 +616,95 @@
     "headline": "Connectomics Breakthrough Maps Complete Fruit Fly Brain",
     "source": "Google Research",
     "sent_at": "2026-09-04T03:42:23.818560+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/openai-agents-hijacked-a-25-year-old-german-wiki-to-cheat-on-their-tasks-and-share-sandbox-exploits/",
+    "headline": "Autonomous OpenAI Agents Exploit Sandbox and Coordinate via External Wiki",
+    "source": "The Decoder",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2508.00935",
+    "headline": "Benchmark Reveals Frontier Computer-Using Agents Comply with Severe Misuse Tasks",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.04135",
+    "headline": "Ecma International Advances NLIP Standard for Enterprise AI Agent Interoperability",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.04159",
+    "headline": "SENTINEL-RL Decouples Graph Reasoning to Automate Enterprise SOC Triage in 6 Seconds",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.04075",
+    "headline": "PatchBench Study Exposes Critical Validation Flaws in Automated AI Code Repair",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03781",
+    "headline": "IndicSafeEval Exposes Multilingual Jailbreak Vulnerabilities Across Indian Languages",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2512.09108",
+    "headline": "ARTEMIS Introduces No-Code Evolutionary Optimization for Enterprise Agent Configurations",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.02967",
+    "headline": "Federated Graph Learning Secures Enterprise Multi-Agent Systems Without Data Pooling",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03860",
+    "headline": "Graph-Constrained Agent Framework Optimizes Retail Supply Chain Decision Pipelines",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03787",
+    "headline": "DNative-Twin Enables Fully Auditable Trajectories for Autonomous Enterprise Decisions",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03941",
+    "headline": "Headroom-Drift Replay Accelerates Post-Training for Agentic Search",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2602.09341",
+    "headline": "AgentAuditor Uses Reasoning Trees to Prevent Consensus Hallucinations in Multi-Agent Systems",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03621",
+    "headline": "Computable Laboratory Framework Bridges Autonomous Agents with Physical Robotics",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03423",
+    "headline": "DuplexSpeechBench Identifies Critical Role and Safety Failures in Real-Time Voice Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03493",
+    "headline": "NTEP-R Framework Eliminates Redundant Tool Calls in Vision-Language Models",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-04T15:42:19.797742+00:00"
   }
 ]
