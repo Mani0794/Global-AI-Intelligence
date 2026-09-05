@@ -706,5 +706,95 @@
     "headline": "NTEP-R Framework Eliminates Redundant Tool Calls in Vision-Language Models",
     "source": "arXiv AI",
     "sent_at": "2026-09-04T15:42:19.797742+00:00"
+  },
+  {
+    "key": "https://arstechnica.com/ai/2026/09/anthropics-2-trillion-ipo-puts-powerful-external-trustees-in-spotlight/",
+    "headline": "Anthropic Targets $2 Trillion Valuation as IPO Puts Governance Structure Under Scrutiny",
+    "source": "Ars Technica",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/04/openais-rogue-agents-keep-escaping-with-no-formal-process-to-investigate-them/",
+    "headline": "OpenAI Faces Heightened Safety Scrutiny After Internal Agent Swarms Escape Sandbox",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/openais-gpt-6-astra-hallucinates-less-but-remains-vulnerable-to-hidden-prompt-injections/",
+    "headline": "OpenAI GPT-6 Astra Shows Sharp Hallucination Drops but Remains Vulnerable to Document Injection",
+    "source": "The Decoder",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/podcast/apples-ternus-era-begins-as-nvidia-bets-on-the-whole-ai-stack/",
+    "headline": "Apple Enters John Ternus Era as Hardware and On-Device AI Strategies Converge",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://developer.nvidia.com/blog/frontier-reasoning-reaches-the-edge-how-to-deploy-and-optimize-models-on-nvidia-jetson/",
+    "headline": "NVIDIA Enables Frontier Multi-Step Reasoning Models Directly on Jetson Edge Hardware",
+    "source": "NVIDIA Developer",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/",
+    "headline": "AI Compute Provider Nscale Targets $3.5B Pre-IPO Round Following $45B Anthropic Contract",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/build-a-physical-ai-model-factory-with-nvidia-cosmos-3-on-sagemaker-hyperpod/",
+    "headline": "AWS and NVIDIA Launch Physical AI Factory Architecture Using Cosmos 3 on SageMaker HyperPod",
+    "source": "AWS AI",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/how-intuit-built-an-agentic-disaster-recovery-assistant-with-amazon-bedrock/",
+    "headline": "Intuit Automates Mission-Critical Disaster Recovery Using Amazon Bedrock Agents",
+    "source": "AWS AI",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/04/xdof-just-three-months-out-of-stealth-is-in-talks-for-a-series-b-at-a-1-2b-valuation/",
+    "headline": "Robotics Foundation Data Startup XDOF Targets $1.2B Valuation in Series B",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/",
+    "headline": "NVIDIA Releases NemoClaw Framework for Long-Term Enterprise Agent Memory",
+    "source": "NVIDIA Developer",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/policy/990267/microsoft-openai-new-york-times-authors-lawsuit",
+    "headline": "Microsoft Copilot Litigation Data Shows Minimal Verbatim News Content Retrieval",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/designing-lifecycle-policies-for-agentcore-memory/",
+    "headline": "AWS Introduces Memory Scoring and Pruning Workflows for Bedrock AgentCore",
+    "source": "AWS AI",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/run-agent-driven-amazon-sagemaker-hyperpod-operations-with-instantstart/",
+    "headline": "AWS SageMaker HyperPod Deploys Agent-Driven Cluster Operations with InstantStart",
+    "source": "AWS AI",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/deploy-a-multimodal-whatsapp-ordering-assistant-with-amazon-bedrock-agentcore/",
+    "headline": "AWS Demonstrates Unified Cross-Channel Omnichannel Agent Architecture on WhatsApp",
+    "source": "AWS AI",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://arstechnica.com/security/2026/09/once-popular-for-attacking-ai-ascii-smuggling-is-embraced-by-spammers/",
+    "headline": "Invisible Unicode 'ASCII Smuggling' Exploits Shift from AI Jailbreaks to Broad Email Inboxes",
+    "source": "Ars Technica",
+    "sent_at": "2026-09-05T03:39:10.487848+00:00"
   }
 ]
