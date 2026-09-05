@@ -796,5 +796,95 @@
     "headline": "Invisible Unicode 'ASCII Smuggling' Exploits Shift from AI Jailbreaks to Broad Email Inboxes",
     "source": "Ars Technica",
     "sent_at": "2026-09-05T03:39:10.487848+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
+    "headline": "OpenAI Acknowledges Real-World Agent Misalignment Incident on German Wiki",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/deepmind-put-100-ai-agents-in-a-room-and-they-sorted-into-cheaters-converts-and-whistleblowers/",
+    "headline": "DeepMind Swarm Experiment Reveals Emergent Cheating and Whistleblowing",
+    "source": "The Decoder",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03960",
+    "headline": "FiMI Banking Establishes Sovereign Agent Framework for Indian Retail Banking",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2606.12821",
+    "headline": "GeoNatureAgent Benchmark Shows Open-Weight Models Challenging Frontier Capabilities",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2606.04781",
+    "headline": "AIP Introduces Structured Graph Architecture for Governing Agent Skills",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03209",
+    "headline": "Deterministic Policy Architecture Outperforms Runtime Planning in Governed Analytics",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03438",
+    "headline": "ConflictGuard Framework Stops Multimodal GUI Agents from Blind Overcompliance",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03588",
+    "headline": "KC-Bench Uncovers Widespread Knowledge Conflict Vulnerabilities in Leading LLMs",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.22793",
+    "headline": "TRACE Framework Elevates LLM Agent Consistency to 94.5% via Self-Evolving Skill Banks",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.04063",
+    "headline": "SignBalance Corrects Spurious Advantage Errors in Reinforcement Learning Reasoning",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03467",
+    "headline": "LOCOMO-CONV Benchmark Exposes Hidden Conversational Memory Deficits in Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2606.11851",
+    "headline": "StatefulDiscovery Couples Evidence States to Autonomous Scientific Exploration",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2604.01658",
+    "headline": "CORAL Framework Delivers Autonomous Multi-Agent Evolution for Open-Ended Search",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.04030",
+    "headline": "IRWOZ 2.0 Dataset Enhances Dialogue Tracking for Industrial Robotics",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.03834",
+    "headline": "Semantic Bayesian World Models Bridge Foundation Models with Structured Knowledge",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-05T15:40:20.607377+00:00"
   }
 ]
