@@ -910,5 +910,41 @@
     "headline": "Search and Rescue Incident Underscores High-Stakes AI Hallucination Risks",
     "source": "TechCrunch AI",
     "sent_at": "2026-09-06T03:39:49.529268+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/metas-new-real-time-audio-model-is-the-foundation-for-ai-assistants-that-never-stop-listening/",
+    "headline": "Meta Launches Real-Time Audio Transcription Engine for Ambient AI",
+    "source": "The Decoder",
+    "sent_at": "2026-09-06T15:40:50.846520+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/openai-developer-claims-astra-boosted-productivity-so-much-it-pulled-some-plans-forward-by-six-months/",
+    "headline": "Internal AI Agent Astra Pulls OpenAI Roadmap Ahead by Six Months",
+    "source": "The Decoder",
+    "sent_at": "2026-09-06T15:40:50.846520+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/googles-weathernext-3-ditches-physics-simulations-and-learns-weather-directly-from-live-satellite-data/",
+    "headline": "Google DeepMind Launches Data-Driven Weather Forecasting Model WeatherNext 3",
+    "source": "The Decoder",
+    "sent_at": "2026-09-06T15:40:50.846520+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service/",
+    "headline": "Commercial Services Emerge to Strip Guardrails from Open-Weight AI Models",
+    "source": "The Decoder",
+    "sent_at": "2026-09-06T15:40:50.846520+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/google-brings-ai-music-generation-directly-into-the-gemini-app-with-its-new-lyria-3-5-model/",
+    "headline": "Google Releases Commercially Licensed Lyria 3.5 Music Model Across Gemini Suite",
+    "source": "The Decoder",
+    "sent_at": "2026-09-06T15:40:50.846520+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/chatbots-built-an-echo-chamber-of-one-and-now-psychiatry-has-to-decide-if-ai-psychosis-exists/",
+    "headline": "Psychiatry Researchers Investigate Clinical Risks of AI Chatbot Echo Chambers",
+    "source": "The Decoder",
+    "sent_at": "2026-09-06T15:40:50.846520+00:00"
   }
 ]
