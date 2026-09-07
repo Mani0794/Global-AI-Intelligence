@@ -946,5 +946,23 @@
     "headline": "Psychiatry Researchers Investigate Clinical Risks of AI Chatbot Echo Chambers",
     "source": "The Decoder",
     "sent_at": "2026-09-06T15:40:50.846520+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft",
+    "headline": "Seattle Times and Newsday Sue OpenAI and Microsoft Over Training Data",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-07T03:42:01.397314+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+    "headline": "Authors and Publishers Clash Over Anthropic AI Copyright Settlement Funds",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-07T03:42:01.397314+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/",
+    "headline": "Uber Co-Founder Travis Kalanick Targets Robotaxi Market with Atoms",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-07T03:42:01.397314+00:00"
   }
 ]
