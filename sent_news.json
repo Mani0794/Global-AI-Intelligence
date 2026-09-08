@@ -1054,5 +1054,35 @@
     "headline": "Execution-Grounded Data Synthesis Helps 9B Parameter Model Match Larger LLMs on Public APIs",
     "source": "arXiv AI",
     "sent_at": "2026-09-07T15:44:07.052537+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk/",
+    "headline": "Anthropic Secures $517 Billion in Compute Deals to Match Frontier Rivals",
+    "source": "The Decoder",
+    "sent_at": "2026-09-08T03:42:04.065067+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/chatgpt-claws-back-web-traffic-share-to-55-5-percent-as-geminis-brief-comeback-fades/",
+    "headline": "ChatGPT Web Traffic Rebounds to 55.5% Market Share as Competition Persists",
+    "source": "The Decoder",
+    "sent_at": "2026-09-08T03:42:04.065067+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/gpt-6-astra-beat-portal-start-to-finish-without-human-help-in-under-24-hours/",
+    "headline": "GPT-6 Astra Autonomously Solves Complex Video Game in Under 24 Hours",
+    "source": "The Decoder",
+    "sent_at": "2026-09-08T03:42:04.065067+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/ai-designed-drug-appears-to-turn-back-the-bodys-biological-clock-in-early-trial/",
+    "headline": "Insilico's AI-Designed Drug Reverses Biological Aging Markers in Clinical Trial",
+    "source": "The Decoder",
+    "sent_at": "2026-09-08T03:42:04.065067+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/07/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
+    "headline": "Executive AI Taxonomy: Clarifying Emerging Generative AI Terminology",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-08T03:42:04.065067+00:00"
   }
 ]
