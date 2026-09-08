@@ -1084,5 +1084,65 @@
     "headline": "Executive AI Taxonomy: Clarifying Emerging Generative AI Terminology",
     "source": "TechCrunch AI",
     "sent_at": "2026-09-08T03:42:04.065067+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/",
+    "headline": "Mistral AI Raises €3B as Sovereign AI Demand Accelerates",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-08T15:45:32.775570+00:00"
+  },
+  {
+    "key": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+    "headline": "Google DeepMind Unveils AlphaGenome Atlas to Predict DNA Mutations",
+    "source": "Google DeepMind",
+    "sent_at": "2026-09-08T15:45:32.775570+00:00"
+  },
+  {
+    "key": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+    "headline": "NVIDIA Introduces Native CUDA Rust for Accelerated Computing",
+    "source": "NVIDIA Developer",
+    "sent_at": "2026-09-08T15:45:32.775570+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/meta-drops-ai-usage-from-engineer-performance-reviews-after-tokenmaxxing-backfires/",
+    "headline": "Meta Drops AI Usage Targets After 'Tokenmaxxing' Misaligns Output",
+    "source": "The Decoder",
+    "sent_at": "2026-09-08T15:45:32.775570+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/asml-locks-in-tsmc-samsung-and-intel-while-huawei-races-to-break-its-grip/",
+    "headline": "ASML Secures Key Semiconductor Makers for Upgraded EUV Scanners",
+    "source": "The Decoder",
+    "sent_at": "2026-09-08T15:45:32.775570+00:00"
+  },
+  {
+    "key": "https://www.technologyreview.com/2026/09/08/1142088/danijar-hafner-developing-plan-ahead-agents/",
+    "headline": "Stealth Startup Focuses on Contingency-Planning AI Agents",
+    "source": "MIT Technology Review AI",
+    "sent_at": "2026-09-08T15:45:32.775570+00:00"
+  },
+  {
+    "key": "https://openai.com/index/the-work-now-within-reach",
+    "headline": "OpenAI Outlines Economic Impact of Lowering Inference Costs",
+    "source": "OpenAI",
+    "sent_at": "2026-09-08T15:45:32.775570+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/patagonia-has-what-ai-data-centers-want-including-no-resistance-so-far/",
+    "headline": "Data Center Developers Eye Patagonia for AI Infrastructure Expansion",
+    "source": "The Decoder",
+    "sent_at": "2026-09-08T15:45:32.775570+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/tech/991133/adobe-is-trying-to-make-its-ai-generators-idiot-proof-in-premiere",
+    "headline": "Adobe Simplifies Generative AI Workflows Inside Premiere Pro",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-08T15:45:32.775570+00:00"
+  },
+  {
+    "key": "https://huggingface.co/blog/multiversecomputingcai/safety-for-whom",
+    "headline": "Research Advocates Context-Aware Fine-Grained Safety Alignment",
+    "source": "Hugging Face",
+    "sent_at": "2026-09-08T15:45:32.775570+00:00"
   }
 ]
