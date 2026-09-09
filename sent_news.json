@@ -1,263 +1,5 @@
 [
   {
-    "key": "https://venturebeat.com/orchestration/your-files-stay-put-perplexitys-hybrid-ai-keeps-confidential-data-off-the-cloud",
-    "headline": "Perplexity Launches Hybrid AI Architecture to Keep Enterprise Data On-Device",
-    "source": "VentureBeat",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2603.19423",
-    "headline": "Defense Safety Training Degrades AI Agent Execution Competence",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2605.30434",
-    "headline": "Benchmark Reveals 47% Accuracy Drop in Long-Horizon Agent Data Analysis",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.27646",
-    "headline": "Out-of-Band Boundary Framework Prevents Enterprise Agent Data Leakage",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.27465",
-    "headline": "Emotional Prompt Context Increases Sycophancy Across Flagship Commercial LLMs",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.22538",
-    "headline": "STAGE Framework Integrates Deterministic Control to Boost Agent Policy Success",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.27796",
-    "headline": "ReToolSQL Achieves Top Text-to-SQL Performance via Agentic RL Training",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.18682",
-    "headline": "Reverse-Turn Policy Optimization Stabilizes Multi-Turn Agentic RL Training",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.28021",
-    "headline": "GenIaC-SecBench Shows AI Infrastructure Code Contains Up to 3.8x Human Vulnerability Density",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.28027",
-    "headline": "String Runtime Re-architects Agent Tool Context Using Markdown Interfaces",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.28062",
-    "headline": "WeAgent-MMSearch Integrates Native Visual Trajectory Tracking for Search Agents",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.26747",
-    "headline": "AgentFold Automates Architectural Search for Scientific Protein Folding Models",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.27869",
-    "headline": "MAGE Framework Leverages Multimodal Agents to Discover Scientific Governing Equations",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.27790",
-    "headline": "Credo Introduces Declarative Primitives for Reusable Agent Harnesses",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.27856",
-    "headline": "FedEHR-Agents Enables Federated Experience Sharing for Healthcare AI",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-01T15:53:33.881666+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
-    "headline": "AIR Raises $50M to Secure Autonomous Enterprise AI Agents",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/tech/987423/google-pics-ai-image-editor-generator",
-    "headline": "Google Workspace Launches Gemini-Powered 'Google Pics' Creative Suite",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://venturebeat.com/orchestration/ai-is-redefining-the-workforce-and-most-planning-models-arent-ready",
-    "headline": "Enterprise Planning Models Fail to Keep Pace with AI Workforce Shifts",
-    "source": "VentureBeat",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/runways-solaris-is-an-ai-system-that-generates-software-interfaces-in-real-time/",
-    "headline": "Runway Unveils 'Solaris' Real-Time Dynamic Interface Model",
-    "source": "The Decoder",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/tokenomics-at-scale-how-jamf-built-real-time-spend-enforcement-for-amazon-bedrock/",
-    "headline": "Jamf Deploys Real-Time Token Spend Governance for Amazon Bedrock",
-    "source": "AWS AI",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/how-t54-built-a-trust-layer-with-amazon-bedrock-agentcore-payments/",
-    "headline": "t54 Implements Autonomous Payment Trust Layer for AI Agents",
-    "source": "AWS AI",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://developer.nvidia.com/blog/how-to-size-gpus-for-ai-inference-and-tco-without-overspending/",
-    "headline": "Nvidia Publishes Architectural Framework for Sizing GPU Inference",
-    "source": "NVIDIA Developer",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/securing-amazon-quick-from-poc-to-production-agents-flows-and-spaces/",
-    "headline": "AWS Outlines Enterprise Security Architecture for Production AI Agents",
-    "source": "AWS AI",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/how-boomi-scribe-streamlines-documentation-using-aws/",
-    "headline": "Boomi Uses AWS Agents to Automate Enterprise Workflow Documentation",
-    "source": "AWS AI",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/ai-artificial-intelligence/987486/john-deere-jd-ai-chatbot",
-    "headline": "John Deere Launches AI Assistant to Optimize Agricultural Field Data",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/how-zs-democratized-secure-ad-hoc-analytics-with-amazon-sagemaker/",
-    "headline": "ZS Scales Healthcare-Grade Analytics Platform across 200+ SageMaker Domains",
-    "source": "AWS AI",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/googles-election-ai-overviews-are-opaque-rely-on-few-sources-and-sometimes-take-sides/",
-    "headline": "Study Highlights Source Bias and Opacity in Google Election AI Overviews",
-    "source": "The Decoder",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/tech/986378/nvidia-dlss-5-launch-nba-2k27",
-    "headline": "Nvidia Launches DLSS 5 Real-Time Upscaling for High-End GPUs",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-01T16:14:50.363955+00:00"
-  },
-  {
-    "key": "https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads",
-    "headline": "Anthropic Releases Claude Fable 5.1 and Cuts Cached Token Costs by 75%",
-    "source": "VentureBeat",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://venturebeat.com/orchestration/frontier-models-can-recover-up-to-65-of-facts-they-cant-directly-recall-just-by-thinking-longer",
-    "headline": "Google Study Finds Frontier Models Store 98% of Facts but Need Compute to Recall",
-    "source": "VentureBeat",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://venturebeat.com/security/azure-openai-agent-passed-every-evaluation-served-files-user-couldnt-open",
-    "headline": "Enterprise RAG Vulnerability Exposes Document Authorization Gaps",
-    "source": "VentureBeat",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://blogs.nvidia.com/blog/nvidia-crowdstrike-fal-con-2026/",
-    "headline": "NVIDIA and CrowdStrike Partner to Launch Agentic Cybersecurity System",
-    "source": "NVIDIA",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/ai-artificial-intelligence/987695/openai-astra-unreleased-model-cybersecurity-delay",
-    "headline": "OpenAI Delays Astra Suite to Reinforce Model Containment and Safety",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/",
-    "headline": "OpenAI Previews Security Protocols for Cyber-Critical Astra Model",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
-    "headline": "ChatGPT Health Adds Read-Only Epic Integration for Clinicians",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/tech/987575/apple-openai-destroying-evidence-trade-secrets-lawsuit",
-    "headline": "Apple Alleges Evidence Spoliation in OpenAI Trade Secrets Dispute",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/01/afterquery-reportedly-becomes-y-combinators-fastest-ever-unicorn-now-valued-at-3-2b/",
-    "headline": "Model Training Startup AfterQuery Reaches $3.2B Valuation",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
-    "headline": "Google DeepMind Unveils Agentic Video Understanding in Gemini",
-    "source": "Google DeepMind",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/anthropic-opens-claude-ai-text-detection-to-regulators-media-fact-checkers-and-others/",
-    "headline": "Anthropic Launches Watermark Detection API for Regulatory Compliance",
-    "source": "The Decoder",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/google-deepminds-new-chief-says-frontier-ai-leadership-is-the-only-thing-that-matters/",
-    "headline": "Google DeepMind Leadership Reaffirms Frontier Model Ambitions",
-    "source": "The Decoder",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
-    "headline": "Empirik Raises $21M to Build Predictive AI for IT Infrastructure Outages",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://openai.com/index/ai-native-company-workflows",
-    "headline": "OpenAI Highlights Shift from Point Tools to Agentic Operating Capabilities",
-    "source": "OpenAI",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/from-theory-to-delivery-how-atos-upskilled-400-engineers-in-agentic-ai/",
-    "headline": "Atos Upskills 400 Enterprise Engineers on AWS Agentic Stacks",
-    "source": "AWS AI",
-    "sent_at": "2026-09-02T03:40:05.502881+00:00"
-  },
-  {
     "key": "https://arxiv.org/abs/2604.16729",
     "headline": "Agentic AI Solves Complex Multi-Step Neuro-Radiological Analysis Without Training",
     "source": "arXiv AI",
@@ -1144,5 +886,95 @@
     "headline": "Research Advocates Context-Aware Fine-Grained Safety Alignment",
     "source": "Hugging Face",
     "sent_at": "2026-09-08T15:45:32.775570+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/take-on-your-most-ambitious-work-with-gpt-6-astra-on-amazon-bedrock/",
+    "headline": "OpenAI Launches GPT-6 Astra on Amazon Bedrock for Enterprise Scale",
+    "source": "AWS AI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/openai-researcher-allegedly-pressured-mathematician-to-drop-anthropic-co-author-from-math-breakthrough-paper/",
+    "headline": "OpenAI Scientific Milestone Overshadowed by IP and Co-Author Controversy",
+    "source": "The Decoder",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/",
+    "headline": "AI Software Engineering Startup Cognition Reaches $48 Billion Valuation",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
+    "headline": "Meta Debuts Personal AI Agent 'Muse' Requiring Deep User Data Access",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/08/google-cloud-races-to-catch-up-in-the-ai-deployment-wars-with-accenture-deal/",
+    "headline": "Google Cloud Partners with Accenture to Accelerate Enterprise AI Deployments",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://arstechnica.com/gadgets/2026/09/top-chipmakers-embrace-asmls-400m-machines-agree-to-crucial-chipmaking-change/",
+    "headline": "Top Semiconductor Makers Adopt Standards for ASML's $400M EUV Systems",
+    "source": "Ars Technica",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/benchmarking-small-llm-inference-on-sagemaker-ai-g7-vs-g5-and-g6/",
+    "headline": "AWS Benchmarks Show NVIDIA Blackwell G7 Gains for LLM Inference",
+    "source": "AWS AI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/990313/anthropic-class-action-lawsuit-pricing-subscription-plans",
+    "headline": "Anthropic Faces Class-Action Lawsuit Over Power-User Tier Limits",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+    "headline": "Hackers Steal Claude Account Tokens from Subscribers",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/how-hpe-zerto-built-an-agentic-troubleshooting-system-with-amazon-bedrock/",
+    "headline": "HPE Zerto Deploys On-Premises Agentic System via Amazon Bedrock",
+    "source": "AWS AI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://arstechnica.com/security/2026/09/microsoft-patches-a-record-972-vulnerabilities-112-of-them-critical/",
+    "headline": "Microsoft Releases Record Patch Update Ahead of AI Cyber Threats",
+    "source": "Ars Technica",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://openai.com/index/codex-quantum-computing-experiments",
+    "headline": "MIT Researchers Use GPT-5.6 Sol to Autonomously Run Quantum Experiments",
+    "source": "OpenAI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/automated-agent-evaluation-with-amazon-bedrock-agentcore-and-github-actions/",
+    "headline": "AWS Automates Agent Evaluations in CI/CD via GitHub Actions",
+    "source": "AWS AI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/pathways-brain-inspired-architecture-development-on-amazon-sagemaker-hyperpod/",
+    "headline": "Pathway Scales Latent-Space AI Architectures on SageMaker HyperPod",
+    "source": "AWS AI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/991727/openai-chatgpt-images-2-5-sketch",
+    "headline": "OpenAI Unveils ChatGPT Images 2.5 with New 'Sketch' Capabilities",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-09T03:44:16.507819+00:00"
   }
 ]
