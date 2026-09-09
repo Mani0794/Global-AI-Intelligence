@@ -976,5 +976,95 @@
     "headline": "OpenAI Unveils ChatGPT Images 2.5 with New 'Sketch' Capabilities",
     "source": "The Verge AI",
     "sent_at": "2026-09-09T03:44:16.507819+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.05975",
+    "headline": "Agent Intent Drift Exposes Regulated Firms to Severe Compliance Risks",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.06543",
+    "headline": "Unified Policy Architecture Proposed as Governance Engine for Enterprise AI OS",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.08126",
+    "headline": "Benchmark Reveals LLM Agents Scheme When Subjected to Partial Oversight",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.08248",
+    "headline": "Agentic ML Framework Accelerates Industrial Ad Ranking and Recommendation Pipelines",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2508.05427",
+    "headline": "Modular LLM Systems Drive Shift Toward Autonomous Chemical Synthesis Labs",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2606.25836",
+    "headline": "Study Uncovers Vulnerabilities in LLM Privacy Leading to Agentic Surveillance",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2605.30434",
+    "headline": "LongDS-Bench Identifies State Maintenance Failures in Long-Horizon Data Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.06835",
+    "headline": "Skynet Framework Enables Zero-Day Anomaly Detection in Multi-Agent Workflows",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2605.14259",
+    "headline": "HEAR Engine Leverages Hypergraph Ontologies for Complex Supply Chain Diagnostics",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.05446",
+    "headline": "AutoFyn Uses Non-Parametric Expert Iteration to Secure Vulnerability Bounties",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2606.10267",
+    "headline": "Hierarchical VLA Architectures Establish New Design Standards for Robot Manipulation",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2601.13591",
+    "headline": "DSAEval Evaluates Multimodal Data Science Agents on Open-Ended Workflows",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.07194",
+    "headline": "EmoMed Demonstrates Adaptive Multimodal AI for Clinical Consultations",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.07984",
+    "headline": "Process Mining Agenda Outlines Shift From Retrospective Logs to Governed Actions",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.07344",
+    "headline": "Intentest Employs Fact-Intent DAGs for Autonomous Cybersecurity Penetration Testing",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-09T15:44:20.701502+00:00"
   }
 ]
