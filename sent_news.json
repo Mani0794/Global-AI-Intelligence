@@ -1,185 +1,5 @@
 [
   {
-    "key": "https://venturebeat.com/data/enterprises-put-non-nvidia-chips-14-points-ahead-of-nvidias-next-gen-gpus-on-their-evaluation-lists",
-    "headline": "Enterprises Prioritize Non-Nvidia Accelerators Over Blackwell in Evaluation Pipelines",
-    "source": "VentureBeat",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://venturebeat.com/security/googles-gemini-3-8-flash-is-built-for-agents-while-its-cyber-twin-hunts-vulnerabilities",
-    "headline": "Google Debuts Gemini 3.8 Flash and Specialized Cyber Defense Variant",
-    "source": "VentureBeat",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://venturebeat.com/technology/meta-prices-muse-voice-transcribe-at-0-18-an-hour-with-real-time-diarization-for-20-speakers-a-steal-for-enterprises",
-    "headline": "Meta Launches Real-Time Voice Model with 20+ Speaker Diarization at $0.18/Hour",
-    "source": "VentureBeat",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://venturebeat.com/security/stolen-claude-session-cookies-can-reach-corporate-gmail-through-grants-no-it-admin-can-revoke",
-    "headline": "Infostealer Attacks Expose Enterprise Data via Personal AI Session Tokens",
-    "source": "VentureBeat",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01660",
-    "headline": "Empirical Study Reveals Compounding Reliability Collapse in Multi-Step AI Agents",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.02095",
-    "headline": "READY Framework Introduces Statistical Qualification for Enterprise Agent Oversight",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.02786",
-    "headline": "SafeEvolve Introduces Harness-Policy Co-Evolution for Autonomous Agent Safety",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2604.11557",
-    "headline": "UniToolCall Standardizes Function-Calling Datasets and Evaluation Protocols",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.02074",
-    "headline": "CHIME Framework Resolves Credit Assignment Failures in Agentic Memory",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01852",
-    "headline": "Research Identifies 'Memory Trust Gap' Where Capable Models Over-Rely on Stale Data",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01861",
-    "headline": "Belief-Calibrated Optimization Creates Explicit World Models for Coding Agents",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2607.12406",
-    "headline": "Survey Establishes Isolation Architecture as Essential for Agent System Security",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01657",
-    "headline": "NeoMME Delivers Single-Tower Multilingual Multimodal Embeddings with 255x Compression",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.29460",
-    "headline": "Escalation Channels Reduce Autonomous Agent Reward Hacking to Near Zero",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01622",
-    "headline": "RecEvolve Demonstrates Autonomous Model Optimization in Live Production Environments",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T05:31:11.654087+00:00"
-  },
-  {
-    "key": "https://venturebeat.com/infrastructure/microsoft-ais-mai-transcribe-2-undercuts-openai-google-and-elevenlabs-on-price-and-speed",
-    "headline": "Microsoft Launches MAI-Transcribe-2, Slashing Speech AI Costs by 72%",
-    "source": "VentureBeat",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/meta-closes-in-on-the-top-with-muse-spark-1-3-and-undercuts-rivals-on-price/",
-    "headline": "Meta Releases Muse Spark 1.3 with Aggressive Task Pricing",
-    "source": "The Decoder",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/",
-    "headline": "Google DeepMind Advances Atmospheric AI with WeatherNext 3",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01736",
-    "headline": "HEART Framework Beats Commercial Frontier Models in AI Tool Use",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.21377",
-    "headline": "Study Reveals Agentic Workflows Systematically Amplify Model Sycophancy",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.02253",
-    "headline": "APEx Framework Boosts Deep Research Agent Performance via Experience Distillation",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.02106",
-    "headline": "Git4Data Introduces Database-Native Version Control for AI Agents",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2607.04562",
-    "headline": "HCRC Execution Control Eliminates Epistemic Errors in Production AI Agents",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.02149",
-    "headline": "OmegaUse-SOP Enables GUI Agents to Execute Complex Enterprise Workflows",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01617",
-    "headline": "DocuSearch Deploys Multi-Agent Hybrid RAG in Production Telecom Networks",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.02217",
-    "headline": "SkillGLoW Consolidation Boosts Self-Improving Agent Performance on Long Horizons",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01818",
-    "headline": "Zeta-Lite Brings Concurrent SQL Branching to In-Browser Agentic Memory",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2607.24814",
-    "headline": "Aletheia Delivers Offline AI Clinical Decision Support for Rural Healthcare",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01608",
-    "headline": "WMLLM Leverages World Modeling for Sample-Efficient Black-Box Optimization",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.02459",
-    "headline": "CivBench Uncovers State-Monitoring and Execution Failures in Long-Horizon Agents",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-03T15:43:09.873250+00:00"
-  },
-  {
     "key": "https://the-decoder.com/gpt-6-astra-is-the-first-model-making-openai-willing-to-declare-the-agi-era/",
     "headline": "OpenAI Launches GPT-6 Astra, Declaring the Start of the AGI Era",
     "source": "The Decoder",
@@ -1066,5 +886,95 @@
     "headline": "Apple Details Technical Privacy Framework for Ambient Audio Features",
     "source": "The Verge AI",
     "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/new-deepseek-model-v4-1-flash-cuts-memory-needs-for-ai-agents/",
+    "headline": "DeepSeek Releases V4.1-Flash with 75% Lower Memory Demands",
+    "source": "The Decoder",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/muse-can-shop-write-emails-and-negotiate-prices-for-users-all-through-whatsapp/",
+    "headline": "Meta Unveils Muse Agent to Power WhatsApp Commerce and Tasks",
+    "source": "The Decoder",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09553",
+    "headline": "Frontier Models Vulnerable to Prompt Injection via Encrypted Ciphers",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09875",
+    "headline": "AgentAudit Benchmark Exposes Deep Trust and Safety Gaps in Autonomous AI",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09187",
+    "headline": "TikTok Ad Framework Demonstrates Direct Revenue Impact from Agentic Video AI",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09203",
+    "headline": "OpenDiscoveryTrace Benchmarks End-to-End Reasoning in Scientific AI Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09853",
+    "headline": "Era Benchmark Evaluates LLM Agents Across Synthetic Enterprise Environments",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.10522",
+    "headline": "Show-Harness Enables Zero-Shot Physical Control for Vision-Language Models",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09404",
+    "headline": "Multimodal Injections Expose Security Gaps in Agent Perceptual Channels",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09233",
+    "headline": "Spawning Subagents Outperforms Single-Context Skill Execution in Long Tasks",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09790",
+    "headline": "Logistics Benchmark Highlights Spatial and Reasoning Gaps in Multimodal AI",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.16620",
+    "headline": "Writer Unveils Palmyra x6 Optimized for Enterprise Tool Integration",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09692",
+    "headline": "CT-SAFR Framework Cuts Unsafe Decisions in Autonomous Warehouse Robots",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/ai-safety-panic-goes-mainstream-after-anthropic-researchers-warnings-land-on-cnn-and-fox-news/",
+    "headline": "AI Safety Warnings Gain National Media Focus Following Researcher Outcry",
+    "source": "The Decoder",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2605.30002",
+    "headline": "KairosAgent Combines Foundation Models and Reasoners for Forecasting",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-10T15:44:06.850523+00:00"
   }
 ]
