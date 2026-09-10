@@ -1,95 +1,5 @@
 [
   {
-    "key": "https://arxiv.org/abs/2604.16729",
-    "headline": "Agentic AI Solves Complex Multi-Step Neuro-Radiological Analysis Without Training",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.00791",
-    "headline": "Instella-MoE: Open 16B Mixture-of-Experts Model Trained Entirely on AMD GPUs",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.00015",
-    "headline": "OpenAgentFlow Establishes Action-Commit Governance for Enterprise Agent Fleets",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2607.21461",
-    "headline": "AREX Framework Advances Recursively Self-Improving Deep Research Agents",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.00196",
-    "headline": "WHALE Protocol Optimizes Joint Model Weights and Execution Harnesses",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01245",
-    "headline": "CANOPY Protocol Proves Outcome-Only RL Suffices for Long-Horizon Interactive Agents",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.00028",
-    "headline": "UI-Venus-2 Unifies Mobile, Web, and Desktop Task Automation",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2605.05726",
-    "headline": "SkillRet Benchmark Exposes Major Gaps in Enterprise Skill Retrieval",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.00206",
-    "headline": "Distributed Implicit Harm Uncovers Critical Blind Spots in Video Moderation",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01045",
-    "headline": "AgentFactory Automates Multi-Objective Design of Agentic Systems",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01272",
-    "headline": "Prospective Intention Store Enables Small Models to Execute Deferred Intentions",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2604.27977",
-    "headline": "D3-Gym Launches Verifiable Environments for Scientific Data Discovery",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.00474",
-    "headline": "LLAMIA Architecture Overcomes Verbalization Bottleneck in Non-Language Agent Collaboration",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.01056",
-    "headline": "WorldBench Highlights Fragility of Multilingual Agents in Persona-Grounded Workflows",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2601.04243",
-    "headline": "Hybrid Insider Threat Framework Combines Multi-Agent Simulation and SIEM Correlation",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-02T15:56:14.694025+00:00"
-  },
-  {
     "key": "https://venturebeat.com/data/enterprises-put-non-nvidia-chips-14-points-ahead-of-nvidias-next-gen-gpus-on-their-evaluation-lists",
     "headline": "Enterprises Prioritize Non-Nvidia Accelerators Over Blackwell in Evaluation Pipelines",
     "source": "VentureBeat",
@@ -1066,5 +976,95 @@
     "headline": "Intentest Employs Fact-Intent DAGs for Autonomous Cybersecurity Penetration Testing",
     "source": "arXiv AI",
     "sent_at": "2026-09-09T15:44:20.701502+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes",
+    "headline": "OpenAI Solves Historic Math Millennium Prize Problem",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/",
+    "headline": "Listen Labs Halts $1.5B Funding Round for Salesforce Acquisition Talks",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-august-2026/",
+    "headline": "AWS Bedrock Unveils 14-Day Persistent Agent Compute and 1M Token Context",
+    "source": "AWS AI",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/",
+    "headline": "Massachusetts Imposes Clean Power Rules on Data Centers",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+    "headline": "Paul Christiano Joins OpenAI Board and Safety Committee",
+    "source": "OpenAI",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/deploying-qwen3-8-2-4t-a95b-on-amazon-sagemaker-hyperpod-with-vllm/",
+    "headline": "AWS SageMaker HyperPod Supports 2.4-Trillion Parameter Open Qwen Model",
+    "source": "AWS AI",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/anthropic-built-an-economic-model-that-frames-its-ceos-bleakest-job-forecasts-as-an-outlier-scenario/",
+    "headline": "Anthropic Model Forecasts Disruption Across Economic Scenarios",
+    "source": "The Decoder",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/tech/992766/apple-iphone-18-pro-reference-image",
+    "headline": "Apple Unveils Hardware Pixel Signing to Authenticate Real Photos",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://developer.nvidia.com/blog/cuda-toolkit-13-4-adds-windows-on-arm-support-and-greater-control-over-shared-gpus/",
+    "headline": "NVIDIA CUDA 13.4 Adds Windows on Arm and Fine-Grained GPU Sharing",
+    "source": "NVIDIA Developer",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/991977/suno-releases-its-first-ai-music-model-made-with-record-industry-help",
+    "headline": "Suno Releases Music Model Trained on Licensed Record Industry Data",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/policy/992359/microsoft-aft-schools-ai-privacy",
+    "headline": "Microsoft Partners with Teachers Union on AI Privacy Frameworks",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/",
+    "headline": "NVIDIA Accelerates Multimodal Serving via Disaggregated Architecture",
+    "source": "NVIDIA Developer",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/how-heurist-finance-built-an-ai-native-investment-workbench-on-amazon-bedrock-agentcore/",
+    "headline": "Heurist Finance Builds Pay-Per-Query Workbench on AWS Bedrock AgentCore",
+    "source": "AWS AI",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://arstechnica.com/ai/2026/09/anthropic-researcher-quits-with-a-warning-self-improving-ai-could-kill-us-all/",
+    "headline": "Former Anthropic Researcher Raises Alarm Over Self-Improving AI Systems",
+    "source": "Ars Technica",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/tech/992919/apple-siri-ai-audio-intelligence-privacy",
+    "headline": "Apple Details Technical Privacy Framework for Ambient Audio Features",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-10T03:43:38.982477+00:00"
   }
 ]
