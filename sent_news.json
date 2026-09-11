@@ -1,95 +1,5 @@
 [
   {
-    "key": "https://the-decoder.com/openai-agents-hijacked-a-25-year-old-german-wiki-to-cheat-on-their-tasks-and-share-sandbox-exploits/",
-    "headline": "Autonomous OpenAI Agents Exploit Sandbox and Coordinate via External Wiki",
-    "source": "The Decoder",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2508.00935",
-    "headline": "Benchmark Reveals Frontier Computer-Using Agents Comply with Severe Misuse Tasks",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04135",
-    "headline": "Ecma International Advances NLIP Standard for Enterprise AI Agent Interoperability",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04159",
-    "headline": "SENTINEL-RL Decouples Graph Reasoning to Automate Enterprise SOC Triage in 6 Seconds",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04075",
-    "headline": "PatchBench Study Exposes Critical Validation Flaws in Automated AI Code Repair",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.03781",
-    "headline": "IndicSafeEval Exposes Multilingual Jailbreak Vulnerabilities Across Indian Languages",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2512.09108",
-    "headline": "ARTEMIS Introduces No-Code Evolutionary Optimization for Enterprise Agent Configurations",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.02967",
-    "headline": "Federated Graph Learning Secures Enterprise Multi-Agent Systems Without Data Pooling",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.03860",
-    "headline": "Graph-Constrained Agent Framework Optimizes Retail Supply Chain Decision Pipelines",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.03787",
-    "headline": "DNative-Twin Enables Fully Auditable Trajectories for Autonomous Enterprise Decisions",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.03941",
-    "headline": "Headroom-Drift Replay Accelerates Post-Training for Agentic Search",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2602.09341",
-    "headline": "AgentAuditor Uses Reasoning Trees to Prevent Consensus Hallucinations in Multi-Agent Systems",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.03621",
-    "headline": "Computable Laboratory Framework Bridges Autonomous Agents with Physical Robotics",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.03423",
-    "headline": "DuplexSpeechBench Identifies Critical Role and Safety Failures in Real-Time Voice Agents",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.03493",
-    "headline": "NTEP-R Framework Eliminates Redundant Tool Calls in Vision-Language Models",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-04T15:42:19.797742+00:00"
-  },
-  {
     "key": "https://arstechnica.com/ai/2026/09/anthropics-2-trillion-ipo-puts-powerful-external-trustees-in-spotlight/",
     "headline": "Anthropic Targets $2 Trillion Valuation as IPO Puts Governance Structure Under Scrutiny",
     "source": "Ars Technica",
@@ -976,5 +886,95 @@
     "headline": "Bedrock Integrates TwelveLabs Marengo 3.0 for Multimodal Search",
     "source": "AWS AI",
     "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/openais-new-agents-api-gives-developers-the-infrastructure-behind-codex-and-chatgpt/",
+    "headline": "OpenAI Launches Public Beta of Autonomous Agents API for Enterprise Developers",
+    "source": "The Decoder",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09604",
+    "headline": "EU AI Act Mandate Triggers Watermarking Adoption Amid Verification Deficits",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.05758",
+    "headline": "Enterprise Case Study: Bounded Agentic Orchestration Reduces Serving Costs Tenfold",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09647",
+    "headline": "Black-Box Audit Uncovers Widespread Governance and Privacy Deficits in Agentic AI",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.24979",
+    "headline": "Benchmark Shows Scientific Agents Suffer High Failure Rates Despite Confident Claims",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2606.06510",
+    "headline": "FP8 Matrix Operations Match Native FP64 Precision on Next-Gen Hardware",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.10105",
+    "headline": "Governance Framework Shifts Regulatory Focus from Training Compute to Inference Execution",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.10144",
+    "headline": "Kernel-Managed Memory Architecture Enhances Privacy and Speed in Multi-Agent Systems",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.24191",
+    "headline": "Audit Highlights Critical Safety Instability Across Major LLMs in South Asian Languages",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09448",
+    "headline": "Internal Latent Signals Outperform Prompt-Based Methods in Calibrating Agent Confidence",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.08977",
+    "headline": "Dual-Architecture Model Unifies Real-Time Full-Duplex Voice, Video, and Agent Reasoning",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.09565",
+    "headline": "Community-Partitioned Multi-Agent Framework Outperforms Single Agents in Graph Reasoning",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2604.10169",
+    "headline": "Reinforced Heterogeneous Distillation Enables Real-Time Edge AI Trajectory Prediction",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.30935",
+    "headline": "Unified Token Representation Unlocks Zero-Shot Robot Navigation Across Diverse Embodiments",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2605.13841",
+    "headline": "Enterprise Benchmark Exposes Wide Gap Between Peak and Reliable Voice Agent Performance",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-11T15:45:09.507798+00:00"
   }
 ]
