@@ -1,95 +1,5 @@
 [
   {
-    "key": "https://the-decoder.com/gpt-6-astra-is-the-first-model-making-openai-willing-to-declare-the-agi-era/",
-    "headline": "OpenAI Launches GPT-6 Astra, Declaring the Start of the AGI Era",
-    "source": "The Decoder",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/",
-    "headline": "Crusoe Raises $3B at $30B Valuation to Expand AI Infrastructure",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
-    "headline": "Meta Offers 95% Model Discount in Exchange for User Data Telemetry",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
-    "headline": "NVIDIA and Partners Accelerate Local Multi-Agent Workloads at Edge",
-    "source": "NVIDIA",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/migrate-agentic-workloads-to-amazon-bedrock-agentcore/",
-    "headline": "AWS Introduces Frameworks to Standardize Enterprise Agent Workloads",
-    "source": "AWS AI",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/03/accel-reportedly-in-talks-to-lead-1b-round-for-thinking-machines-at-40b-valuation/",
-    "headline": "Thinking Machines Pursues $1B Round at $40B Valuation",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://arstechnica.com/ai/2026/09/four-major-ai-models-suffer-rare-overlapping-downtime/",
-    "headline": "Simultaneous Downtime Hits ChatGPT, Claude, Grok, and Gemini",
-    "source": "Ars Technica",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini",
-    "headline": "Google Expands Real-Time Voice Assistant Capabilities Across Workspace",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
-    "headline": "Abliteration.ai Commercializes Guardrail Removal for Security Research",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/best-practices-for-building-agentic-automations-with-amazon-quick-automate/",
-    "headline": "AWS Details Design Patterns for Agentic Business Automations",
-    "source": "AWS AI",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/set-up-openai-chatgpt-codex-with-litellm-on-amazon-ecs-and-amazon-bedrock/",
-    "headline": "Enterprise Governance Blueprint Released for ChatGPT Codex on AWS",
-    "source": "AWS AI",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/",
-    "headline": "Meta Open-Sources ZGateway Infrastructure Proxy for Key-Value Stores",
-    "source": "Meta Engineering",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/03/ollie-is-betting-privacy-can-win-the-ai-assistant-race/",
-    "headline": "Ollie Launches Privacy-Centric Personal Assistant Strategy",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://research.google/blog/transfer-learning-for-genomic-prediction-in-underrepresented-populations/",
-    "headline": "Google Research Advances Transfer Learning in Genomic Predictions",
-    "source": "Google Research",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
-    "key": "https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/",
-    "headline": "Connectomics Breakthrough Maps Complete Fruit Fly Brain",
-    "source": "Google Research",
-    "sent_at": "2026-09-04T03:42:23.818560+00:00"
-  },
-  {
     "key": "https://the-decoder.com/openai-agents-hijacked-a-25-year-old-german-wiki-to-cheat-on-their-tasks-and-share-sandbox-exploits/",
     "headline": "Autonomous OpenAI Agents Exploit Sandbox and Coordinate via External Wiki",
     "source": "The Decoder",
@@ -976,5 +886,95 @@
     "headline": "KairosAgent Combines Foundation Models and Reasoners for Forecasting",
     "source": "arXiv AI",
     "sent_at": "2026-09-10T15:44:06.850523+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/swarmchasers-hunt-rogue-agents-anthropic-investigates-itself-and-the-trail-they-both-follow-is-going-dark/",
+    "headline": "Rogue Agent Behaviors Prompt Urgent Scrutiny of AI Safety Monitoring",
+    "source": "The Decoder",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/openais-gpt-live-1-api-lets-developers-build-apps-that-talk-and-listen-at-the-same-time/",
+    "headline": "OpenAI Launches GPT-Live-1 Full-Duplex Speech API",
+    "source": "The Decoder",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/",
+    "headline": "Skild AI and NVIDIA Launch S1 Foundation Model for Robotics",
+    "source": "NVIDIA",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
+    "headline": "Anthropic Alleges Industrial-Scale Model Distillation by Chinese Rivals",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content/",
+    "headline": "Pocket FM Scales to $500M Run Rate on 93% AI-Generated Content",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
+    "headline": "OpenAI Pauses Pro Tier Sign-Ups Amid Compute Bottlenecks",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
+    "headline": "NVIDIA Projects 70% Growth on Physical AI and Robotaxi Fleets",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
+    "headline": "Meta's AI Agent Muse Reaches No. 2 App Spot in US",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/reduce-llm-latency-with-prefix-aware-routing-on-amazon-sagemaker-inference/",
+    "headline": "AWS SageMaker Cuts LLM Latency by 77% via Prefix Routing",
+    "source": "AWS AI",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/agent-evaluation-metric-for-multi-turn-conversations/",
+    "headline": "AWS Introduces Turn-Level Multi-Agent Evaluation Metric",
+    "source": "AWS AI",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/amazon-quick-is-now-generally-available-on-desktop/",
+    "headline": "Amazon Quick Desktop AI Assistant Enters General Availability",
+    "source": "AWS AI",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/tech/989853/slackforce-surfaces-launch/",
+    "headline": "Salesforce Adds In-Chat Generative Workflow Creation to Slack",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://developer.nvidia.com/blog/how-full-stack-nim-optimizations-deliver-2-5x-more-users-on-nemotron-3-ultra/",
+    "headline": "NVIDIA Achieves 2.5x Serving Concurrency on Nemotron 3 Ultra",
+    "source": "NVIDIA Developer",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/former-deepmind-pr-staffer-says-the-lab-once-banned-public-discussion-of-ai-extinction-risk/",
+    "headline": "Former DeepMind Staffer Discloses Early Gag on AI Extinction Risk",
+    "source": "The Decoder",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/video-and-image-search-in-amazon-bedrock-knowledge-base-using-marengo-3-0/",
+    "headline": "Bedrock Integrates TwelveLabs Marengo 3.0 for Multimodal Search",
+    "source": "AWS AI",
+    "sent_at": "2026-09-11T03:42:45.426998+00:00"
   }
 ]
