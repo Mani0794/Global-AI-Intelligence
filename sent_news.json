@@ -1,95 +1,5 @@
 [
   {
-    "key": "https://arstechnica.com/ai/2026/09/anthropics-2-trillion-ipo-puts-powerful-external-trustees-in-spotlight/",
-    "headline": "Anthropic Targets $2 Trillion Valuation as IPO Puts Governance Structure Under Scrutiny",
-    "source": "Ars Technica",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/04/openais-rogue-agents-keep-escaping-with-no-formal-process-to-investigate-them/",
-    "headline": "OpenAI Faces Heightened Safety Scrutiny After Internal Agent Swarms Escape Sandbox",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/openais-gpt-6-astra-hallucinates-less-but-remains-vulnerable-to-hidden-prompt-injections/",
-    "headline": "OpenAI GPT-6 Astra Shows Sharp Hallucination Drops but Remains Vulnerable to Document Injection",
-    "source": "The Decoder",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/podcast/apples-ternus-era-begins-as-nvidia-bets-on-the-whole-ai-stack/",
-    "headline": "Apple Enters John Ternus Era as Hardware and On-Device AI Strategies Converge",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://developer.nvidia.com/blog/frontier-reasoning-reaches-the-edge-how-to-deploy-and-optimize-models-on-nvidia-jetson/",
-    "headline": "NVIDIA Enables Frontier Multi-Step Reasoning Models Directly on Jetson Edge Hardware",
-    "source": "NVIDIA Developer",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/04/ai-compute-provider-nscale-is-looking-for-3-5b-in-pre-ipo-financing/",
-    "headline": "AI Compute Provider Nscale Targets $3.5B Pre-IPO Round Following $45B Anthropic Contract",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/build-a-physical-ai-model-factory-with-nvidia-cosmos-3-on-sagemaker-hyperpod/",
-    "headline": "AWS and NVIDIA Launch Physical AI Factory Architecture Using Cosmos 3 on SageMaker HyperPod",
-    "source": "AWS AI",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/how-intuit-built-an-agentic-disaster-recovery-assistant-with-amazon-bedrock/",
-    "headline": "Intuit Automates Mission-Critical Disaster Recovery Using Amazon Bedrock Agents",
-    "source": "AWS AI",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/04/xdof-just-three-months-out-of-stealth-is-in-talks-for-a-series-b-at-a-1-2b-valuation/",
-    "headline": "Robotics Foundation Data Startup XDOF Targets $1.2B Valuation in Series B",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/",
-    "headline": "NVIDIA Releases NemoClaw Framework for Long-Term Enterprise Agent Memory",
-    "source": "NVIDIA Developer",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/policy/990267/microsoft-openai-new-york-times-authors-lawsuit",
-    "headline": "Microsoft Copilot Litigation Data Shows Minimal Verbatim News Content Retrieval",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/designing-lifecycle-policies-for-agentcore-memory/",
-    "headline": "AWS Introduces Memory Scoring and Pruning Workflows for Bedrock AgentCore",
-    "source": "AWS AI",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/run-agent-driven-amazon-sagemaker-hyperpod-operations-with-instantstart/",
-    "headline": "AWS SageMaker HyperPod Deploys Agent-Driven Cluster Operations with InstantStart",
-    "source": "AWS AI",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/deploy-a-multimodal-whatsapp-ordering-assistant-with-amazon-bedrock-agentcore/",
-    "headline": "AWS Demonstrates Unified Cross-Channel Omnichannel Agent Architecture on WhatsApp",
-    "source": "AWS AI",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
-    "key": "https://arstechnica.com/security/2026/09/once-popular-for-attacking-ai-ascii-smuggling-is-embraced-by-spammers/",
-    "headline": "Invisible Unicode 'ASCII Smuggling' Exploits Shift from AI Jailbreaks to Broad Email Inboxes",
-    "source": "Ars Technica",
-    "sent_at": "2026-09-05T03:39:10.487848+00:00"
-  },
-  {
     "key": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
     "headline": "OpenAI Acknowledges Real-World Agent Misalignment Incident on German Wiki",
     "source": "The Verge AI",
@@ -976,5 +886,95 @@
     "headline": "Enterprise Benchmark Exposes Wide Gap Between Peak and Reliable Voice Agent Performance",
     "source": "arXiv AI",
     "sent_at": "2026-09-11T15:45:09.507798+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity",
+    "headline": "Anthropic Report Reveals Autonomous AI Models Hacked Target Systems",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+    "headline": "OpenAI Powers Autonomous Workflows in Perplexity with GPT-6 Astra",
+    "source": "OpenAI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://arstechnica.com/gadgets/2026/09/oracle-promises-2-gw-of-renewables-to-match-stargate-data-center-emissions/",
+    "headline": "Oracle Pledges 2 GW of Renewables for OpenAI's Stargate Data Center",
+    "source": "Ars Technica",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/deep-learning-pioneer-bengio-argues-the-training-process-itself-makes-ai-dangerous/",
+    "headline": "Yoshua Bengio Warns Core Training Methods Make AI Agents Inherently Deceptive",
+    "source": "The Decoder",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/",
+    "headline": "AWS Introduces Full-Lifecycle Monitoring for Multi-Agent Production Systems",
+    "source": "AWS AI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/ex-deepmind-vp-vinyals-says-ai-self-improvement-is-coming-but-wont-trigger-an-intelligence-explosion/",
+    "headline": "Ex-DeepMind Research Head Oriol Vinyals Dismisses Sudden Intelligence Explosion",
+    "source": "The Decoder",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/podcast/an-anthropic-researchers-doomsday-warning-comes-at-a-very-interesting-time/",
+    "headline": "Anthropic Safety Researcher Resigns Warning of Reckless Superintelligence Race",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/",
+    "headline": "AWS Releases Outcome-Based Benchmarking Harness for OpenAI Bedrock Models",
+    "source": "AWS AI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/",
+    "headline": "Robot Training Data Startup Mecka AI Nears $500M Valuation in Sequoia Round",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/",
+    "headline": "China's Moonshot AI Targets $2B in Annual Revenue on Massive Token Usage",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/",
+    "headline": "AWS Standardizes Interactive Model Context Protocol Apps on Bedrock",
+    "source": "AWS AI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
+    "headline": "YC's Garry Tan Urges US Open-Weight Labs to Distill Domestic Frontier Models",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://openai.com/index/cognition-devin-testing-with-astra",
+    "headline": "Cognition Integrates GPT-6 Astra for Autonomous Software Verification in Devin",
+    "source": "OpenAI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/11/nscale-adds-former-openai-exec-fidji-simo-to-its-board-ahead-of-potential-ipo/",
+    "headline": "Nscale Appoints Former OpenAI Executive Fidji Simo to Board Ahead of IPO",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal",
+    "headline": "Court Sanctions Attorney Over AI-Fabricated Witnesses in Murder Appeal",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-12T03:40:59.337396+00:00"
   }
 ]
