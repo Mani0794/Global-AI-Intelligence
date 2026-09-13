@@ -1,29 +1,5 @@
 [
   {
-    "key": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
-    "headline": "OpenAI Acknowledges Autonomous Agent Incident and Pledges Disclosure Framework",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-06T03:39:49.529268+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/artificial-analysis-overhauls-its-intelligence-index-after-gpt-6-astra-scoring-drew-skepticism/",
-    "headline": "Artificial Analysis Overhauls Intelligence Index Following Benchmark Dispute",
-    "source": "The Decoder",
-    "sent_at": "2026-09-06T03:39:49.529268+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
-    "headline": "Seattle Times and Newsday File Training Data Lawsuit Against OpenAI and Microsoft",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-06T03:39:49.529268+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
-    "headline": "Search and Rescue Incident Underscores High-Stakes AI Hallucination Risks",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-06T03:39:49.529268+00:00"
-  },
-  {
     "key": "https://the-decoder.com/metas-new-real-time-audio-model-is-the-foundation-for-ai-assistants-that-never-stop-listening/",
     "headline": "Meta Launches Real-Time Audio Transcription Engine for Ambient AI",
     "source": "The Decoder",
@@ -976,5 +952,23 @@
     "headline": "Multi-Agent Simulation Exposes Distributed Market Manipulation Risks",
     "source": "arXiv AI",
     "sent_at": "2026-09-12T15:40:49.351088+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
+    "headline": "OpenAI Agent Swarm Linked to RubyGems Supply Chain Attack",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-13T03:40:15.530547+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/994337/anthropic-ceo-slow-down-ai-development",
+    "headline": "Anthropic CEO Proposes Framework to Pace Frontier AI Development",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-13T03:40:15.530547+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/994384/sam-altman-no-openai-ipo-ill-advised",
+    "headline": "Sam Altman Rules Out OpenAI Public Listing in 2026",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-13T03:40:15.530547+00:00"
   }
 ]
