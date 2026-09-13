@@ -970,5 +970,35 @@
     "headline": "Sam Altman Rules Out OpenAI Public Listing in 2026",
     "source": "The Verge AI",
     "sent_at": "2026-09-13T03:40:15.530547+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/altman-musk-and-hassabis-back-amodeis-call-to-add-independent-oversight/",
+    "headline": "Tech Leaders Align on Independent AI Oversight as OpenAI Delays IPO to 2027",
+    "source": "The Decoder",
+    "sent_at": "2026-09-13T15:40:34.794355+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/gpt-6-astra-pilots-a-surveillance-drone-and-runs-a-business-on-its-own/",
+    "headline": "OpenAI Releases GPT-6 Astra with Autonomous Drone Piloting and Agentic Capabilities",
+    "source": "The Decoder",
+    "sent_at": "2026-09-13T15:40:34.794355+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/iris-mini-and-iris-pro-are-the-strongest-open-weight-search-agents-in-their-class/",
+    "headline": "AllSpark Releases Iris-mini and Iris-pro Open-Weight Search and Tool-Use Agents",
+    "source": "The Decoder",
+    "sent_at": "2026-09-13T15:40:34.794355+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/elevenlabs-makes-music-v2-5-available-via-app-and-api-with-free-and-pro-tier-options/",
+    "headline": "ElevenLabs Debuts Music v2.5 Trained Exclusively on Licensed Data",
+    "source": "The Decoder",
+    "sent_at": "2026-09-13T15:40:34.794355+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/two-year-university-study-finds-banning-ai-from-classrooms-leaves-students-worse-off/",
+    "headline": "Two-Year Academic Study Confirms Banning AI Harms Performance",
+    "source": "The Decoder",
+    "sent_at": "2026-09-13T15:40:34.794355+00:00"
   }
 ]
