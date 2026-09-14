@@ -1,59 +1,5 @@
 [
   {
-    "key": "https://the-decoder.com/metas-new-real-time-audio-model-is-the-foundation-for-ai-assistants-that-never-stop-listening/",
-    "headline": "Meta Launches Real-Time Audio Transcription Engine for Ambient AI",
-    "source": "The Decoder",
-    "sent_at": "2026-09-06T15:40:50.846520+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/openai-developer-claims-astra-boosted-productivity-so-much-it-pulled-some-plans-forward-by-six-months/",
-    "headline": "Internal AI Agent Astra Pulls OpenAI Roadmap Ahead by Six Months",
-    "source": "The Decoder",
-    "sent_at": "2026-09-06T15:40:50.846520+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/googles-weathernext-3-ditches-physics-simulations-and-learns-weather-directly-from-live-satellite-data/",
-    "headline": "Google DeepMind Launches Data-Driven Weather Forecasting Model WeatherNext 3",
-    "source": "The Decoder",
-    "sent_at": "2026-09-06T15:40:50.846520+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/stripping-safety-guardrails-from-open-weight-ai-models-is-now-a-turnkey-commercial-service/",
-    "headline": "Commercial Services Emerge to Strip Guardrails from Open-Weight AI Models",
-    "source": "The Decoder",
-    "sent_at": "2026-09-06T15:40:50.846520+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/google-brings-ai-music-generation-directly-into-the-gemini-app-with-its-new-lyria-3-5-model/",
-    "headline": "Google Releases Commercially Licensed Lyria 3.5 Music Model Across Gemini Suite",
-    "source": "The Decoder",
-    "sent_at": "2026-09-06T15:40:50.846520+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/chatbots-built-an-echo-chamber-of-one-and-now-psychiatry-has-to-decide-if-ai-psychosis-exists/",
-    "headline": "Psychiatry Researchers Investigate Clinical Risks of AI Chatbot Echo Chambers",
-    "source": "The Decoder",
-    "sent_at": "2026-09-06T15:40:50.846520+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft",
-    "headline": "Seattle Times and Newsday Sue OpenAI and Microsoft Over Training Data",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-07T03:42:01.397314+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
-    "headline": "Authors and Publishers Clash Over Anthropic AI Copyright Settlement Funds",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-07T03:42:01.397314+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/",
-    "headline": "Uber Co-Founder Travis Kalanick Targets Robotaxi Market with Atoms",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-07T03:42:01.397314+00:00"
-  },
-  {
     "key": "https://arxiv.org/abs/2609.04681",
     "headline": "Research Identifies 'Agentic SDLC Paradox' and Rising Verification Costs in Enterprise AI Coding",
     "source": "arXiv AI",
@@ -1000,5 +946,23 @@
     "headline": "Two-Year Academic Study Confirms Banning AI Harms Performance",
     "source": "The Decoder",
     "sent_at": "2026-09-13T15:40:34.794355+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/994441/trump-mike-johnson-ai-industry-overreacting",
+    "headline": "Political Pushback Mounts Against Frontier AI Safety Pauses",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-14T03:42:58.949945+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/13/obama-urges-democrats-to-have-a-clear-plan-for-ai-safeguards/",
+    "headline": "Obama Calls on Democrats to Establish Formal AI Safeguards Agenda",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-14T03:42:58.949945+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom/",
+    "headline": "Industry Debate Intensifies Over Frontier AI Existential Risk",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-14T03:42:58.949945+00:00"
   }
 ]
