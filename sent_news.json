@@ -1,95 +1,5 @@
 [
   {
-    "key": "https://arxiv.org/abs/2609.04681",
-    "headline": "Research Identifies 'Agentic SDLC Paradox' and Rising Verification Costs in Enterprise AI Coding",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04298",
-    "headline": "Large-Scale Benchmark Shows Frontier AI Agents Capped at 28% Success Rate",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.05232",
-    "headline": "Substrate-Aware AI Agents Cut Code Execution Time by 3.1x and Memory by 74%",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.31082",
-    "headline": "Agentic Context Cracking Cuts Data Reasoning Token Costs by 53%",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04641",
-    "headline": "Cost-Aware Agent Architecture Achieves 91.7% Accuracy on Complex Enterprise Schemas",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04667",
-    "headline": "ERPBench: Enterprise Decision Agents Show Divergent Performance in Competitive Markets",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2607.27231",
-    "headline": "KernelGenBench Exposes High Token Costs and Hardware Portability Limits for GPU Kernel Generation",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04917",
-    "headline": "Comprehensive Review Shows Lack of Evidence for Persistent Net Alpha in AI-Driven Trading",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04495",
-    "headline": "Test-Time Compute Dramatically Enhances Agentic Prompt Injection Attacks",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2512.15751",
-    "headline": "GLOW Framework Reduces Agentic Workflow Optimization Time by 98.7%",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04871",
-    "headline": "AutoLR Automates Industrial Recommendation Engineering from Research to Production",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04820",
-    "headline": "Cost-Aware Hierarchical Multi-Agent Framework Cuts Cybersecurity Analysis Costs by 44%",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04523",
-    "headline": "MaxKernel Multi-Agent System Automates Custom TPU Kernel Design",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.04894",
-    "headline": "Framework Proposed for Justified Delegation and Bounded Authority in Agentic AI",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.05395",
-    "headline": "Execution-Grounded Data Synthesis Helps 9B Parameter Model Match Larger LLMs on Public APIs",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-07T15:44:07.052537+00:00"
-  },
-  {
     "key": "https://the-decoder.com/anthropic-reportedly-signs-517-billion-in-compute-deals-after-dario-amodei-warned-rivals-about-reckless-risk/",
     "headline": "Anthropic Secures $517 Billion in Compute Deals to Match Frontier Rivals",
     "source": "The Decoder",
@@ -964,5 +874,95 @@
     "headline": "Industry Debate Intensifies Over Frontier AI Existential Risk",
     "source": "TechCrunch AI",
     "sent_at": "2026-09-14T03:42:58.949945+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/sam-altman-calls-for-pacing-ai-development-but-promises-rapid-progress-will-continue/",
+    "headline": "OpenAI, Anthropic, and Google Engage in Joint AI Self-Regulation Talks",
+    "source": "The Decoder",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/china-fires-back-at-u-s-ai-safety-warnings-calling-them-fearmongering-to-lock-in-american-advantage/",
+    "headline": "China Rejects Calls to Slow AI Progress, Accelerates Compute Buildout",
+    "source": "The Decoder",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://blogs.nvidia.com/blog/local-ai-perplexity-windows-pcs/",
+    "headline": "Perplexity Releases Local AI Agent for Windows PCs Powered by NVIDIA RTX",
+    "source": "NVIDIA",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.11987",
+    "headline": "Study Finds Agentic Harnesses Increase Compute Costs Without Accuracy Gains",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/news/994566/microsoft-humanist-ai-code-of-conduct",
+    "headline": "Microsoft Issues Code of Conduct Emphasizing Human Control Over AI",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.12171",
+    "headline": "Enterprise QA Benchmark Reveals Frontier AI Models Score Under 80% on Workplace Data",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.11030",
+    "headline": "Agent Incident Registry Reveals Unaddressed Safety Risks in Active Deployments",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.12413",
+    "headline": "Frontier Model Safety Alignment Fails to Protect Intermediate Agent Execution Chains",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.13073",
+    "headline": "Autonomous AI Research Framework Compresses 10 Months of Engineering into 10 Weeks",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.12708",
+    "headline": "Large-Scale Code Analysis Uncovers Structural Defects Unique to AI-Generated Software",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.11977",
+    "headline": "Occamy-1.0 Demonstrates Low-Cost Pareto Efficiency for Agentic Co-Work Tasks",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.12394",
+    "headline": "BlueLM-GUI Sets Open Benchmarks for Mobile Device Agent Automation",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.12436",
+    "headline": "Lifecycle Memory Framework Prevents Context Overwriting in Persistent AI Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.15424",
+    "headline": "ETHOS Governance Architecture Adds Auditable Guardrails to Clinical Multi-Agent Systems",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.12162",
+    "headline": "Deictic Context Shifts Expose Systematic Flaws in Multi-LLM Pipelines",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-14T15:46:23.826131+00:00"
   }
 ]
