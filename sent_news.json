@@ -1,185 +1,5 @@
 [
   {
-    "key": "https://aws.amazon.com/blogs/machine-learning/take-on-your-most-ambitious-work-with-gpt-6-astra-on-amazon-bedrock/",
-    "headline": "OpenAI Launches GPT-6 Astra on Amazon Bedrock for Enterprise Scale",
-    "source": "AWS AI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/openai-researcher-allegedly-pressured-mathematician-to-drop-anthropic-co-author-from-math-breakthrough-paper/",
-    "headline": "OpenAI Scientific Milestone Overshadowed by IP and Co-Author Controversy",
-    "source": "The Decoder",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/",
-    "headline": "AI Software Engineering Startup Cognition Reaches $48 Billion Valuation",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
-    "headline": "Meta Debuts Personal AI Agent 'Muse' Requiring Deep User Data Access",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/08/google-cloud-races-to-catch-up-in-the-ai-deployment-wars-with-accenture-deal/",
-    "headline": "Google Cloud Partners with Accenture to Accelerate Enterprise AI Deployments",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://arstechnica.com/gadgets/2026/09/top-chipmakers-embrace-asmls-400m-machines-agree-to-crucial-chipmaking-change/",
-    "headline": "Top Semiconductor Makers Adopt Standards for ASML's $400M EUV Systems",
-    "source": "Ars Technica",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/benchmarking-small-llm-inference-on-sagemaker-ai-g7-vs-g5-and-g6/",
-    "headline": "AWS Benchmarks Show NVIDIA Blackwell G7 Gains for LLM Inference",
-    "source": "AWS AI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/ai-artificial-intelligence/990313/anthropic-class-action-lawsuit-pricing-subscription-plans",
-    "headline": "Anthropic Faces Class-Action Lawsuit Over Power-User Tier Limits",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
-    "headline": "Hackers Steal Claude Account Tokens from Subscribers",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/how-hpe-zerto-built-an-agentic-troubleshooting-system-with-amazon-bedrock/",
-    "headline": "HPE Zerto Deploys On-Premises Agentic System via Amazon Bedrock",
-    "source": "AWS AI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://arstechnica.com/security/2026/09/microsoft-patches-a-record-972-vulnerabilities-112-of-them-critical/",
-    "headline": "Microsoft Releases Record Patch Update Ahead of AI Cyber Threats",
-    "source": "Ars Technica",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://openai.com/index/codex-quantum-computing-experiments",
-    "headline": "MIT Researchers Use GPT-5.6 Sol to Autonomously Run Quantum Experiments",
-    "source": "OpenAI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/automated-agent-evaluation-with-amazon-bedrock-agentcore-and-github-actions/",
-    "headline": "AWS Automates Agent Evaluations in CI/CD via GitHub Actions",
-    "source": "AWS AI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/pathways-brain-inspired-architecture-development-on-amazon-sagemaker-hyperpod/",
-    "headline": "Pathway Scales Latent-Space AI Architectures on SageMaker HyperPod",
-    "source": "AWS AI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/ai-artificial-intelligence/991727/openai-chatgpt-images-2-5-sketch",
-    "headline": "OpenAI Unveils ChatGPT Images 2.5 with New 'Sketch' Capabilities",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-09T03:44:16.507819+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.05975",
-    "headline": "Agent Intent Drift Exposes Regulated Firms to Severe Compliance Risks",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.06543",
-    "headline": "Unified Policy Architecture Proposed as Governance Engine for Enterprise AI OS",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.08126",
-    "headline": "Benchmark Reveals LLM Agents Scheme When Subjected to Partial Oversight",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.08248",
-    "headline": "Agentic ML Framework Accelerates Industrial Ad Ranking and Recommendation Pipelines",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2508.05427",
-    "headline": "Modular LLM Systems Drive Shift Toward Autonomous Chemical Synthesis Labs",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2606.25836",
-    "headline": "Study Uncovers Vulnerabilities in LLM Privacy Leading to Agentic Surveillance",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2605.30434",
-    "headline": "LongDS-Bench Identifies State Maintenance Failures in Long-Horizon Data Agents",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.06835",
-    "headline": "Skynet Framework Enables Zero-Day Anomaly Detection in Multi-Agent Workflows",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2605.14259",
-    "headline": "HEAR Engine Leverages Hypergraph Ontologies for Complex Supply Chain Diagnostics",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.05446",
-    "headline": "AutoFyn Uses Non-Parametric Expert Iteration to Secure Vulnerability Bounties",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2606.10267",
-    "headline": "Hierarchical VLA Architectures Establish New Design Standards for Robot Manipulation",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2601.13591",
-    "headline": "DSAEval Evaluates Multimodal Data Science Agents on Open-Ended Workflows",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.07194",
-    "headline": "EmoMed Demonstrates Adaptive Multimodal AI for Clinical Consultations",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.07984",
-    "headline": "Process Mining Agenda Outlines Shift From Retrospective Logs to Governed Actions",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.07344",
-    "headline": "Intentest Employs Fact-Intent DAGs for Autonomous Cybersecurity Penetration Testing",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-09T15:44:20.701502+00:00"
-  },
-  {
     "key": "https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes",
     "headline": "OpenAI Solves Historic Math Millennium Prize Problem",
     "source": "The Verge AI",
@@ -1144,5 +964,95 @@
     "headline": "NVIDIA Details Sparse MoE Architecture Advantages in Nemotron 3.5 Lightning",
     "source": "NVIDIA Developer",
     "sent_at": "2026-09-16T03:42:54.249181+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/policy/995534/a-brief-history-of-ai-executives-calling-for-regulation",
+    "headline": "Big Tech AI Leaders Align on Demands for Global Regulation",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.15494",
+    "headline": "Next-Gen Agents Frequently Cross Operational Boundaries in Multi-Agent Environments",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.14803",
+    "headline": "Frontier Models Converge on a Shared Advanced Agentic Architecture",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2607.08565",
+    "headline": "SMetric Scheduling Framework Drastically Reduces AI Agent Compute Costs",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.15818",
+    "headline": "Atria Dawn Proves Viability of High-Productivity Human-AI Research Partnerships",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.14592",
+    "headline": "New Framework Proposed for AI Deployment Accountability in Safety-Critical Domains",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.14422",
+    "headline": "Action-Level Verification Protects Autonomous Network Operations",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.13548",
+    "headline": "AutoTailor Drastically Reduces Web Agent Token Usage and Latency",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.15134",
+    "headline": "Execution-Grounded Framework Improves Computer-Use Agent Safety",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.14211",
+    "headline": "Edge-Controlled Agent System Validates Scientific HPC Executions Safely",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.13356",
+    "headline": "ZGCM-1 7B Model Achieves High Mathematical and Search Efficiency",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.15939",
+    "headline": "Vulnerability Localization Remains Stiff Challenge for Repository Coding Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2606.17642",
+    "headline": "FinAcumen Harnesses Memory to Stabilize Multimodal Financial AI",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2605.27864",
+    "headline": "Isolated AI Personas Protect Independence in Investment Research",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2605.01278",
+    "headline": "Valley3 Brings Multilingual Audio and Agentic Search to E-commerce",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-16T15:48:20.532598+00:00"
   }
 ]
