@@ -1,95 +1,5 @@
 [
   {
-    "key": "https://the-decoder.com/new-deepseek-model-v4-1-flash-cuts-memory-needs-for-ai-agents/",
-    "headline": "DeepSeek Releases V4.1-Flash with 75% Lower Memory Demands",
-    "source": "The Decoder",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/muse-can-shop-write-emails-and-negotiate-prices-for-users-all-through-whatsapp/",
-    "headline": "Meta Unveils Muse Agent to Power WhatsApp Commerce and Tasks",
-    "source": "The Decoder",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09553",
-    "headline": "Frontier Models Vulnerable to Prompt Injection via Encrypted Ciphers",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09875",
-    "headline": "AgentAudit Benchmark Exposes Deep Trust and Safety Gaps in Autonomous AI",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09187",
-    "headline": "TikTok Ad Framework Demonstrates Direct Revenue Impact from Agentic Video AI",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09203",
-    "headline": "OpenDiscoveryTrace Benchmarks End-to-End Reasoning in Scientific AI Agents",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09853",
-    "headline": "Era Benchmark Evaluates LLM Agents Across Synthetic Enterprise Environments",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.10522",
-    "headline": "Show-Harness Enables Zero-Shot Physical Control for Vision-Language Models",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09404",
-    "headline": "Multimodal Injections Expose Security Gaps in Agent Perceptual Channels",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09233",
-    "headline": "Spawning Subagents Outperforms Single-Context Skill Execution in Long Tasks",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09790",
-    "headline": "Logistics Benchmark Highlights Spatial and Reasoning Gaps in Multimodal AI",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.16620",
-    "headline": "Writer Unveils Palmyra x6 Optimized for Enterprise Tool Integration",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09692",
-    "headline": "CT-SAFR Framework Cuts Unsafe Decisions in Autonomous Warehouse Robots",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/ai-safety-panic-goes-mainstream-after-anthropic-researchers-warnings-land-on-cnn-and-fox-news/",
-    "headline": "AI Safety Warnings Gain National Media Focus Following Researcher Outcry",
-    "source": "The Decoder",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2605.30002",
-    "headline": "KairosAgent Combines Foundation Models and Reasoners for Forecasting",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-10T15:44:06.850523+00:00"
-  },
-  {
     "key": "https://the-decoder.com/swarmchasers-hunt-rogue-agents-anthropic-investigates-itself-and-the-trail-they-both-follow-is-going-dark/",
     "headline": "Rogue Agent Behaviors Prompt Urgent Scrutiny of AI Safety Monitoring",
     "source": "The Decoder",
@@ -1054,5 +964,95 @@
     "headline": "Snap Unveils Specs Intelligence AI Assistant Across Apple Ecosystems",
     "source": "The Verge AI",
     "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.18283",
+    "headline": "Where to Deploy AI Agents: Energy Cost Is Driven by Inference, Not Data Transfer",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.18605",
+    "headline": "Enterprise AI Assistants Fail Compliance Rules Under Basic User Pressure",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.17885",
+    "headline": "Computer-Use Agents Perform Poorly on Persistent Enterprise Software Records",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.18111",
+    "headline": "The Rise of Generative Physical AI: Integrating LLMs with Robotics",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2606.03077",
+    "headline": "Libra Framework Boosts Reinforcement Learning Post-Training for Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.17699",
+    "headline": "NVIDIA Open-Sources NeMo Data Designer for Multimodal Synthetic Data",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.17708",
+    "headline": "Experiential Confidence Estimator Reduces AI Agent Errors by Up to 8.7%",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.18857",
+    "headline": "AURA Arbiter Prevents Critical Network Excursions Caused by Opposing AI Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.18052",
+    "headline": "Cost-Efficient SLMs Achieve Only 12.9% Accuracy in Enterprise Code Generation",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.18182",
+    "headline": "WFM Paradigm Offers 10.5x Training Acceleration for Agentic Long-Term Memory",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.18598",
+    "headline": "SynAgent Enables Hypothesis-Driven Autonomous Material Discovery",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.18435",
+    "headline": "WetRobo Kit Proves Code-Generating Agents Excel Over Static Vision-Language Policies",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.18949",
+    "headline": "StableEval Arena Reveals Financial AI Agents Fail to Predict Rare Peg Stress",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2608.24314",
+    "headline": "Voice-Agent LLM Evaluators Show High Sensitivity to Configuration Changes",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.12839",
+    "headline": "Context Segmentation Helps Local SLMs Complete Cybersecurity Challenges",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-17T15:47:57.783792+00:00"
   }
 ]
