@@ -1,95 +1,5 @@
 [
   {
-    "key": "https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes",
-    "headline": "OpenAI Solves Historic Math Millennium Prize Problem",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/",
-    "headline": "Listen Labs Halts $1.5B Funding Round for Salesforce Acquisition Talks",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-august-2026/",
-    "headline": "AWS Bedrock Unveils 14-Day Persistent Agent Compute and 1M Token Context",
-    "source": "AWS AI",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/",
-    "headline": "Massachusetts Imposes Clean Power Rules on Data Centers",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
-    "headline": "Paul Christiano Joins OpenAI Board and Safety Committee",
-    "source": "OpenAI",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/deploying-qwen3-8-2-4t-a95b-on-amazon-sagemaker-hyperpod-with-vllm/",
-    "headline": "AWS SageMaker HyperPod Supports 2.4-Trillion Parameter Open Qwen Model",
-    "source": "AWS AI",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/anthropic-built-an-economic-model-that-frames-its-ceos-bleakest-job-forecasts-as-an-outlier-scenario/",
-    "headline": "Anthropic Model Forecasts Disruption Across Economic Scenarios",
-    "source": "The Decoder",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/tech/992766/apple-iphone-18-pro-reference-image",
-    "headline": "Apple Unveils Hardware Pixel Signing to Authenticate Real Photos",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://developer.nvidia.com/blog/cuda-toolkit-13-4-adds-windows-on-arm-support-and-greater-control-over-shared-gpus/",
-    "headline": "NVIDIA CUDA 13.4 Adds Windows on Arm and Fine-Grained GPU Sharing",
-    "source": "NVIDIA Developer",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/ai-artificial-intelligence/991977/suno-releases-its-first-ai-music-model-made-with-record-industry-help",
-    "headline": "Suno Releases Music Model Trained on Licensed Record Industry Data",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/policy/992359/microsoft-aft-schools-ai-privacy",
-    "headline": "Microsoft Partners with Teachers Union on AI Privacy Frameworks",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/",
-    "headline": "NVIDIA Accelerates Multimodal Serving via Disaggregated Architecture",
-    "source": "NVIDIA Developer",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/how-heurist-finance-built-an-ai-native-investment-workbench-on-amazon-bedrock-agentcore/",
-    "headline": "Heurist Finance Builds Pay-Per-Query Workbench on AWS Bedrock AgentCore",
-    "source": "AWS AI",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://arstechnica.com/ai/2026/09/anthropic-researcher-quits-with-a-warning-self-improving-ai-could-kill-us-all/",
-    "headline": "Former Anthropic Researcher Raises Alarm Over Self-Improving AI Systems",
-    "source": "Ars Technica",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/tech/992919/apple-siri-ai-audio-intelligence-privacy",
-    "headline": "Apple Details Technical Privacy Framework for Ambient Audio Features",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-10T03:43:38.982477+00:00"
-  },
-  {
     "key": "https://the-decoder.com/new-deepseek-model-v4-1-flash-cuts-memory-needs-for-ai-agents/",
     "headline": "DeepSeek Releases V4.1-Flash with 75% Lower Memory Demands",
     "source": "The Decoder",
@@ -1054,5 +964,95 @@
     "headline": "Valley3 Brings Multilingual Audio and Agentic Search to E-commerce",
     "source": "arXiv AI",
     "sent_at": "2026-09-16T15:48:20.532598+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/apple-is-reportedly-building-an-enterprise-ai-server-with-its-own-m8-ultra-chips/",
+    "headline": "Apple Reportedly Developing Enterprise AI Servers Driven by Custom M8 Ultra Chips",
+    "source": "The Decoder",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/16/anthropic-and-openai-want-to-embed-safety-evaluators-will-they-really-be-independent/",
+    "headline": "Anthropic and OpenAI Plan to Embed Independent AI Safety Auditors",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/eu-president-warns-ai-agents-escaping-their-environment-are-just-a-preview-of-whats-coming/",
+    "headline": "EU President Warns of Uncontained AI Agents and Pushes EU AI Act Enforcement",
+    "source": "The Decoder",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/",
+    "headline": "Google Opens Smart Home Ecosystem to Autonomous AI Agents via MCP",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/anthropic-merges-claude-chat-cowork-and-more-into-a-single-product/",
+    "headline": "Anthropic Unifies Claude Platform and Introduces Native Workspace Tools",
+    "source": "The Decoder",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/google-deepmind-launches-interdisciplinary-institute-to-tackle-the-big-questions-around-agi/",
+    "headline": "Google DeepMind Launches Interdisciplinary Institute for AGI Governance",
+    "source": "The Decoder",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://developer.nvidia.com/blog/tensorrt-edge-llm-completes-the-mlperf-edge-agentic-benchmark-6-4x-faster-on-jetson-agx-thor/",
+    "headline": "NVIDIA TensorRT Edge-LLM Delivers 6.4x Speedup for Edge AI Agents",
+    "source": "NVIDIA Developer",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
+    "headline": "AWS Physical Data Center Damage Causes Irreversible Cloud Customer Data Loss",
+    "source": "Ars Technica",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://openai.com/index/model-misalignment-reporting-framework",
+    "headline": "OpenAI Introduces Disclosures Framework for Model Misalignment Incidents",
+    "source": "OpenAI",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/improving-hcls-ai-reasoning-with-open-source-agent-skills/",
+    "headline": "AWS Open-Sources 38 Domain Skills to Fix Healthcare AI Reasoning Errors",
+    "source": "AWS AI",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/optimizing-agent-system-prompts-with-amazon-bedrock-agentcore/",
+    "headline": "Amazon Bedrock Automates System Prompt Optimization for Enterprise Agents",
+    "source": "AWS AI",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://developer.nvidia.com/blog/translating-cuda-tile-operations-from-python-to-rust-using-agentic-ai/",
+    "headline": "NVIDIA Uses Agentic AI to Translate CUDA Kernels into Safe Rust",
+    "source": "NVIDIA Developer",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://developer.nvidia.com/blog/how-to-use-ai-agents-to-prepare-3d-scenes-for-simulation/",
+    "headline": "NVIDIA Automates 3D Digital Twin Creation Using Agentic Workflows",
+    "source": "NVIDIA Developer",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/fault-tolerant-distributed-training-on-amazon-eks-using-nvrx/",
+    "headline": "AWS Integrates NVIDIA NVRx for Fault-Tolerant Distributed Training",
+    "source": "AWS AI",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/tech/996078/snap-specs-intelligence-ai-agent-ios-mac",
+    "headline": "Snap Unveils Specs Intelligence AI Assistant Across Apple Ecosystems",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-17T03:45:41.622907+00:00"
   }
 ]
