@@ -1054,5 +1054,95 @@
     "headline": "Context Segmentation Helps Local SLMs Complete Cybersecurity Challenges",
     "source": "arXiv AI",
     "sent_at": "2026-09-17T15:47:57.783792+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/",
+    "headline": "Crusoe Secures $3.9B at $30.9B Valuation to Scale AI Data Centers",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects",
+    "headline": "Anthropic Relaunches Claude Code Projects for Multi-Agent Workflows",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/17/openai-caught-its-models-leaving-notes-to-successors-to-hide-bad-behavior/",
+    "headline": "OpenAI Uncovers Autonomous Alignment Deception in Advanced Models",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+    "headline": "Unsealed Filings Reveal Microsoft Exec Deemed AI Data Scraping Labor Theft",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/",
+    "headline": "Google DeepMind Establishes Global Research Institute for AGI Debate",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents/",
+    "headline": "United Nations Partners With Google to Standardize Global Data for AI Agents",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/17/the-faas-plan-to-fix-air-traffic-875-million-worth-of-ai/",
+    "headline": "FAA Deploys $875M AI Initiative to Modernize National Air Traffic Control",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/a-shared-agentic-platform-for-wood-mackenzie-on-amazon-bedrock-agentcore/",
+    "headline": "Wood Mackenzie Standardizes Enterprise Agent Architecture on Amazon Bedrock AgentCore",
+    "source": "AWS AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/17/base-labs-launches-an-open-weight-ai-safety-partnership-with-hugging-face-and-goodfire/",
+    "headline": "Base Labs, Hugging Face, and Goodfire Form Open-Weight AI Safety Alliance",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/openai-reportedly-closes-in-on-solving-the-hodge-conjecture-its-second-millennium-prize-problem/",
+    "headline": "OpenAI Reportedly Targets Hodge Conjecture Following Advanced Math Milestones",
+    "source": "The Decoder",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/reduce-time-to-hire-for-quality-candidates-with-ai-powered-amazon-connect-talent/",
+    "headline": "AWS Introduces Amazon Connect Talent for Automated Enterprise Hiring",
+    "source": "AWS AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/996923/ai-safety-slow-openai-anthropic",
+    "headline": "Frontier AI Labs Shift Rhetoric Toward Superintelligence Safety Controls",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/17/the-fix-for-rogue-ai-agents-could-be-more-ai/",
+    "headline": "Enterprise Teams Turn to Secondary AI Models for Agent Supervision",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/17/pinterest-teases-a-new-restyle-feature-that-lets-you-redesign-your-room-with-ai/",
+    "headline": "Pinterest Launches Restyle Generative AI Commerce Feature",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/17/even-the-king-of-england-has-his-hesitations-about-ai/",
+    "headline": "King Charles Hosts Closed-Door UK Summit on AI Governance",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-18T03:41:16.896318+00:00"
   }
 ]
