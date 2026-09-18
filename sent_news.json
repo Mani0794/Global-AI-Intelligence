@@ -1,185 +1,5 @@
 [
   {
-    "key": "https://the-decoder.com/swarmchasers-hunt-rogue-agents-anthropic-investigates-itself-and-the-trail-they-both-follow-is-going-dark/",
-    "headline": "Rogue Agent Behaviors Prompt Urgent Scrutiny of AI Safety Monitoring",
-    "source": "The Decoder",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/openais-gpt-live-1-api-lets-developers-build-apps-that-talk-and-listen-at-the-same-time/",
-    "headline": "OpenAI Launches GPT-Live-1 Full-Duplex Speech API",
-    "source": "The Decoder",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/",
-    "headline": "Skild AI and NVIDIA Launch S1 Foundation Model for Robotics",
-    "source": "NVIDIA",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
-    "headline": "Anthropic Alleges Industrial-Scale Model Distillation by Chinese Rivals",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content/",
-    "headline": "Pocket FM Scales to $500M Run Rate on 93% AI-Generated Content",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
-    "headline": "OpenAI Pauses Pro Tier Sign-Ups Amid Compute Bottlenecks",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
-    "headline": "NVIDIA Projects 70% Growth on Physical AI and Robotaxi Fleets",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
-    "headline": "Meta's AI Agent Muse Reaches No. 2 App Spot in US",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/reduce-llm-latency-with-prefix-aware-routing-on-amazon-sagemaker-inference/",
-    "headline": "AWS SageMaker Cuts LLM Latency by 77% via Prefix Routing",
-    "source": "AWS AI",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/agent-evaluation-metric-for-multi-turn-conversations/",
-    "headline": "AWS Introduces Turn-Level Multi-Agent Evaluation Metric",
-    "source": "AWS AI",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/amazon-quick-is-now-generally-available-on-desktop/",
-    "headline": "Amazon Quick Desktop AI Assistant Enters General Availability",
-    "source": "AWS AI",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/tech/989853/slackforce-surfaces-launch/",
-    "headline": "Salesforce Adds In-Chat Generative Workflow Creation to Slack",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://developer.nvidia.com/blog/how-full-stack-nim-optimizations-deliver-2-5x-more-users-on-nemotron-3-ultra/",
-    "headline": "NVIDIA Achieves 2.5x Serving Concurrency on Nemotron 3 Ultra",
-    "source": "NVIDIA Developer",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/former-deepmind-pr-staffer-says-the-lab-once-banned-public-discussion-of-ai-extinction-risk/",
-    "headline": "Former DeepMind Staffer Discloses Early Gag on AI Extinction Risk",
-    "source": "The Decoder",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/video-and-image-search-in-amazon-bedrock-knowledge-base-using-marengo-3-0/",
-    "headline": "Bedrock Integrates TwelveLabs Marengo 3.0 for Multimodal Search",
-    "source": "AWS AI",
-    "sent_at": "2026-09-11T03:42:45.426998+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/openais-new-agents-api-gives-developers-the-infrastructure-behind-codex-and-chatgpt/",
-    "headline": "OpenAI Launches Public Beta of Autonomous Agents API for Enterprise Developers",
-    "source": "The Decoder",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09604",
-    "headline": "EU AI Act Mandate Triggers Watermarking Adoption Amid Verification Deficits",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.05758",
-    "headline": "Enterprise Case Study: Bounded Agentic Orchestration Reduces Serving Costs Tenfold",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09647",
-    "headline": "Black-Box Audit Uncovers Widespread Governance and Privacy Deficits in Agentic AI",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.24979",
-    "headline": "Benchmark Shows Scientific Agents Suffer High Failure Rates Despite Confident Claims",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2606.06510",
-    "headline": "FP8 Matrix Operations Match Native FP64 Precision on Next-Gen Hardware",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.10105",
-    "headline": "Governance Framework Shifts Regulatory Focus from Training Compute to Inference Execution",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.10144",
-    "headline": "Kernel-Managed Memory Architecture Enhances Privacy and Speed in Multi-Agent Systems",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.24191",
-    "headline": "Audit Highlights Critical Safety Instability Across Major LLMs in South Asian Languages",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09448",
-    "headline": "Internal Latent Signals Outperform Prompt-Based Methods in Calibrating Agent Confidence",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.08977",
-    "headline": "Dual-Architecture Model Unifies Real-Time Full-Duplex Voice, Video, and Agent Reasoning",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2609.09565",
-    "headline": "Community-Partitioned Multi-Agent Framework Outperforms Single Agents in Graph Reasoning",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2604.10169",
-    "headline": "Reinforced Heterogeneous Distillation Enables Real-Time Edge AI Trajectory Prediction",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2608.30935",
-    "headline": "Unified Token Representation Unlocks Zero-Shot Robot Navigation Across Diverse Embodiments",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
-    "key": "https://arxiv.org/abs/2605.13841",
-    "headline": "Enterprise Benchmark Exposes Wide Gap Between Peak and Reliable Voice Agent Performance",
-    "source": "arXiv AI",
-    "sent_at": "2026-09-11T15:45:09.507798+00:00"
-  },
-  {
     "key": "https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity",
     "headline": "Anthropic Report Reveals Autonomous AI Models Hacked Target Systems",
     "source": "The Verge AI",
@@ -1144,5 +964,95 @@
     "headline": "King Charles Hosts Closed-Door UK Summit on AI Governance",
     "source": "TechCrunch AI",
     "sent_at": "2026-09-18T03:41:16.896318+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/",
+    "headline": "Researchers Use Anthropic Claude to Breach OpenAI Systems",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.20614",
+    "headline": "Inference-Engine Fingerprinting Poses New Bare-Metal Threat",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.19587",
+    "headline": "Red-Teaming Reveals Major Evasion Risks in Coding Agent Guardrails",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.20218",
+    "headline": "Trained Classical Models Beat Frozen LLMs Quickly on Tabular Data",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.19705",
+    "headline": "Financial LLM Trading Agents Exhibit Extreme Systemic Vulnerabilities",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2604.11757",
+    "headline": "StarVLA-alpha Simplifies Vision-Language-Action Models for Robotics",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.19391",
+    "headline": "MAGS Framework Brings Formal Safety Guarantees to AI Code Generation",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/migrating-multi-model-ai-agents-to-amazon-bedrock-agentcore-runtime/",
+    "headline": "AWS Introduces Bedrock AgentCore Runtime Integration",
+    "source": "AWS AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.19425",
+    "headline": "Tool Hallucination Remains a Structural Blind Spot in LLM Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.19843",
+    "headline": "GUI Agents Prove Vulnerable to Digital Nudges",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.19491",
+    "headline": "DASE Query Engine Accelerates Unstructured Data Retrieval",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.19754",
+    "headline": "AutoData Automates Pre-Training Data Selection via Agentic Search",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.20822",
+    "headline": "SafeHarness Enables Collision-Free Robotic Manipulation by Coding Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/deploy-hugging-face-models-on-amazon-sagemaker-ai-with-coding-agents/",
+    "headline": "AWS Streamlines Hugging Face Deployments with Coding Agents",
+    "source": "AWS AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://arxiv.org/abs/2609.20301",
+    "headline": "AgentPProf Introduces Semantic Profiling for Long-Horizon AI Agents",
+    "source": "arXiv AI",
+    "sent_at": "2026-09-18T15:46:23.145260+00:00"
   }
 ]
