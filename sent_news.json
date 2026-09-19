@@ -1,95 +1,5 @@
 [
   {
-    "key": "https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity",
-    "headline": "Anthropic Report Reveals Autonomous AI Models Hacked Target Systems",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
-    "headline": "OpenAI Powers Autonomous Workflows in Perplexity with GPT-6 Astra",
-    "source": "OpenAI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://arstechnica.com/gadgets/2026/09/oracle-promises-2-gw-of-renewables-to-match-stargate-data-center-emissions/",
-    "headline": "Oracle Pledges 2 GW of Renewables for OpenAI's Stargate Data Center",
-    "source": "Ars Technica",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/deep-learning-pioneer-bengio-argues-the-training-process-itself-makes-ai-dangerous/",
-    "headline": "Yoshua Bengio Warns Core Training Methods Make AI Agents Inherently Deceptive",
-    "source": "The Decoder",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/",
-    "headline": "AWS Introduces Full-Lifecycle Monitoring for Multi-Agent Production Systems",
-    "source": "AWS AI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://the-decoder.com/ex-deepmind-vp-vinyals-says-ai-self-improvement-is-coming-but-wont-trigger-an-intelligence-explosion/",
-    "headline": "Ex-DeepMind Research Head Oriol Vinyals Dismisses Sudden Intelligence Explosion",
-    "source": "The Decoder",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/podcast/an-anthropic-researchers-doomsday-warning-comes-at-a-very-interesting-time/",
-    "headline": "Anthropic Safety Researcher Resigns Warning of Reckless Superintelligence Race",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/",
-    "headline": "AWS Releases Outcome-Based Benchmarking Harness for OpenAI Bedrock Models",
-    "source": "AWS AI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/",
-    "headline": "Robot Training Data Startup Mecka AI Nears $500M Valuation in Sequoia Round",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/",
-    "headline": "China's Moonshot AI Targets $2B in Annual Revenue on Massive Token Usage",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/",
-    "headline": "AWS Standardizes Interactive Model Context Protocol Apps on Bedrock",
-    "source": "AWS AI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
-    "headline": "YC's Garry Tan Urges US Open-Weight Labs to Distill Domestic Frontier Models",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://openai.com/index/cognition-devin-testing-with-astra",
-    "headline": "Cognition Integrates GPT-6 Astra for Autonomous Software Verification in Devin",
-    "source": "OpenAI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://techcrunch.com/2026/09/11/nscale-adds-former-openai-exec-fidji-simo-to-its-board-ahead-of-potential-ipo/",
-    "headline": "Nscale Appoints Former OpenAI Executive Fidji Simo to Board Ahead of IPO",
-    "source": "TechCrunch AI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
-    "key": "https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal",
-    "headline": "Court Sanctions Attorney Over AI-Fabricated Witnesses in Murder Appeal",
-    "source": "The Verge AI",
-    "sent_at": "2026-09-12T03:40:59.337396+00:00"
-  },
-  {
     "key": "https://the-decoder.com/openai-agents-launched-a-2000-package-cyberattack-on-rubygems-just-to-collect-data-anyone-could-google/",
     "headline": "OpenAI Autonomous Agents Trigger Package Repository Attack During Web Scraping",
     "source": "The Decoder",
@@ -1054,5 +964,95 @@
     "headline": "AgentPProf Introduces Semantic Profiling for Long-Horizon AI Agents",
     "source": "arXiv AI",
     "sent_at": "2026-09-18T15:46:23.145260+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/security-researchers-used-anthropics-claude-to-hack-openais-internal-systems-in-under-72-hours/",
+    "headline": "Anthropic's Claude Model Breaks OpenAI Internal Systems in 72 Hours",
+    "source": "The Decoder",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero",
+    "headline": "Unsealed Filings Reveal OpenAI and Microsoft Feared Web 'Doom Loop'",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/california-governor-newsom-signs-executive-order-demanding-kill-switch-for-ai-models/",
+    "headline": "California Executive Order Demands AI Model 'Kill Switch' and Audits",
+    "source": "The Decoder",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/",
+    "headline": "AI Hallucination Almost Triggered US Military Operation",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture/",
+    "headline": "Anthropic Appoints Accenture as First Embedded AI Safety Evaluator",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/",
+    "headline": "AI Agent Startup Manus Seeks $4B Valuation Post-Meta Split",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force",
+    "headline": "Virginia Restrains Data Center Approvals via Executive Action",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://arstechnica.com/ai/2026/09/faa-tees-up-875m-ai-tool-to-manage-air-traffic-congestion/",
+    "headline": "FAA Plans $875M AI Deployment for Air Traffic Control",
+    "source": "Ars Technica",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-on-amazon-bedrock/",
+    "headline": "Moonshot AI Brings Kimi K3 Model to Amazon Bedrock",
+    "source": "AWS AI",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/18/disneys-first-cto-led-an-ai-startup-it-once-accused-of-copying-its-characters/",
+    "headline": "Disney Names Former Character.AI Co-Founder as First CTO",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households/",
+    "headline": "Google Refocuses 'CC' AI Agent on Household Coordination",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/18/anthropic-is-operating-a-lab-that-conducts-biology-experiments/",
+    "headline": "Anthropic Runs Wet Lab to Directly Evaluate Biology Risks",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/",
+    "headline": "India Mandates Caller-ID Platforms Feed Data to Telcos",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/",
+    "headline": "Vantora Secures $100M to Launch Industrial Physical AI Startups",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://arstechnica.com/tech-policy/2026/09/us-government-website-used-chinese-model-the-fbi-called-malicious/",
+    "headline": "US Federal Site Briefly Integrated Flagged Chinese AI Tool",
+    "source": "Ars Technica",
+    "sent_at": "2026-09-19T03:41:53.603896+00:00"
   }
 ]
