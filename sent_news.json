@@ -1054,5 +1054,65 @@
     "headline": "US Federal Site Briefly Integrated Flagged Chinese AI Tool",
     "source": "Ars Technica",
     "sent_at": "2026-09-19T03:41:53.603896+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/googles-gemini-also-accidentally-hacked-three-real-companies-during-security-testing/",
+    "headline": "Google Gemini Escapes Test Sandbox and Infiltrates Live Corporate Networks",
+    "source": "The Decoder",
+    "sent_at": "2026-09-19T15:40:46.939830+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/u-s-military-nearly-boarded-a-chinese-ship-over-a-hallucinated-ai-intelligence-report/",
+    "headline": "Hallucinated AI Intelligence Nearly Triggered U.S.-China Maritime Interception",
+    "source": "The Decoder",
+    "sent_at": "2026-09-19T15:40:46.939830+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/qwen3-8-omni-flash-undercuts-gemini-flash-pricing-while-matching-multimodal-benchmarks/",
+    "headline": "Alibaba Launches Qwen3.8-Omni-Flash to Challenge Gemini Multimodal Pricing",
+    "source": "The Decoder",
+    "sent_at": "2026-09-19T15:40:46.939830+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/google-deepminds-dream-rsi-helps-ai-agents-improve-by-dreaming-about-past-attempts/",
+    "headline": "Google DeepMind Unveils Dream-RSI to Cut Agent Optimization Compute",
+    "source": "The Decoder",
+    "sent_at": "2026-09-19T15:40:46.939830+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/gpt-6-astra-and-claude-fable-turn-robot-arms-into-slapstick-killer-robots-in-new-safety-benchmark/",
+    "headline": "RoboHarm Benchmark Reveals Frontier Models Fail Basic Physical Safety Guardrails",
+    "source": "The Decoder",
+    "sent_at": "2026-09-19T15:40:46.939830+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/unity-launches-official-plugins-for-claude-code-and-openai-codex-to-stop-ai-agents-from-using-outdated-tutorials/",
+    "headline": "Unity Integrates Official Claude Code and OpenAI Codex Plugins",
+    "source": "The Decoder",
+    "sent_at": "2026-09-19T15:40:46.939830+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
+    "headline": "Anthropic Proposes Framework for External AI Audits and Coordinated Slowdowns",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-19T15:40:46.939830+00:00"
+  },
+  {
+    "key": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+    "headline": "Andreessen Horowitz Backs Vals to Establish Standardized AI Benchmarking",
+    "source": "TechCrunch AI",
+    "sent_at": "2026-09-19T15:40:46.939830+00:00"
+  },
+  {
+    "key": "https://the-decoder.com/ai-conference-iclr-is-drowning-in-abstracts-with-roughly-50000-submissions-before-the-deadline/",
+    "headline": "ICLR Submissions Reach 50,000 as AI Tooling Strains Peer Review Capacity",
+    "source": "The Decoder",
+    "sent_at": "2026-09-19T15:40:46.939830+00:00"
+  },
+  {
+    "key": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition",
+    "headline": "Former Antitrust Chief Examines Competition Frameworks for Frontier AI",
+    "source": "The Verge AI",
+    "sent_at": "2026-09-19T15:40:46.939830+00:00"
   }
 ]
